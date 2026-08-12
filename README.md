@@ -1,4 +1,4 @@
-# LAAB-Python:  Linear Algebra Awareness Benchmarks for Python
+# LAAB-Python:  Linear Algebra Awareness Benchmarks for ML frameworks
 
 Machine learning frameworks such as PyTorch, TensorFlow, and JAX are designed to scale numerical computations and data processing from single to multi-GPU and distributed computing environments, while abstracting much of the underlying complexity of parallelisation. Amid the growing use of machine learning in traditional high-performance computing application areas-for example, protein modeling and material discovery—researchers and practitioners increasingly employ these frameworks to integrate ML algorithms into their scientific computing applications, such as those involving solution of partial differential equations, eigenvalue problems, etc.
 

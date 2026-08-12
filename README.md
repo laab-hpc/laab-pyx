@@ -1,8 +1,9 @@
-# LAAB-Python:  Linear Algebra Awareness Benchmarks for ML frameworks
+# LAAB-PyX:  Linear Algebra Awareness Benchmarks for Math Operation Executions via Python Interfaces
 
-Machine learning frameworks such as PyTorch, TensorFlow, and JAX are designed to scale numerical computations and data processing from single to multi-GPU and distributed computing environments, while abstracting much of the underlying complexity of parallelisation. Amid the growing use of machine learning in traditional high-performance computing application areas-for example, protein modeling and material discovery—researchers and practitioners increasingly employ these frameworks to integrate ML algorithms into their scientific computing applications, such as those involving solution of partial differential equations, eigenvalue problems, etc.
 
 Linear algebra operations, which are the building blocks of countless computational problems, often constitute major performance bottlenecks. The HPC community invests significant effort in developing architecture-specific optimised kernels, such as those provided by the BLAS and LAPACK libraries, to accelerate these operations. Thanks to high-level frameworks, users no longer need to engage in the error-prone and time-consuming process of directly invoking such kernels; instead, they can express computations using a high-level, mathematics-like syntax that closely mirrors textbook notation, without having to manage the low-level implementation details themselves. However, it is not guaranteed that these frameworks will automatically exploit knowledge of linear algebra to accelerate computations in the way expert-tuned implementations would.
+
+We currently investigate the executions on math operations invoked from the installations of ML frameworks - PyTorch, TensorFlow and JAX
 
 ## The benchmark suite
 
@@ -77,3 +78,8 @@ More details about this benchmark can be found in the following publications,
   doi={10.1109/IPDPSW55747.2022.00150}
 }
 ```
+
+
+## Acknowledgement
+
+Financial support from the Deutsche Forschungsgemeinschaft (German Research Foundation) through the grant IRTG 2379 is gratefully acknowledged.

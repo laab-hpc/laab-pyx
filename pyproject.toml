@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyx_inspector"
+version = "v2026a"
+description = "Linear Algebra Awareness Benchmark for Python frameworks"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dependencies = [
+  "flask",
+]
+
+[project.scripts]
+pyx-process-logs = "pyx_inspector.process_logs:main"
+pyx-prepare-md-report = "pyx_inspector.markdown.prepare_report:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

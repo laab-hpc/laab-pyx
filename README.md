@@ -55,11 +55,64 @@ For each input, the $\texttt{slowdown}$ and $\texttt{loss}$ scores are reported,
 
 ## The usage and example
 
-If you want to run the benchmark, refer [here](examples/README.md). 
+### Installing the inspector
 
-If you just want to access the results, the evaluation reports from previously run benchmarks are available in the [`reports/`](reports/) directory. 
+Prepare the Python environment and install the package:
 
-An example evaluation report for the installation of PyTorch/2.1.2-foss-2023a on the HPC system Kebnekaise, hosted at Umea University in Sweden is available [here](examples/PyTorch/2.1.2-foss-2023a/HPC2N_x86_64/1xCore/amd_zen3/README.md).
+```bash
+cd /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+### Installation on Kebnekaise
+
+LAAB-PyX uses [JUBE](https://apps.fz-juelich.de/jsc/jube/jube2/docu/) to prepare and run experiments. On Kebnekaise, the virtual environment can also be prepared directly with JUBE:
+
+```bash
+cd venvs/jube
+jube run prepare_venv_kebnekaise.xml
+```
+
+This creates a virtual environment named `pyx-kebnekaise` under `venvs/pyx-kebnekaise/`. You can then activate it with:
+
+```bash
+source venvs/pyx-kebnekaise/activate.sh
+```
+
+### Running the benchmark
+
+To run a benchmark experiment, go to the intended JUBE directory and start it with `jube run`. For example:
+
+```bash
+cd jube/PyTorch/kebnekaise:skylake
+jube run 2.1.2-foss-2023a.xml
+```
+
+This launches the experiment. The run results are stored in the JUBE-generated artifact directory for that benchmark configuration.
+
+### Results and reports
+
+Collected profiles and generated markdown reports are stored under the corresponding `profiles/` directory. Sample outputs are available under [`data/jube_sample/`](data/jube_sample/).
+
+An example markdown report is available at [`data/jube_sample/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/profiles/README_1_0.md`](data/jube_sample/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/profiles/README_1_0.md).
+
+**Visualisation of reports via dashboard**
+
+Step 1. Collect profiles:
+
+```bash
+pyx-collect-profiles jube/
+```
+
+This creates a `profiles.<timestamp>.json` file with metadata of the available profiles found under `jube/`.
+
+Step 2. Start the dashboard:
+
+```bash
+pyx-dashboard jube/ --port 8000
+```
 
 
 ## Cite
@@ -82,4 +135,6 @@ More details about this benchmark can be found in the following publications,
 
 ## Acknowledgement
 
-Financial support from the Deutsche Forschungsgemeinschaft (German Research Foundation) through the grant IRTG 2379 is gratefully acknowledged.
+Financial support from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through Grant IRTG 2379 and from the BMBF project “01-1H1-6013 AP6-NRW Anwenderunterstützung SiVeGCS” is gratefully acknowledged.
+
+The authors also gratefully acknowledge the computing resources provided by the High Performance Computing Center North (HPC2N), Sweden, and the Jülich Supercomputing Centre (JSC), Germany.

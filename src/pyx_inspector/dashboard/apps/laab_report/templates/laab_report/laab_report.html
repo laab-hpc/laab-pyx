@@ -1,0 +1,123 @@
+{% extends 'laab_report/base.html' %}
+{% import 'tvst-macros/bs-cards.html' as card_macros %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    {% call(region) card_macros.render_card_with_custom_header(
+        header_class='tvst-card h5'
+    ) %}
+        {% if region == 'header' %}
+        <div>{{ profile.eb_name }}</div>
+        <div><strong>Score: {{ profile.score }} / {{ profile.num_tests }}</strong></div>
+        {% elif region == 'body' %}
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-borderless table-sm mb-0">
+                    <tbody>
+                        <tr><td><strong>System</strong></td><td>{{ profile.system }}</td></tr>
+                        <tr><td><strong>CPU</strong></td><td>{{ profile.cpu_model }}</td></tr>
+                        <tr><td><strong>Name</strong></td><td>{{ profile.exp_config.name }}</td></tr>
+                        <tr><td><strong>N</strong></td><td>{{ profile.exp_config.laab_n }}</td></tr>
+                        <tr><td><strong>REP</strong></td><td>{{ profile.exp_config.laab_rep }}</td></tr>
+                        <tr><td><strong>NCPUs</strong></td><td>{{ profile.exp_config.omp_num_threads }}</td></tr>
+                        <tr><td><strong>CB ID</strong></td><td>{{ cb_id }}</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-borderless table-sm mb-0 me-auto" style="width: auto;">
+                    <tbody>
+                        <tr><td><strong>Mean loss</strong></td><td>{{ profile.mean_loss }}</td></tr>
+                        <tr><td><strong>Cutoff</strong></td><td>{{ profile.cutoff }}</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+    {% endcall %}
+</div>
+
+<style>
+    .pyx-status-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        display: inline-block;
+    }
+
+    .pyx-status-pass {
+        background-color: #39d353;
+        box-shadow: 0 0 0 2px rgba(57, 211, 83, 0.18);
+    }
+
+    .pyx-status-fail {
+        background-color: #dc3545;
+        box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.18);
+    }
+
+    .pyx-result-pass {
+        color: #1f9d45;
+        font-weight: 600;
+    }
+
+    .pyx-result-fail {
+        color: #dc3545;
+        font-weight: 600;
+    }
+</style>
+
+{% for section in sections %}
+<div class="container-fluid py-4">
+    {% call(region) card_macros.render_card_with_custom_header(
+        header_class='tvst-card fst-italic'
+    ) %}
+        {% if region == 'header' %}
+        <div>{{ section.title }}</div>
+        <div>
+            <span
+                class="pyx-status-dot {{ 'pyx-status-pass' if section.result == 'pass' else 'pyx-status-fail' }}"
+                title="{{ section.result }}"
+            ></span>
+        </div>
+        {% elif region == 'body' %}
+        <p class="mb-2"><strong>Operands:</strong> <span>{{ section.operands | safe }}</span></p>
+        <p class="mb-3">{{ section.description | safe }}</p>
+        <div class="table-responsive">
+            <table class="table table-sm table-striped table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>{{ section.expr_header }}</th>
+                        <th>Call</th>
+                        <th>Time (s)</th>
+                        <th>Slowdown</th>
+                        <th>Loss</th>
+                        <th>Result@{{ profile.cutoff }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in section.rows %}
+                    <tr>
+                        <td>{{ row.label | safe }}</td>
+                        <td><code>{{ row.call }}</code></td>
+                        <td>{{ row.time }}</td>
+                        <td>{{ row.slowdown }}</td>
+                        <td>{{ row.loss }}</td>
+                        <td>
+                            {% if row.result == ':white_check_mark:' %}
+                            <span class="pyx-result-pass">✓</span>
+                            {% elif row.result == ':x:' %}
+                            <span class="pyx-result-fail">✗</span>
+                            {% else %}
+                            {{ row.result }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    {% endcall %}
+</div>
+{% endfor %}
+{% endblock content %}

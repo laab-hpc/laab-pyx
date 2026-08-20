@@ -15,6 +15,8 @@ dependencies = [
 [project.scripts]
 pyx-process-logs = "pyx_inspector.process_logs:main"
 pyx-prepare-md-report = "pyx_inspector.markdown.prepare_report:main"
+pyx-collect-profiles = "pyx_inspector.collect_profiles:main"
+pyx-dashboard = "pyx_inspector.dashboard.dashboard:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

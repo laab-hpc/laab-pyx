@@ -1,0 +1,129 @@
+{% extends 'laab_report/base.html' %}
+{% import 'tvst-macros/bs-cards.html' as card_macros %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    {% call card_macros.render_card_basic(
+        title='Common metadata',
+        header_class='tvst-card h5'
+    ) %}
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-borderless table-sm mb-0">
+                    <tbody>
+                        {% for label, value in common_metadata %}
+                        <tr>
+                            <td><strong>{{ label }}</strong></td>
+                            <td>{{ value }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endcall %}
+</div>
+
+<div class="container-fluid py-4">
+    {% call card_macros.render_card_basic(
+        title='Comparison',
+        header_class='tvst-card h5'
+    ) %}
+    <style>
+        .pyx-compare-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pyx-compare-table th,
+        .pyx-compare-table td {
+            padding: 0.2rem 0.75rem;
+            vertical-align: top;
+        }
+
+        .pyx-compare-table thead th {
+            text-align: center;
+            border-top: 1px solid #444;
+            border-bottom: 1px solid #444;
+        }
+
+        .pyx-compare-group td {
+            font-weight: 700;
+            padding-top: 0.55rem;
+            border-top: 1px solid #777;
+        }
+
+        .pyx-compare-footer td {
+            font-weight: 700;
+            border-top: 1px solid #777;
+            padding-top: 0.55rem;
+        }
+
+        .pyx-compare-cell {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .pyx-compare-pass {
+            color: #1f9d45;
+            font-weight: 700;
+        }
+
+        .pyx-compare-fail {
+            color: #dc3545;
+            font-weight: 700;
+        }
+    </style>
+    <table class="pyx-compare-table">
+        <thead>
+            <tr>
+                <th></th>
+                {% for row in selected_profiles %}
+                <th>
+                    <div>{{ row.library }}</div>
+                    <div class="fw-normal">{{ row.version }}-{{ row.toolchain }}</div>
+                    {% if show_ncpus_in_header %}
+                    <div class="fw-normal">NCPUs {{ row.ncpus }}</div>
+                    {% endif %}
+                    {% if show_cb_id_in_header %}
+                    <div class="fw-normal">CB ID {{ row.cb_id }}</div>
+                    {% endif %}
+                </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for group in compare_groups %}
+            <tr class="pyx-compare-group">
+                <td colspan="{{ selected_profiles|length + 1 }}">{{ group["title"] }}</td>
+            </tr>
+            {% for row in group["rows"] %}
+            <tr>
+                <td>{{ row["label"] }}</td>
+                {% for value in row["values"] %}
+                <td class="pyx-compare-cell">
+                    {{ '%.3f'|format(value["loss"]|float) }}
+                    {% if value["symbol"] == '✓' %}
+                    <span class="pyx-compare-pass">({{ value["symbol"] }})</span>
+                    {% elif value["symbol"] == '✗' %}
+                    <span class="pyx-compare-fail">({{ value["symbol"] }})</span>
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            {% endfor %}
+
+            {% for row in summary_rows %}
+            <tr class="pyx-compare-footer">
+                <td>{{ row["label"] }}</td>
+                {% for value in row["values"] %}
+                <td class="pyx-compare-cell">{{ value["text"] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endcall %}
+</div>
+{% endblock content %}

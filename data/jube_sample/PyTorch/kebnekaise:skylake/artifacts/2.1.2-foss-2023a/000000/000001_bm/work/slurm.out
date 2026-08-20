@@ -10,245 +10,249 @@ gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyT
 gcc -O3 stridiagmm.c -c -fopenmp -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/stridiagmm.o
 gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/stridiagmm.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/stridiagmm.exe -fopenmp
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/sgemm.exe 3000 3000 3000
-[LAAB] C | mm_sgemm | ref_positive=0.093 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
-[LAAB] C | mm_sgemm | ref_positive=0.092 s
-[LAAB] C | mm_sgemm | ref_positive=0.093 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
-[LAAB] C | mm_sgemm | ref_positive=0.091 s
+[LAAB] C | mm_sgemm | ref_positive=0.097 s
+[LAAB] C | mm_sgemm | ref_positive=0.095 s
+[LAAB] C | mm_sgemm | ref_positive=0.094 s
+[LAAB] C | mm_sgemm | ref_positive=0.097 s
+[LAAB] C | mm_sgemm | ref_positive=0.098 s
+[LAAB] C | mm_sgemm | ref_positive=0.097 s
+[LAAB] C | mm_sgemm | ref_positive=0.098 s
+[LAAB] C | mm_sgemm | ref_positive=0.101 s
+[LAAB] C | mm_sgemm | ref_positive=0.101 s
+[LAAB] C | mm_sgemm | ref_positive=0.105 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/sgemv.exe 3000 3000 3000
-[LAAB] C | mm_sgemm | ref_negative=1.822257 s
-[LAAB] C | mm_sgemm | ref_negative=1.825680 s
-[LAAB] C | mm_sgemm | ref_negative=1.832226 s
-[LAAB] C | mm_sgemm | ref_negative=1.821011 s
-[LAAB] C | mm_sgemm | ref_negative=1.847647 s
-[LAAB] C | mm_sgemm | ref_negative=1.813985 s
-[LAAB] C | mm_sgemm | ref_negative=1.854023 s
-[LAAB] C | mm_sgemm | ref_negative=1.869958 s
-[LAAB] C | mm_sgemm | ref_negative=1.853088 s
-[LAAB] C | mm_sgemm | ref_negative=1.861323 s
+[LAAB] C | mm_sgemm | ref_negative=1.772181 s
+[LAAB] C | mm_sgemm | ref_negative=1.781186 s
+[LAAB] C | mm_sgemm | ref_negative=1.759956 s
+[LAAB] C | mm_sgemm | ref_negative=1.787294 s
+[LAAB] C | mm_sgemm | ref_negative=1.746545 s
+[LAAB] C | mm_sgemm | ref_negative=1.787261 s
+[LAAB] C | mm_sgemm | ref_negative=1.740607 s
+[LAAB] C | mm_sgemm | ref_negative=1.762873 s
+[LAAB] C | mm_sgemm | ref_negative=1.787749 s
+[LAAB] C | mm_sgemm | ref_negative=1.797841 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/ssyrk.exe 3000 3000
-[LAAB] C | mm_syrk | ref_positive=0.193 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.187 s
-[LAAB] C | mm_syrk | ref_positive=0.188 s
-[LAAB] C | mm_syrk | ref_positive=0.188 s
+[LAAB] C | mm_syrk | ref_positive=0.212 s
+[LAAB] C | mm_syrk | ref_positive=0.210 s
+[LAAB] C | mm_syrk | ref_positive=0.210 s
+[LAAB] C | mm_syrk | ref_positive=0.202 s
+[LAAB] C | mm_syrk | ref_positive=0.196 s
+[LAAB] C | mm_syrk | ref_positive=0.197 s
+[LAAB] C | mm_syrk | ref_positive=0.196 s
+[LAAB] C | mm_syrk | ref_positive=0.192 s
+[LAAB] C | mm_syrk | ref_positive=0.196 s
+[LAAB] C | mm_syrk | ref_positive=0.199 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/strmm.exe 3000 3000
 [LAAB] C | mm_trmm | ref_positive=0.058 s
+[LAAB] C | mm_trmm | ref_positive=0.054 s
+[LAAB] C | mm_trmm | ref_positive=0.053 s
+[LAAB] C | mm_trmm | ref_positive=0.052 s
+[LAAB] C | mm_trmm | ref_positive=0.053 s
 [LAAB] C | mm_trmm | ref_positive=0.052 s
 [LAAB] C | mm_trmm | ref_positive=0.052 s
+[LAAB] C | mm_trmm | ref_positive=0.053 s
 [LAAB] C | mm_trmm | ref_positive=0.052 s
-[LAAB] C | mm_trmm | ref_positive=0.052 s
-[LAAB] C | mm_trmm | ref_positive=0.052 s
-[LAAB] C | mm_trmm | ref_positive=0.052 s
-[LAAB] C | mm_trmm | ref_positive=0.052 s
-[LAAB] C | mm_trmm | ref_positive=0.052 s
-[LAAB] C | mm_trmm | ref_positive=0.052 s
+[LAAB] C | mm_trmm | ref_positive=0.053 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/stridiagmm.exe 3000 3000
-[LAAB] C | mm_tridiag | ref_positive=0.002594 s
-[LAAB] C | mm_tridiag | ref_positive=0.002392 s
-[LAAB] C | mm_tridiag | ref_positive=0.002364 s
-[LAAB] C | mm_tridiag | ref_positive=0.002365 s
-[LAAB] C | mm_tridiag | ref_positive=0.002351 s
-[LAAB] C | mm_tridiag | ref_positive=0.002367 s
-[LAAB] C | mm_tridiag | ref_positive=0.002397 s
-[LAAB] C | mm_tridiag | ref_positive=0.002389 s
-[LAAB] C | mm_tridiag | ref_positive=0.002355 s
-[LAAB] C | mm_tridiag | ref_positive=0.002372 s
+[LAAB] C | mm_tridiag | ref_positive=0.002493 s
+[LAAB] C | mm_tridiag | ref_positive=0.002243 s
+[LAAB] C | mm_tridiag | ref_positive=0.002325 s
+[LAAB] C | mm_tridiag | ref_positive=0.002233 s
+[LAAB] C | mm_tridiag | ref_positive=0.002471 s
+[LAAB] C | mm_tridiag | ref_positive=0.002184 s
+[LAAB] C | mm_tridiag | ref_positive=0.002271 s
+[LAAB] C | mm_tridiag | ref_positive=0.002265 s
+[LAAB] C | mm_tridiag | ref_positive=0.002255 s
+[LAAB] C | mm_tridiag | ref_positive=0.002357 s
 rm -f /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/*.o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000000/000001_bm/work/build/*.exe
 LAAB_REPS=10 LAAB_N=3000  python mm_sgemm.py 
-[LAAB] PyTorch | mm_sgemm | operator=0.13499 s | linalg_matmul=0.11059 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10876 s | linalg_matmul=0.11061 s
-[LAAB] PyTorch | mm_sgemm | operator=0.12818 s | linalg_matmul=0.11118 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10898 s | linalg_matmul=0.11080 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10907 s | linalg_matmul=0.11106 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10903 s | linalg_matmul=0.11082 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10934 s | linalg_matmul=0.11123 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10934 s | linalg_matmul=0.11085 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10920 s | linalg_matmul=0.11082 s
-[LAAB] PyTorch | mm_sgemm | operator=0.10943 s | linalg_matmul=0.11081 s
+[LAAB] PyTorch | mm_sgemm | operator=0.12402 s | linalg_matmul=0.11239 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11072 s | linalg_matmul=0.10882 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11404 s | linalg_matmul=0.11605 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11518 s | linalg_matmul=0.11442 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11280 s | linalg_matmul=0.11611 s
+[LAAB] PyTorch | mm_sgemm | operator=0.12254 s | linalg_matmul=0.11444 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11292 s | linalg_matmul=0.11405 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11297 s | linalg_matmul=0.11497 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11380 s | linalg_matmul=0.11292 s
+[LAAB] PyTorch | mm_sgemm | operator=0.11363 s | linalg_matmul=0.11287 s
 LAAB_REPS=10 LAAB_N=3000  python cse_addition.py 
-[LAAB] PyTorch | cse_addition | ref_positive=0.13200 s | operator=0.12644 s | ref_negative=0.26400 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.11340 s | operator=0.11551 s | ref_negative=0.22680 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.11368 s | operator=0.11368 s | ref_negative=0.22735 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.11639 s | operator=0.11702 s | ref_negative=0.23277 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.11413 s | operator=0.11333 s | ref_negative=0.22827 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.12050 s | operator=0.12880 s | ref_negative=0.24100 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.12013 s | operator=0.12018 s | ref_negative=0.24025 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.12040 s | operator=0.12336 s | ref_negative=0.24080 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.12036 s | operator=0.12054 s | ref_negative=0.24073 s
-[LAAB] PyTorch | cse_addition | ref_positive=0.12045 s | operator=0.12042 s | ref_negative=0.24090 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12757 s | operator=0.12755 s | ref_negative=0.25515 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12173 s | operator=0.12001 s | ref_negative=0.24347 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12028 s | operator=0.12156 s | ref_negative=0.24057 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12374 s | operator=0.12207 s | ref_negative=0.24749 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12117 s | operator=0.12121 s | ref_negative=0.24235 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12227 s | operator=0.12979 s | ref_negative=0.24453 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12017 s | operator=0.12140 s | ref_negative=0.24034 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.11821 s | operator=0.12111 s | ref_negative=0.23641 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.12132 s | operator=0.11992 s | ref_negative=0.24265 s
+[LAAB] PyTorch | cse_addition | ref_positive=0.11702 s | operator=0.12045 s | ref_negative=0.23404 s
 LAAB_REPS=10 LAAB_N=3000  python cse_matmul_paranthesis.py 
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.21322 s | operator=0.22236 s | ref_negative=0.31983 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.21660 s | operator=0.22113 s | ref_negative=0.32489 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.21223 s | operator=0.21202 s | ref_negative=0.31835 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.21587 s | operator=0.20754 s | ref_negative=0.32381 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.20950 s | operator=0.21508 s | ref_negative=0.31425 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.20788 s | operator=0.21630 s | ref_negative=0.31182 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.21233 s | operator=0.21957 s | ref_negative=0.31849 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19671 s | operator=0.19582 s | ref_negative=0.29507 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19352 s | operator=0.20133 s | ref_negative=0.29028 s
-[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19383 s | operator=0.19500 s | ref_negative=0.29074 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.22065 s | operator=0.22257 s | ref_negative=0.33097 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19609 s | operator=0.20971 s | ref_negative=0.29413 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19630 s | operator=0.19742 s | ref_negative=0.29445 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19404 s | operator=0.19965 s | ref_negative=0.29106 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19507 s | operator=0.20255 s | ref_negative=0.29260 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19474 s | operator=0.19932 s | ref_negative=0.29212 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19392 s | operator=0.19343 s | ref_negative=0.29089 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19492 s | operator=0.19333 s | ref_negative=0.29238 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19855 s | operator=0.19931 s | ref_negative=0.29783 s
+[LAAB] PyTorch | cse_matmul_paranthesis | ref_positive=0.19520 s | operator=0.19649 s | ref_negative=0.29280 s
 LAAB_REPS=10 LAAB_N=3000  python cse_matmul_no_paranthesis.py 
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19426 s | operator=0.29002 s | ref_negative=0.29139 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.22051 s | operator=0.29867 s | ref_negative=0.33076 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19443 s | operator=0.29979 s | ref_negative=0.29165 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19682 s | operator=0.29722 s | ref_negative=0.29522 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19477 s | operator=0.29029 s | ref_negative=0.29216 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.22255 s | operator=0.33042 s | ref_negative=0.33383 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.22483 s | operator=0.33234 s | ref_negative=0.33724 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.22331 s | operator=0.33102 s | ref_negative=0.33496 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.22195 s | operator=0.33279 s | ref_negative=0.33292 s
-[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.22199 s | operator=0.33791 s | ref_negative=0.33299 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19305 s | operator=0.29319 s | ref_negative=0.28958 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19271 s | operator=0.29191 s | ref_negative=0.28906 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19548 s | operator=0.29958 s | ref_negative=0.29322 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.20543 s | operator=0.29231 s | ref_negative=0.30815 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19453 s | operator=0.29558 s | ref_negative=0.29179 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19536 s | operator=0.28977 s | ref_negative=0.29305 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.20621 s | operator=0.29234 s | ref_negative=0.30931 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19514 s | operator=0.29078 s | ref_negative=0.29271 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19509 s | operator=0.29554 s | ref_negative=0.29263 s
+[LAAB] PyTorch | cse_matmul_no_paranthesis | ref_positive=0.19905 s | operator=0.29062 s | ref_negative=0.29857 s
 LAAB_REPS=10 LAAB_N=3000  python cse_suboptimal.py 
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00774 s | operator=0.33520 s | ref_negative=0.22257 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.01416 s | operator=0.33290 s | ref_negative=0.23681 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00726 s | operator=0.33316 s | ref_negative=0.22392 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00725 s | operator=0.33433 s | ref_negative=0.22347 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00730 s | operator=0.33326 s | ref_negative=0.22453 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00728 s | operator=0.33204 s | ref_negative=0.22331 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00732 s | operator=0.33241 s | ref_negative=0.22309 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00726 s | operator=0.33221 s | ref_negative=0.22285 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00726 s | operator=0.33214 s | ref_negative=0.22304 s
-[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00730 s | operator=0.33181 s | ref_negative=0.22437 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00724 s | operator=0.29858 s | ref_negative=0.19874 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00763 s | operator=0.30317 s | ref_negative=0.21781 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00694 s | operator=0.30763 s | ref_negative=0.20036 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00680 s | operator=0.30243 s | ref_negative=0.20031 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00683 s | operator=0.29852 s | ref_negative=0.19996 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00726 s | operator=0.29751 s | ref_negative=0.19832 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00731 s | operator=0.29622 s | ref_negative=0.19939 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.03291 s | operator=0.57437 s | ref_negative=0.23305 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00684 s | operator=0.29780 s | ref_negative=0.20108 s
+[LAAB] PyTorch | cse_suboptimal | ref_positive=0.00703 s | operator=0.29971 s | ref_negative=0.20852 s
 LAAB_REPS=10 LAAB_N=3000  python matchain_ltor.py 
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00406 s | operator=0.00716 s | linalg_multidot=0.04637 s | ref_negative=0.11439 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00407 s | operator=0.00436 s | linalg_multidot=0.00412 s | ref_negative=0.11351 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00348 s | operator=0.00388 s | linalg_multidot=0.00353 s | ref_negative=0.11302 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00354 s | operator=0.00388 s | linalg_multidot=0.00357 s | ref_negative=0.12228 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00342 s | operator=0.00747 s | linalg_multidot=0.00349 s | ref_negative=0.11293 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00344 s | operator=0.00369 s | linalg_multidot=0.00346 s | ref_negative=0.11319 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00348 s | operator=0.00376 s | linalg_multidot=0.00352 s | ref_negative=0.11338 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00346 s | operator=0.00388 s | linalg_multidot=0.00348 s | ref_negative=0.11381 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00339 s | operator=0.00367 s | linalg_multidot=0.00343 s | ref_negative=0.11342 s
-[LAAB] PyTorch | matchain_ltor | ref_positive=0.00347 s | operator=0.00370 s | linalg_multidot=0.00347 s | ref_negative=0.11422 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00355 s | operator=0.00667 s | linalg_multidot=0.04395 s | ref_negative=0.09957 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00364 s | operator=0.00402 s | linalg_multidot=0.00367 s | ref_negative=0.09906 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00310 s | operator=0.00350 s | linalg_multidot=0.00317 s | ref_negative=0.09935 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00319 s | operator=0.00351 s | linalg_multidot=0.00322 s | ref_negative=0.09946 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00304 s | operator=0.00360 s | linalg_multidot=0.00317 s | ref_negative=0.10053 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00308 s | operator=0.00335 s | linalg_multidot=0.00312 s | ref_negative=0.10098 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00329 s | operator=0.00352 s | linalg_multidot=0.00325 s | ref_negative=0.09923 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00302 s | operator=0.00336 s | linalg_multidot=0.00302 s | ref_negative=0.09893 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00299 s | operator=0.00687 s | linalg_multidot=0.00304 s | ref_negative=0.10000 s
+[LAAB] PyTorch | matchain_ltor | ref_positive=0.00298 s | operator=0.00335 s | linalg_multidot=0.00304 s | ref_negative=0.09964 s
 LAAB_REPS=10 LAAB_N=3000  python matchain_rtol.py 
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00384 s | operator=0.11508 s | linalg_multidot=0.04222 s | ref_negative=0.11094 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00387 s | operator=0.11120 s | linalg_multidot=0.00409 s | ref_negative=0.11126 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00339 s | operator=0.11071 s | linalg_multidot=0.00365 s | ref_negative=0.11111 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00331 s | operator=0.11208 s | linalg_multidot=0.00352 s | ref_negative=0.11120 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00328 s | operator=0.11114 s | linalg_multidot=0.00347 s | ref_negative=0.11130 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00335 s | operator=0.12268 s | linalg_multidot=0.00728 s | ref_negative=0.11183 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00321 s | operator=0.11084 s | linalg_multidot=0.00340 s | ref_negative=0.11206 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00329 s | operator=0.11161 s | linalg_multidot=0.00347 s | ref_negative=0.11348 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00329 s | operator=0.11388 s | linalg_multidot=0.00345 s | ref_negative=0.11266 s
-[LAAB] PyTorch | matchain_rtol | ref_positive=0.00323 s | operator=0.11079 s | linalg_multidot=0.00339 s | ref_negative=0.11107 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00358 s | operator=0.10696 s | linalg_multidot=0.04102 s | ref_negative=0.09826 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00349 s | operator=0.10009 s | linalg_multidot=0.00371 s | ref_negative=0.09901 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00305 s | operator=0.09793 s | linalg_multidot=0.00329 s | ref_negative=0.09865 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00301 s | operator=0.10641 s | linalg_multidot=0.00682 s | ref_negative=0.09645 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00294 s | operator=0.09803 s | linalg_multidot=0.00316 s | ref_negative=0.09902 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00298 s | operator=0.09865 s | linalg_multidot=0.00327 s | ref_negative=0.09886 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00295 s | operator=0.10063 s | linalg_multidot=0.00334 s | ref_negative=0.09964 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00296 s | operator=0.10078 s | linalg_multidot=0.00321 s | ref_negative=0.09934 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00294 s | operator=0.09997 s | linalg_multidot=0.00319 s | ref_negative=0.10003 s
+[LAAB] PyTorch | matchain_rtol | ref_positive=0.00294 s | operator=0.09970 s | linalg_multidot=0.00318 s | ref_negative=0.10209 s
 LAAB_REPS=10 LAAB_N=3000  python matchain_mixed.py 
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01917 s | operator=0.12697 s | linalg_multidot=0.05701 s | ref_negative=0.12539 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01997 s | operator=0.12657 s | linalg_multidot=0.01951 s | ref_negative=0.12634 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01944 s | operator=0.12618 s | linalg_multidot=0.01920 s | ref_negative=0.14243 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01967 s | operator=0.12777 s | linalg_multidot=0.01931 s | ref_negative=0.12626 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01937 s | operator=0.12632 s | linalg_multidot=0.01927 s | ref_negative=0.12643 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01935 s | operator=0.12632 s | linalg_multidot=0.01958 s | ref_negative=0.12629 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01953 s | operator=0.12638 s | linalg_multidot=0.01946 s | ref_negative=0.12614 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01957 s | operator=0.12629 s | linalg_multidot=0.01957 s | ref_negative=0.12607 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01948 s | operator=0.12625 s | linalg_multidot=0.01916 s | ref_negative=0.12600 s
-[LAAB] PyTorch | matchain_mixed | ref_positive=0.01965 s | operator=0.12778 s | linalg_multidot=0.02418 s | ref_negative=0.12616 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01863 s | operator=0.11617 s | linalg_multidot=0.05595 s | ref_negative=0.11640 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01920 s | operator=0.11557 s | linalg_multidot=0.01877 s | ref_negative=0.11425 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01936 s | operator=0.12143 s | linalg_multidot=0.01924 s | ref_negative=0.11482 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01844 s | operator=0.11498 s | linalg_multidot=0.01863 s | ref_negative=0.11525 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01849 s | operator=0.11611 s | linalg_multidot=0.01842 s | ref_negative=0.11528 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01879 s | operator=0.11911 s | linalg_multidot=0.01837 s | ref_negative=0.11418 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01910 s | operator=0.11407 s | linalg_multidot=0.01853 s | ref_negative=0.11443 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01827 s | operator=0.11689 s | linalg_multidot=0.01864 s | ref_negative=0.11261 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01839 s | operator=0.11350 s | linalg_multidot=0.01838 s | ref_negative=0.11395 s
+[LAAB] PyTorch | matchain_mixed | ref_positive=0.01893 s | operator=0.11409 s | linalg_multidot=0.01892 s | ref_negative=0.11324 s
 LAAB_REPS=10 LAAB_N=3000  python mm_trmm.py 
-[LAAB] PyTorch | mm_trmm | operator=0.11017 s | linalg_matmul=0.11231 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.10893 s | linalg_matmul=0.10887 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.11179 s | linalg_matmul=0.11224 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.11143 s | linalg_matmul=0.11131 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.10957 s | linalg_matmul=0.10869 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.12405 s | linalg_matmul=0.10964 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.10931 s | linalg_matmul=0.10969 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.10920 s | linalg_matmul=0.10903 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.10923 s | linalg_matmul=0.10902 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_trmm | operator=0.10927 s | linalg_matmul=0.10909 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09947 s | linalg_matmul=0.09868 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09929 s | linalg_matmul=0.09898 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09802 s | linalg_matmul=0.09747 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.11345 s | linalg_matmul=0.09742 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09652 s | linalg_matmul=0.09689 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09705 s | linalg_matmul=0.09585 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09795 s | linalg_matmul=0.09619 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09660 s | linalg_matmul=0.09598 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09784 s | linalg_matmul=0.09639 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_trmm | operator=0.09781 s | linalg_matmul=0.09631 s | ref_negative=R+mm_sgemm
 LAAB_REPS=10 LAAB_N=3000  python mm_syrk.py 
-[LAAB] PyTorch | mm_syrk | operator=0.11005 s | linalg_matmul=0.10891 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10827 s | linalg_matmul=0.10892 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10807 s | linalg_matmul=0.10868 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10864 s | linalg_matmul=0.10922 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10859 s | linalg_matmul=0.10931 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10876 s | linalg_matmul=0.11387 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.11322 s | linalg_matmul=0.10929 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10898 s | linalg_matmul=0.10915 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10796 s | linalg_matmul=0.10754 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_syrk | operator=0.10878 s | linalg_matmul=0.10973 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09752 s | linalg_matmul=0.09694 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09502 s | linalg_matmul=0.09654 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09501 s | linalg_matmul=0.09573 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09709 s | linalg_matmul=0.11089 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09863 s | linalg_matmul=0.09871 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09607 s | linalg_matmul=0.09886 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09987 s | linalg_matmul=0.09838 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09821 s | linalg_matmul=0.09639 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09811 s | linalg_matmul=0.09731 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_syrk | operator=0.09814 s | linalg_matmul=0.09693 s | ref_negative=R+mm_sgemm
 LAAB_REPS=10 LAAB_N=3000  python mm_tridiag.py 
-[LAAB] PyTorch | mm_tridiag | operator=0.11146 s | linalg_matmul=0.12358 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.10817 s | linalg_matmul=0.10433 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.10466 s | linalg_matmul=0.10245 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.10442 s | linalg_matmul=0.10573 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.10340 s | linalg_matmul=0.10312 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.10446 s | linalg_matmul=0.09957 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.09933 s | linalg_matmul=0.10016 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.09978 s | linalg_matmul=0.09845 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.09841 s | linalg_matmul=0.10047 s | ref_negative=R+mm_sgemm
-[LAAB] PyTorch | mm_tridiag | operator=0.10444 s | linalg_matmul=0.09747 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.10104 s | linalg_matmul=0.09953 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.09833 s | linalg_matmul=0.09999 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.09838 s | linalg_matmul=0.09851 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.10857 s | linalg_matmul=0.10188 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.10230 s | linalg_matmul=0.10092 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.10072 s | linalg_matmul=0.09937 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.09978 s | linalg_matmul=0.09919 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.09992 s | linalg_matmul=0.10095 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.10190 s | linalg_matmul=0.10350 s | ref_negative=R+mm_sgemm
+[LAAB] PyTorch | mm_tridiag | operator=0.10142 s | linalg_matmul=0.10169 s | ref_negative=R+mm_sgemm
 LAAB_REPS=10 LAAB_N=3000  python am_distributivity1.py 
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10881 s | operator=0.20365 s | ref_negative=0.21479 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10749 s | operator=0.20486 s | ref_negative=0.22046 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10995 s | operator=0.21169 s | ref_negative=0.20285 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11190 s | operator=0.21362 s | ref_negative=0.20612 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.12036 s | operator=0.23213 s | ref_negative=0.23011 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.12152 s | operator=0.22929 s | ref_negative=0.22824 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11980 s | operator=0.22893 s | ref_negative=0.22778 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11937 s | operator=0.22851 s | ref_negative=0.23918 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11937 s | operator=0.22938 s | ref_negative=0.22826 s
-[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11985 s | operator=0.22862 s | ref_negative=0.22824 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10876 s | operator=0.21141 s | ref_negative=0.20922 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10945 s | operator=0.20797 s | ref_negative=0.22104 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10969 s | operator=0.22866 s | ref_negative=0.20866 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10793 s | operator=0.21481 s | ref_negative=0.21158 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10913 s | operator=0.21022 s | ref_negative=0.21240 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11188 s | operator=0.21228 s | ref_negative=0.21316 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.11352 s | operator=0.21249 s | ref_negative=0.20769 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10907 s | operator=0.21445 s | ref_negative=0.20899 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10820 s | operator=0.20488 s | ref_negative=0.20512 s
+[LAAB] PyTorch | am_distributivity1 | ref_positive=0.10634 s | operator=0.20587 s | ref_negative=0.20378 s
 LAAB_REPS=10 LAAB_N=3000  python am_distributivity2.py 
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00556 s | operator=0.12600 s | ref_negative=0.12154 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00570 s | operator=0.12284 s | ref_negative=0.12266 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00497 s | operator=0.12178 s | ref_negative=0.12184 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00502 s | operator=0.12289 s | ref_negative=0.12230 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00497 s | operator=0.12449 s | ref_negative=0.12365 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00506 s | operator=0.13493 s | ref_negative=0.12605 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00501 s | operator=0.12632 s | ref_negative=0.12528 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00496 s | operator=0.12270 s | ref_negative=0.12284 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00493 s | operator=0.12153 s | ref_negative=0.12106 s
-[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00499 s | operator=0.12239 s | ref_negative=0.12227 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00551 s | operator=0.11839 s | ref_negative=0.11165 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00542 s | operator=0.11312 s | ref_negative=0.11112 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00500 s | operator=0.11249 s | ref_negative=0.11336 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00470 s | operator=0.11355 s | ref_negative=0.11543 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00489 s | operator=0.11439 s | ref_negative=0.11551 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00473 s | operator=0.11449 s | ref_negative=0.12747 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00496 s | operator=0.11199 s | ref_negative=0.11242 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00478 s | operator=0.11331 s | ref_negative=0.11378 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00487 s | operator=0.11514 s | ref_negative=0.11320 s
+[LAAB] PyTorch | am_distributivity2 | ref_positive=0.00488 s | operator=0.11474 s | ref_negative=0.11311 s
 LAAB_REPS=10 LAAB_N=3000  python am_transpose.py 
-[LAAB] PyTorch | am_transpose | ref_positive=0.21934 s | operator=0.32823 s | ref_negative=0.32619 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.22061 s | operator=0.35218 s | ref_negative=0.32793 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.21964 s | operator=0.33410 s | ref_negative=0.32784 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.21953 s | operator=0.32895 s | ref_negative=0.32764 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.22040 s | operator=0.32865 s | ref_negative=0.32848 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.21975 s | operator=0.32878 s | ref_negative=0.32850 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.21971 s | operator=0.32944 s | ref_negative=0.32811 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.21968 s | operator=0.32874 s | ref_negative=0.32853 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.21996 s | operator=0.32918 s | ref_negative=0.32828 s
-[LAAB] PyTorch | am_transpose | ref_positive=0.22037 s | operator=0.32876 s | ref_negative=0.32840 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22215 s | operator=0.33634 s | ref_negative=0.33482 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.21963 s | operator=0.35230 s | ref_negative=0.33167 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.21708 s | operator=0.33172 s | ref_negative=0.32682 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22128 s | operator=0.39209 s | ref_negative=0.33366 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22006 s | operator=0.33401 s | ref_negative=0.33104 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22115 s | operator=0.33265 s | ref_negative=0.33365 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22074 s | operator=0.33043 s | ref_negative=0.33216 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22152 s | operator=0.33422 s | ref_negative=0.33076 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22076 s | operator=0.33233 s | ref_negative=0.32803 s
+[LAAB] PyTorch | am_transpose | ref_positive=0.22279 s | operator=0.47968 s | ref_negative=0.33604 s
 LAAB_REPS=10 LAAB_N=3000  python cm_loops.py 
-[LAAB] PyTorch | cm_loops | ref_positive=0.17425 s | operator=0.42144 s | ref_negative=0.52274 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12886 s | operator=0.12798 s | ref_negative=0.38657 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12578 s | operator=0.12865 s | ref_negative=0.37734 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12742 s | operator=0.12738 s | ref_negative=0.38226 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12741 s | operator=0.14154 s | ref_negative=0.38224 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12550 s | operator=0.12665 s | ref_negative=0.37649 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12684 s | operator=0.12619 s | ref_negative=0.38052 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12678 s | operator=0.12744 s | ref_negative=0.38034 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12717 s | operator=0.12658 s | ref_negative=0.38151 s
-[LAAB] PyTorch | cm_loops | ref_positive=0.12619 s | operator=0.12660 s | ref_negative=0.37856 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.18685 s | operator=0.44243 s | ref_negative=0.56054 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13830 s | operator=0.13847 s | ref_negative=0.41490 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13614 s | operator=0.13624 s | ref_negative=0.40841 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13463 s | operator=0.13673 s | ref_negative=0.40390 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13643 s | operator=0.14339 s | ref_negative=0.40930 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13579 s | operator=0.13491 s | ref_negative=0.40736 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13588 s | operator=0.14108 s | ref_negative=0.40765 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13475 s | operator=0.13668 s | ref_negative=0.40424 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13233 s | operator=0.13312 s | ref_negative=0.39700 s
+[LAAB] PyTorch | cm_loops | ref_positive=0.13298 s | operator=0.13265 s | ref_negative=0.39895 s
 LAAB_REPS=10 LAAB_N=3000  python cm_partial_op_sum.py 
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00249 s | operator=0.04771 s | ref_negative=0.00768 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00250 s | operator=0.01010 s | ref_negative=0.00771 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00194 s | operator=0.00995 s | ref_negative=0.00751 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00213 s | operator=0.00975 s | ref_negative=0.00754 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00202 s | operator=0.00966 s | ref_negative=0.00746 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00209 s | operator=0.01961 s | ref_negative=0.01333 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00205 s | operator=0.00986 s | ref_negative=0.00731 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00271 s | operator=0.01011 s | ref_negative=0.00738 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00270 s | operator=0.00984 s | ref_negative=0.00731 s
-[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00279 s | operator=0.01009 s | ref_negative=0.00750 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00254 s | operator=0.04720 s | ref_negative=0.00770 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00253 s | operator=0.00994 s | ref_negative=0.00773 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00200 s | operator=0.01000 s | ref_negative=0.00744 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00197 s | operator=0.00986 s | ref_negative=0.00755 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00198 s | operator=0.00962 s | ref_negative=0.00770 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00199 s | operator=0.01675 s | ref_negative=0.00756 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00190 s | operator=0.00994 s | ref_negative=0.00735 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00250 s | operator=0.01005 s | ref_negative=0.00772 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00253 s | operator=0.00990 s | ref_negative=0.00767 s
+[LAAB] PyTorch | cm_partial_op_sum | ref_positive=0.00248 s | operator=0.01044 s | ref_negative=0.00780 s
 LAAB_REPS=10 LAAB_N=3000  python cm_partial_op_prod.py 
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00437 s | operator=0.14075 s | ref_negative=0.09910 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00290 s | operator=0.10246 s | ref_negative=0.09864 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00301 s | operator=0.10255 s | ref_negative=0.09925 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00316 s | operator=0.10176 s | ref_negative=0.09866 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00310 s | operator=0.10166 s | ref_negative=0.09789 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00322 s | operator=0.10265 s | ref_negative=0.11011 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00315 s | operator=0.10785 s | ref_negative=0.09783 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00309 s | operator=0.10139 s | ref_negative=0.09767 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00298 s | operator=0.10266 s | ref_negative=0.09855 s
-[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00308 s | operator=0.10167 s | ref_negative=0.09763 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00400 s | operator=0.14484 s | ref_negative=0.10569 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00264 s | operator=0.10579 s | ref_negative=0.10250 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00208 s | operator=0.10616 s | ref_negative=0.09977 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00219 s | operator=0.10373 s | ref_negative=0.10196 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00220 s | operator=0.10326 s | ref_negative=0.10258 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00290 s | operator=0.10302 s | ref_negative=0.11536 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00285 s | operator=0.10877 s | ref_negative=0.10172 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00286 s | operator=0.10378 s | ref_negative=0.09994 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00303 s | operator=0.10399 s | ref_negative=0.10030 s
+[LAAB] PyTorch | cm_partial_op_prod | ref_positive=0.00295 s | operator=0.10311 s | ref_negative=0.10015 s
+The activation script must be sourced, otherwise the virtual environment will not work.
+Setting vars
+Results dumped to profile.pkl
+Report written to README.md

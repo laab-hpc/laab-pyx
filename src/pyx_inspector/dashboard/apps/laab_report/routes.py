@@ -408,12 +408,14 @@ def compare():
 
     show_ncpus_in_header = not _all_same([row["ncpus"] for row in selected_profiles])
     show_cb_id_in_header = not _all_same([row["cb_id"] for row in selected_profiles])
+    show_system_in_header = not _all_same([row["system"] for row in selected_profiles])
 
     return render_template(
         f"{name}/compare.html",
         selected_profiles=selected_profiles,
         common_metadata=_build_common_metadata(loaded_profiles),
         compare_groups=_build_compare_groups(loaded_profiles),
+        show_system_in_header=show_system_in_header,
         show_ncpus_in_header=show_ncpus_in_header,
         show_cb_id_in_header=show_cb_id_in_header,
         summary_rows=[

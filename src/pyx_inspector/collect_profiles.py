@@ -53,6 +53,7 @@ def _load_profile_metadata(profile_path: Path, profiles_root: Path) -> dict:
         "laab_n": exp_config.get("laab_n", ""),
         "laab_rep": exp_config.get("laab_rep", ""),
         "omp_num_threads": exp_config.get("omp_num_threads", ""),
+        "datetime": exp_config.get("datetime", ""),
         "cb_id": _extract_cb_id(profile_path),
     }
     return metadata

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jube>
+    <parameterset name="param_set">
+        <parameter name="system">kebnekaise:zen4</parameter>
+        <parameter name="root">/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx</parameter>
+        <parameter name="time_limit">00:30:00</parameter>
+        <parameter name="ncpus">1,4,14</parameter>
+        <parameter name="ld_blas">'-lopenblas'</parameter>
+        <parameter name="laab_reps">10</parameter>
+        <parameter name="laab_n">3000</parameter>
+        <parameter name="account_config">
+#SBATCH -A hpc2n2026-184
+#SBATCH -C zen4
+        </parameter>
+        <parameter name="postprocess_deps">
+source ${root}/venvs/pyx-kebnekaise/activate.sh
+        </parameter>
+    </parameterset>
+
+    <files>
+        <fileset name="files">
+            <copy>../../submit.in</copy>
+            <copy>../../pyx_process_logs.in</copy>
+            <copy target_dir="../../src">${src}/*</copy>
+            <copy target_dir="../../src">${src}/../../C</copy>
+        </fileset>
+    </files>
+
+    <subs>
+        <substituteset name="substitutes">
+            <iofile in="submit.in" out="submit.sh" />
+            <iofile in="pyx_process_logs.in" out="pyx_process_logs.sh" />
+            <sub source="#NAME#" dest="$name" />
+            <sub source="#TIME_LIMIT#" dest="$time_limit" />
+            <sub source="#NCPUS#" dest="$ncpus" />
+            <sub source="#ACCOUNT_CONFIG#" dest="$account_config" />
+            <sub source="#MODULES#" dest="$modules" />
+            <sub source="#LD_BLAS#" dest="$ld_blas" />
+            <sub source="#LAAB_REPS#" dest="$laab_reps" />
+            <sub source="#LAAB_N#" dest="$laab_n" />
+            <sub source="#SYSTEM#" dest="$system" />
+            <sub source="#LIBRARY#" dest="$library" />
+            <sub source="#VERSION#" dest="$version" />
+            <sub source="#TOOLCHAIN#" dest="$toolchain" />
+            <sub source="#CB_ID#" dest="$jube_benchmark_id" />
+            <sub source="#POSTPROCESS_DEPS#" dest="$postprocess_deps" />
+        </substituteset>
+    </subs>
+
+    <steps>
+        <use>param_set</use>
+        <use>files</use>
+        <use>substitutes</use>
+        <do>sbatch submit.sh</do>
+    </steps>
+</jube>

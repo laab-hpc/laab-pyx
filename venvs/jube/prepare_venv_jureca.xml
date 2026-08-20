@@ -9,7 +9,7 @@
       <parameter name="modules">
 module purge
 module load Stages/2026
-module load SciPy-bundle     
+module load GCC SciPy-bundle     
       </parameter>
       <parameter name="requirements">
 pip

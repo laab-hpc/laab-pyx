@@ -22,8 +22,10 @@ export LAAB_N=3000
 
 export LAAB_BUILD_DIR=$(pwd)/build
 
-lscpu > cpu_info.txt
+lscpu > data.txt
 
 srun make --no-print-directory -C ../../src  | tee -a data.txt
+
+bash pyx_process_logs.sh
 
 

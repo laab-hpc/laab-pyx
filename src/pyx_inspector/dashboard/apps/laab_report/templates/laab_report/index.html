@@ -13,6 +13,7 @@
         <thead>
             <tr>
                 <th></th>
+                <th>Datetime</th>
                 <th>Library</th>
                 <th>Version</th>
                 <th>Toolchain</th>
@@ -33,6 +34,7 @@
                 <th><input type="text" data-col="6" placeholder="filter"></th>
                 <th><input type="text" data-col="7" placeholder="filter"></th>
                 <th><input type="text" data-col="8" placeholder="filter"></th>
+                <th><input type="text" data-col="9" placeholder="filter"></th>
                 <th></th>
             </tr>
         </thead>
@@ -40,6 +42,7 @@
             {% for row in profiles %}
             <tr>
                 <td><input type="checkbox" class="tvst-select" value="{{ row['profile_path'] }}"></td>
+                <td class="datetime">{{ row.get('datetime', '') }}</td>
                 <td class="library">{{ row['library'] }}</td>
                 <td class="version">{{ row['version'] }}</td>
                 <td class="toolchain">{{ row['toolchain'] }}</td>

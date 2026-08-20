@@ -10,247 +10,249 @@ gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/Ten
 gcc -O3 stridiagmm.c -c -fopenmp -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/stridiagmm.o
 gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/stridiagmm.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/stridiagmm.exe -fopenmp
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/sgemm.exe 3000 3000 3000
-[LAAB] C | mm_sgemm | ref_positive=0.296 s
-[LAAB] C | mm_sgemm | ref_positive=0.294 s
-[LAAB] C | mm_sgemm | ref_positive=0.290 s
-[LAAB] C | mm_sgemm | ref_positive=0.295 s
-[LAAB] C | mm_sgemm | ref_positive=0.292 s
-[LAAB] C | mm_sgemm | ref_positive=0.291 s
-[LAAB] C | mm_sgemm | ref_positive=0.293 s
-[LAAB] C | mm_sgemm | ref_positive=0.292 s
-[LAAB] C | mm_sgemm | ref_positive=0.303 s
-[LAAB] C | mm_sgemm | ref_positive=0.293 s
+[LAAB] C | mm_sgemm | ref_positive=0.393 s
+[LAAB] C | mm_sgemm | ref_positive=0.390 s
+[LAAB] C | mm_sgemm | ref_positive=0.391 s
+[LAAB] C | mm_sgemm | ref_positive=0.387 s
+[LAAB] C | mm_sgemm | ref_positive=0.389 s
+[LAAB] C | mm_sgemm | ref_positive=0.392 s
+[LAAB] C | mm_sgemm | ref_positive=0.387 s
+[LAAB] C | mm_sgemm | ref_positive=0.389 s
+[LAAB] C | mm_sgemm | ref_positive=0.386 s
+[LAAB] C | mm_sgemm | ref_positive=0.386 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/sgemv.exe 3000 3000 3000
-[LAAB] C | mm_sgemm | ref_negative=6.496703 s
-[LAAB] C | mm_sgemm | ref_negative=6.472030 s
-[LAAB] C | mm_sgemm | ref_negative=6.554825 s
-[LAAB] C | mm_sgemm | ref_negative=6.536071 s
-[LAAB] C | mm_sgemm | ref_negative=6.535398 s
-[LAAB] C | mm_sgemm | ref_negative=6.511942 s
-[LAAB] C | mm_sgemm | ref_negative=6.456337 s
-[LAAB] C | mm_sgemm | ref_negative=6.404662 s
-[LAAB] C | mm_sgemm | ref_negative=6.527056 s
-[LAAB] C | mm_sgemm | ref_negative=6.542975 s
+[LAAB] C | mm_sgemm | ref_negative=7.183995 s
+[LAAB] C | mm_sgemm | ref_negative=7.169632 s
+[LAAB] C | mm_sgemm | ref_negative=7.201193 s
+[LAAB] C | mm_sgemm | ref_negative=7.229805 s
+[LAAB] C | mm_sgemm | ref_negative=7.288685 s
+[LAAB] C | mm_sgemm | ref_negative=7.423527 s
+[LAAB] C | mm_sgemm | ref_negative=7.421229 s
+[LAAB] C | mm_sgemm | ref_negative=7.427230 s
+[LAAB] C | mm_sgemm | ref_negative=7.282891 s
+[LAAB] C | mm_sgemm | ref_negative=7.182519 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/ssyrk.exe 3000 3000
-[LAAB] C | mm_syrk | ref_positive=0.164 s
-[LAAB] C | mm_syrk | ref_positive=0.158 s
-[LAAB] C | mm_syrk | ref_positive=0.157 s
-[LAAB] C | mm_syrk | ref_positive=0.157 s
-[LAAB] C | mm_syrk | ref_positive=0.159 s
-[LAAB] C | mm_syrk | ref_positive=0.157 s
-[LAAB] C | mm_syrk | ref_positive=0.158 s
-[LAAB] C | mm_syrk | ref_positive=0.183 s
-[LAAB] C | mm_syrk | ref_positive=0.213 s
-[LAAB] C | mm_syrk | ref_positive=0.213 s
+[LAAB] C | mm_syrk | ref_positive=0.216 s
+[LAAB] C | mm_syrk | ref_positive=0.209 s
+[LAAB] C | mm_syrk | ref_positive=0.211 s
+[LAAB] C | mm_syrk | ref_positive=0.210 s
+[LAAB] C | mm_syrk | ref_positive=0.210 s
+[LAAB] C | mm_syrk | ref_positive=0.209 s
+[LAAB] C | mm_syrk | ref_positive=0.208 s
+[LAAB] C | mm_syrk | ref_positive=0.210 s
+[LAAB] C | mm_syrk | ref_positive=0.210 s
+[LAAB] C | mm_syrk | ref_positive=0.209 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/strmm.exe 3000 3000
-[LAAB] C | mm_trmm | ref_positive=0.207 s
-[LAAB] C | mm_trmm | ref_positive=0.202 s
+[LAAB] C | mm_trmm | ref_positive=0.198 s
 [LAAB] C | mm_trmm | ref_positive=0.192 s
-[LAAB] C | mm_trmm | ref_positive=0.148 s
-[LAAB] C | mm_trmm | ref_positive=0.149 s
-[LAAB] C | mm_trmm | ref_positive=0.148 s
-[LAAB] C | mm_trmm | ref_positive=0.148 s
-[LAAB] C | mm_trmm | ref_positive=0.148 s
-[LAAB] C | mm_trmm | ref_positive=0.148 s
-[LAAB] C | mm_trmm | ref_positive=0.152 s
+[LAAB] C | mm_trmm | ref_positive=0.193 s
+[LAAB] C | mm_trmm | ref_positive=0.193 s
+[LAAB] C | mm_trmm | ref_positive=0.191 s
+[LAAB] C | mm_trmm | ref_positive=0.193 s
+[LAAB] C | mm_trmm | ref_positive=0.190 s
+[LAAB] C | mm_trmm | ref_positive=0.192 s
+[LAAB] C | mm_trmm | ref_positive=0.193 s
+[LAAB] C | mm_trmm | ref_positive=0.194 s
 REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/stridiagmm.exe 3000 3000
-[LAAB] C | mm_tridiag | ref_positive=0.009366 s
-[LAAB] C | mm_tridiag | ref_positive=0.009339 s
-[LAAB] C | mm_tridiag | ref_positive=0.009388 s
-[LAAB] C | mm_tridiag | ref_positive=0.009315 s
-[LAAB] C | mm_tridiag | ref_positive=0.009330 s
-[LAAB] C | mm_tridiag | ref_positive=0.009381 s
-[LAAB] C | mm_tridiag | ref_positive=0.009424 s
-[LAAB] C | mm_tridiag | ref_positive=0.009424 s
-[LAAB] C | mm_tridiag | ref_positive=0.009246 s
-[LAAB] C | mm_tridiag | ref_positive=0.009336 s
+[LAAB] C | mm_tridiag | ref_positive=0.010072 s
+[LAAB] C | mm_tridiag | ref_positive=0.010058 s
+[LAAB] C | mm_tridiag | ref_positive=0.009911 s
+[LAAB] C | mm_tridiag | ref_positive=0.009921 s
+[LAAB] C | mm_tridiag | ref_positive=0.009864 s
+[LAAB] C | mm_tridiag | ref_positive=0.009872 s
+[LAAB] C | mm_tridiag | ref_positive=0.010065 s
+[LAAB] C | mm_tridiag | ref_positive=0.009897 s
+[LAAB] C | mm_tridiag | ref_positive=0.009871 s
+[LAAB] C | mm_tridiag | ref_positive=0.009871 s
 rm -f /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/*.o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/TensorFlow/kebnekaise:skylake/artifacts/2.15.1-foss-2023a/000000/000000_bm/work/build/*.exe
 LAAB_REPS=10 LAAB_N=3000  python mm_sgemm.py 
-[LAAB] TensorFlow | mm_sgemm | operator=0.66923 s | linalg_matmul=0.40571 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.42280 s | linalg_matmul=0.40248 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.38085 s | linalg_matmul=0.37747 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.37679 s | linalg_matmul=0.39349 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.39895 s | linalg_matmul=0.38280 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.40117 s | linalg_matmul=0.38530 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.40521 s | linalg_matmul=0.39422 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.42602 s | linalg_matmul=0.39553 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.39197 s | linalg_matmul=0.38913 s
-[LAAB] TensorFlow | mm_sgemm | operator=0.39048 s | linalg_matmul=0.38713 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.76924 s | linalg_matmul=0.54337 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.52768 s | linalg_matmul=0.49887 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49881 s | linalg_matmul=0.49630 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49819 s | linalg_matmul=0.49122 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49546 s | linalg_matmul=0.49480 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49164 s | linalg_matmul=0.50078 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.50152 s | linalg_matmul=0.50200 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49906 s | linalg_matmul=0.49705 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49700 s | linalg_matmul=0.49788 s
+[LAAB] TensorFlow | mm_sgemm | operator=0.49614 s | linalg_matmul=0.49651 s
 LAAB_REPS=10 LAAB_N=3000  python cse_addition.py 
-[LAAB] TensorFlow | cse_addition | ref_positive=0.57057 s | operator=0.56912 s | ref_negative=1.14115 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.37576 s | operator=0.44854 s | ref_negative=0.75153 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.38183 s | operator=0.37479 s | ref_negative=0.76366 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.38067 s | operator=0.37480 s | ref_negative=0.76133 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.37340 s | operator=0.37723 s | ref_negative=0.74681 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.37613 s | operator=0.42132 s | ref_negative=0.75226 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.41782 s | operator=0.47140 s | ref_negative=0.83564 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.45096 s | operator=0.51554 s | ref_negative=0.90191 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.50980 s | operator=0.51507 s | ref_negative=1.01961 s
-[LAAB] TensorFlow | cse_addition | ref_positive=0.51590 s | operator=0.47635 s | ref_negative=1.03181 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.57146 s | operator=0.59764 s | ref_negative=1.14291 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.51575 s | operator=0.54518 s | ref_negative=1.03149 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.52661 s | operator=0.51748 s | ref_negative=1.05323 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.51979 s | operator=0.52106 s | ref_negative=1.03959 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.51875 s | operator=0.52230 s | ref_negative=1.03750 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.52712 s | operator=0.52500 s | ref_negative=1.05424 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.52070 s | operator=0.51945 s | ref_negative=1.04141 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.52409 s | operator=0.52226 s | ref_negative=1.04818 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.52144 s | operator=0.52574 s | ref_negative=1.04289 s
+[LAAB] TensorFlow | cse_addition | ref_positive=0.53498 s | operator=0.52041 s | ref_negative=1.06997 s
 LAAB_REPS=10 LAAB_N=3000  python cse_matmul_paranthesis.py 
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.03862 s | operator=1.07324 s | ref_negative=1.55793 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.94262 s | operator=0.92140 s | ref_negative=1.41393 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.96888 s | operator=0.92739 s | ref_negative=1.45333 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.78430 s | operator=0.86524 s | ref_negative=1.17645 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.91805 s | operator=0.77452 s | ref_negative=1.37707 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.73052 s | operator=0.85219 s | ref_negative=1.09578 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.74850 s | operator=0.79782 s | ref_negative=1.12275 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.82931 s | operator=0.74431 s | ref_negative=1.24396 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.78906 s | operator=0.80114 s | ref_negative=1.18359 s
-[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=0.78872 s | operator=0.78766 s | ref_negative=1.18308 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.09352 s | operator=1.13749 s | ref_negative=1.64028 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.02368 s | operator=1.03028 s | ref_negative=1.53552 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.02232 s | operator=1.01866 s | ref_negative=1.53348 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.01689 s | operator=1.01883 s | ref_negative=1.52533 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.01891 s | operator=1.01517 s | ref_negative=1.52836 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.01462 s | operator=1.01923 s | ref_negative=1.52192 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.01538 s | operator=1.01466 s | ref_negative=1.52307 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.02038 s | operator=1.02015 s | ref_negative=1.53056 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.02624 s | operator=1.03047 s | ref_negative=1.53936 s
+[LAAB] TensorFlow | cse_matmul_paranthesis | ref_positive=1.02676 s | operator=1.01887 s | ref_negative=1.54014 s
 LAAB_REPS=10 LAAB_N=3000  python cse_matmul_no_paranthesis.py 
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.82855 s | operator=1.34638 s | ref_negative=1.24282 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78281 s | operator=1.22060 s | ref_negative=1.17422 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78051 s | operator=1.21919 s | ref_negative=1.17077 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78060 s | operator=1.22443 s | ref_negative=1.17090 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78709 s | operator=1.50873 s | ref_negative=1.18063 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78628 s | operator=1.21351 s | ref_negative=1.17942 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78642 s | operator=1.22828 s | ref_negative=1.17963 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78713 s | operator=1.21140 s | ref_negative=1.18070 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.78756 s | operator=1.21638 s | ref_negative=1.18133 s
-[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.79384 s | operator=1.23324 s | ref_negative=1.19076 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.06910 s | operator=1.73029 s | ref_negative=1.60366 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.03268 s | operator=1.57897 s | ref_negative=1.54901 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.02722 s | operator=1.58292 s | ref_negative=1.54083 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.03134 s | operator=1.58020 s | ref_negative=1.54701 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.02195 s | operator=1.57774 s | ref_negative=1.53292 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.01782 s | operator=1.57759 s | ref_negative=1.52673 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.00777 s | operator=1.56932 s | ref_negative=1.51166 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.01297 s | operator=1.54251 s | ref_negative=1.51945 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=0.99372 s | operator=1.53543 s | ref_negative=1.49059 s
+[LAAB] TensorFlow | cse_matmul_no_paranthesis | ref_positive=1.00790 s | operator=1.54199 s | ref_negative=1.51185 s
 LAAB_REPS=10 LAAB_N=3000  python cse_suboptimal.py 
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.05897 s | operator=1.35775 s | ref_negative=0.85043 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01226 s | operator=1.34481 s | ref_negative=0.94669 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01062 s | operator=1.21304 s | ref_negative=0.78450 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01045 s | operator=1.21899 s | ref_negative=0.79525 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01044 s | operator=1.21261 s | ref_negative=0.78632 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01037 s | operator=1.20979 s | ref_negative=0.75506 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01028 s | operator=1.22375 s | ref_negative=0.74612 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01034 s | operator=1.18826 s | ref_negative=0.73966 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01047 s | operator=1.25226 s | ref_negative=0.79414 s
-[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01047 s | operator=1.20399 s | ref_negative=0.78094 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.05567 s | operator=1.70869 s | ref_negative=1.03054 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01161 s | operator=1.54374 s | ref_negative=1.02575 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01198 s | operator=1.55351 s | ref_negative=1.00498 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01196 s | operator=1.55346 s | ref_negative=1.00433 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01162 s | operator=1.55393 s | ref_negative=1.00647 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01191 s | operator=1.54806 s | ref_negative=1.00364 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01160 s | operator=1.54909 s | ref_negative=1.00301 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01151 s | operator=1.54713 s | ref_negative=1.00070 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01149 s | operator=1.54788 s | ref_negative=1.00831 s
+[LAAB] TensorFlow | cse_suboptimal | ref_positive=0.01179 s | operator=1.55188 s | ref_negative=1.00238 s
 LAAB_REPS=10 LAAB_N=3000  python matchain_ltor.py 
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.03481 s | operator=0.03928 s | ref_negative=0.46404 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00547 s | operator=0.00602 s | ref_negative=0.51382 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00552 s | operator=0.00592 s | ref_negative=0.46401 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00502 s | operator=0.00563 s | ref_negative=0.40059 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00538 s | operator=0.00557 s | ref_negative=0.42102 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00497 s | operator=0.00877 s | ref_negative=0.39367 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00517 s | operator=0.00552 s | ref_negative=0.39425 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00495 s | operator=0.00553 s | ref_negative=0.39192 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00516 s | operator=0.00714 s | ref_negative=0.40162 s
-[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00502 s | operator=0.00553 s | ref_negative=0.38869 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.04112 s | operator=0.04134 s | ref_negative=0.58560 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00574 s | operator=0.00624 s | ref_negative=0.50591 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00573 s | operator=0.00614 s | ref_negative=0.50618 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00563 s | operator=0.00612 s | ref_negative=0.53033 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00564 s | operator=0.01717 s | ref_negative=0.50734 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00563 s | operator=0.00610 s | ref_negative=0.50200 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00557 s | operator=0.00609 s | ref_negative=0.50667 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00571 s | operator=0.00770 s | ref_negative=0.51696 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00576 s | operator=0.00624 s | ref_negative=0.51740 s
+[LAAB] TensorFlow | matchain_ltor | ref_positive=0.00593 s | operator=0.00654 s | ref_negative=0.51422 s
 LAAB_REPS=10 LAAB_N=3000  python matchain_rtol.py 
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.03201 s | operator=0.46806 s | ref_negative=0.42021 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00967 s | operator=0.41872 s | ref_negative=0.39402 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00544 s | operator=0.39551 s | ref_negative=0.40289 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00542 s | operator=0.39446 s | ref_negative=0.39920 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00550 s | operator=0.39501 s | ref_negative=0.39262 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00545 s | operator=0.39319 s | ref_negative=0.39381 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00533 s | operator=0.39240 s | ref_negative=0.39276 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00584 s | operator=0.38873 s | ref_negative=0.39563 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00532 s | operator=0.39144 s | ref_negative=0.39441 s
-[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00531 s | operator=0.37962 s | ref_negative=0.37954 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.03348 s | operator=0.59738 s | ref_negative=0.56747 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00609 s | operator=0.52634 s | ref_negative=0.51130 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00601 s | operator=0.51285 s | ref_negative=0.51932 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00592 s | operator=0.51084 s | ref_negative=0.50963 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00589 s | operator=0.50947 s | ref_negative=0.51171 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00603 s | operator=0.51392 s | ref_negative=0.51309 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00593 s | operator=0.51417 s | ref_negative=0.51017 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00620 s | operator=0.51267 s | ref_negative=0.51606 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00601 s | operator=0.51772 s | ref_negative=0.52045 s
+[LAAB] TensorFlow | matchain_rtol | ref_positive=0.00592 s | operator=0.51643 s | ref_negative=0.51601 s
 LAAB_REPS=10 LAAB_N=3000  python matchain_mixed.py 
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.13632 s | operator=0.47849 s | ref_negative=0.48611 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10377 s | operator=0.44369 s | ref_negative=0.41718 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11547 s | operator=0.47541 s | ref_negative=0.53169 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10589 s | operator=0.45196 s | ref_negative=0.41590 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10228 s | operator=0.41476 s | ref_negative=0.41531 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10240 s | operator=0.41482 s | ref_negative=0.41792 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10334 s | operator=0.41713 s | ref_negative=0.42315 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10283 s | operator=0.41563 s | ref_negative=0.41391 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10301 s | operator=0.41578 s | ref_negative=0.41644 s
-[LAAB] TensorFlow | matchain_mixed | ref_positive=0.10312 s | operator=0.41735 s | ref_negative=0.41596 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.15149 s | operator=0.61585 s | ref_negative=0.61835 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11607 s | operator=0.54908 s | ref_negative=0.53891 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.12198 s | operator=0.53836 s | ref_negative=0.53843 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11337 s | operator=0.53880 s | ref_negative=0.53630 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11444 s | operator=0.53904 s | ref_negative=0.53979 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11366 s | operator=0.53977 s | ref_negative=0.53619 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11299 s | operator=0.53638 s | ref_negative=0.54039 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11300 s | operator=0.53814 s | ref_negative=0.53579 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11661 s | operator=0.53643 s | ref_negative=0.53606 s
+[LAAB] TensorFlow | matchain_mixed | ref_positive=0.11341 s | operator=0.53986 s | ref_negative=0.54143 s
 LAAB_REPS=10 LAAB_N=3000  python mm_trmm.py 
-[LAAB] TensorFlow | mm_trmm | operator=0.45896 s | linalg_matmul=0.40911 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38292 s | linalg_matmul=0.40333 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38297 s | linalg_matmul=0.42984 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38717 s | linalg_matmul=0.39848 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38538 s | linalg_matmul=0.38513 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.40489 s | linalg_matmul=0.38776 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38531 s | linalg_matmul=0.39150 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38600 s | linalg_matmul=0.38739 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.38544 s | linalg_matmul=0.38573 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_trmm | operator=0.39993 s | linalg_matmul=0.39269 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.57514 s | linalg_matmul=0.54201 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.52787 s | linalg_matmul=0.49721 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.49601 s | linalg_matmul=0.49993 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.52401 s | linalg_matmul=0.50322 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.50169 s | linalg_matmul=0.50088 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.50140 s | linalg_matmul=0.51320 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.50330 s | linalg_matmul=0.49846 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.50093 s | linalg_matmul=0.49405 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.49465 s | linalg_matmul=0.49436 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_trmm | operator=0.49448 s | linalg_matmul=0.50171 s | ref_negative=R+mm_sgemm
 LAAB_REPS=10 LAAB_N=3000  python mm_syrk.py 
-[LAAB] TensorFlow | mm_syrk | operator=0.50068 s | linalg_matmul=0.47923 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.43455 s | linalg_matmul=0.41804 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.40127 s | linalg_matmul=0.43804 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.40012 s | linalg_matmul=0.41958 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.40853 s | linalg_matmul=0.40399 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.46733 s | linalg_matmul=0.45877 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.43027 s | linalg_matmul=0.43334 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.45223 s | linalg_matmul=0.43038 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.42903 s | linalg_matmul=0.42104 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_syrk | operator=0.42155 s | linalg_matmul=0.43239 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.62290 s | linalg_matmul=0.60663 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.54854 s | linalg_matmul=0.54556 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55192 s | linalg_matmul=0.55776 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.56440 s | linalg_matmul=0.55777 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55659 s | linalg_matmul=0.55092 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55662 s | linalg_matmul=0.55588 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55633 s | linalg_matmul=0.55916 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55842 s | linalg_matmul=0.55484 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55717 s | linalg_matmul=0.55699 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_syrk | operator=0.55924 s | linalg_matmul=0.56294 s | ref_negative=R+mm_sgemm
 LAAB_REPS=10 LAAB_N=3000  python mm_tridiag.py 
-[LAAB] TensorFlow | mm_tridiag | operator=0.45707 s | linalg_matmul=0.41547 s | linalg_tridiagonal_matmul=0.07640 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.38585 s | linalg_matmul=0.38744 s | linalg_tridiagonal_matmul=0.03675 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.40678 s | linalg_matmul=0.40858 s | linalg_tridiagonal_matmul=0.03687 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.38659 s | linalg_matmul=0.38705 s | linalg_tridiagonal_matmul=0.03691 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.38750 s | linalg_matmul=0.38688 s | linalg_tridiagonal_matmul=0.04394 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.39966 s | linalg_matmul=0.39772 s | linalg_tridiagonal_matmul=0.03696 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.50239 s | linalg_matmul=0.50324 s | linalg_tridiagonal_matmul=0.03940 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.38666 s | linalg_matmul=0.39029 s | linalg_tridiagonal_matmul=0.03692 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.39722 s | linalg_matmul=0.39928 s | linalg_tridiagonal_matmul=0.03609 s | ref_negative=R+mm_sgemm
-[LAAB] TensorFlow | mm_tridiag | operator=0.36638 s | linalg_matmul=0.38815 s | linalg_tridiagonal_matmul=0.03581 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.57437 s | linalg_matmul=0.55714 s | linalg_tridiagonal_matmul=0.09979 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.51212 s | linalg_matmul=0.50423 s | linalg_tridiagonal_matmul=0.04038 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50416 s | linalg_matmul=0.52152 s | linalg_tridiagonal_matmul=0.04362 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50767 s | linalg_matmul=0.50597 s | linalg_tridiagonal_matmul=0.04047 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50494 s | linalg_matmul=0.51067 s | linalg_tridiagonal_matmul=0.04022 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50366 s | linalg_matmul=0.52421 s | linalg_tridiagonal_matmul=0.04083 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50512 s | linalg_matmul=0.50758 s | linalg_tridiagonal_matmul=0.04048 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50450 s | linalg_matmul=0.50851 s | linalg_tridiagonal_matmul=0.04044 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50488 s | linalg_matmul=0.50687 s | linalg_tridiagonal_matmul=0.04060 s | ref_negative=R+mm_sgemm
+[LAAB] TensorFlow | mm_tridiag | operator=0.50958 s | linalg_matmul=0.50888 s | linalg_tridiagonal_matmul=0.04034 s | ref_negative=R+mm_sgemm
 LAAB_REPS=10 LAAB_N=3000  python am_distributivity1.py 
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.48220 s | operator=0.85545 s | ref_negative=0.80267 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.41563 s | operator=0.77386 s | ref_negative=0.78913 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.41207 s | operator=0.77519 s | ref_negative=0.78421 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.41555 s | operator=0.77483 s | ref_negative=0.77478 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.41069 s | operator=0.77447 s | ref_negative=0.77268 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.40996 s | operator=0.77202 s | ref_negative=0.97895 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.51071 s | operator=0.82956 s | ref_negative=0.96242 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.52411 s | operator=0.98772 s | ref_negative=0.95626 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.47335 s | operator=0.98989 s | ref_negative=0.98859 s
-[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.44516 s | operator=1.01389 s | ref_negative=0.99946 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.61094 s | operator=1.13754 s | ref_negative=1.03795 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.53735 s | operator=1.01764 s | ref_negative=1.01110 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.53948 s | operator=1.01173 s | ref_negative=1.01102 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.54575 s | operator=1.02727 s | ref_negative=1.02599 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.54629 s | operator=1.02540 s | ref_negative=1.02409 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.54398 s | operator=1.02206 s | ref_negative=1.01850 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.53960 s | operator=1.02125 s | ref_negative=1.01099 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.54172 s | operator=1.01164 s | ref_negative=1.00562 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.53393 s | operator=1.00803 s | ref_negative=1.00584 s
+[LAAB] TensorFlow | am_distributivity1 | ref_positive=0.53957 s | operator=1.01017 s | ref_negative=1.01077 s
 LAAB_REPS=10 LAAB_N=3000  python am_distributivity2.py 
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.03880 s | operator=0.60254 s | ref_negative=0.54637 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00819 s | operator=0.52149 s | ref_negative=0.46901 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00812 s | operator=0.47395 s | ref_negative=0.39824 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00913 s | operator=0.40497 s | ref_negative=0.40891 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00816 s | operator=0.40652 s | ref_negative=0.41967 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00811 s | operator=0.42118 s | ref_negative=0.42371 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00857 s | operator=0.43497 s | ref_negative=0.41943 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00853 s | operator=0.47496 s | ref_negative=0.51926 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00816 s | operator=0.46576 s | ref_negative=0.41796 s
-[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00819 s | operator=0.42556 s | ref_negative=0.42886 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.04023 s | operator=0.65564 s | ref_negative=0.60202 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00893 s | operator=0.53566 s | ref_negative=0.52208 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00926 s | operator=0.52504 s | ref_negative=0.53231 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00908 s | operator=0.53004 s | ref_negative=0.53040 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00898 s | operator=0.52363 s | ref_negative=0.52155 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00933 s | operator=0.52822 s | ref_negative=0.52098 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00880 s | operator=0.52011 s | ref_negative=0.52282 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00899 s | operator=0.52259 s | ref_negative=0.52760 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00888 s | operator=0.52037 s | ref_negative=0.52444 s
+[LAAB] TensorFlow | am_distributivity2 | ref_positive=0.00897 s | operator=0.52781 s | ref_negative=0.52516 s
 LAAB_REPS=10 LAAB_N=3000  python am_transpose.py 
-[LAAB] TensorFlow | am_transpose | ref_positive=0.87314 s | operator=1.34483 s | ref_negative=1.30132 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.83792 s | operator=1.27565 s | ref_negative=1.27306 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.84018 s | operator=1.24800 s | ref_negative=1.28049 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.78133 s | operator=1.23310 s | ref_negative=1.16776 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.78315 s | operator=1.22750 s | ref_negative=1.21395 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.82396 s | operator=1.50465 s | ref_negative=1.26817 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.81786 s | operator=1.27485 s | ref_negative=1.25980 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.78562 s | operator=1.20863 s | ref_negative=1.20641 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.78039 s | operator=1.19837 s | ref_negative=1.26543 s
-[LAAB] TensorFlow | am_transpose | ref_positive=0.83677 s | operator=1.32625 s | ref_negative=1.32481 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.08351 s | operator=1.74690 s | ref_negative=1.61185 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.03067 s | operator=1.58458 s | ref_negative=1.57990 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.02764 s | operator=1.57079 s | ref_negative=1.57255 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.03244 s | operator=1.57024 s | ref_negative=1.57670 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.02819 s | operator=1.57252 s | ref_negative=1.58303 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.03623 s | operator=1.57898 s | ref_negative=1.58335 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.02388 s | operator=1.57018 s | ref_negative=1.57598 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.03027 s | operator=1.58540 s | ref_negative=1.57968 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.02817 s | operator=1.57715 s | ref_negative=1.57033 s
+[LAAB] TensorFlow | am_transpose | ref_positive=1.04062 s | operator=1.57228 s | ref_negative=1.59587 s
 LAAB_REPS=10 LAAB_N=3000  python cm_loops.py 
-[LAAB] TensorFlow | cm_loops | ref_positive=0.61808 s | operator=0.61130 s | ref_negative=1.85423 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.61146 s | operator=0.54952 s | ref_negative=1.83438 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.47355 s | operator=0.53506 s | ref_negative=1.42064 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.51725 s | operator=0.48136 s | ref_negative=1.55175 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.48827 s | operator=0.49681 s | ref_negative=1.46481 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.48245 s | operator=0.48945 s | ref_negative=1.44734 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.49335 s | operator=0.49699 s | ref_negative=1.48006 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.49973 s | operator=0.49019 s | ref_negative=1.49920 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.48607 s | operator=0.48456 s | ref_negative=1.45821 s
-[LAAB] TensorFlow | cm_loops | ref_positive=0.48740 s | operator=0.48558 s | ref_negative=1.46221 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.76006 s | operator=0.73827 s | ref_negative=2.28019 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.62488 s | operator=0.62952 s | ref_negative=1.87464 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.62260 s | operator=0.62650 s | ref_negative=1.86780 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.62239 s | operator=0.62016 s | ref_negative=1.86718 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.62015 s | operator=0.62438 s | ref_negative=1.86044 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.61913 s | operator=0.61857 s | ref_negative=1.85740 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.62211 s | operator=0.62244 s | ref_negative=1.86634 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.63391 s | operator=0.62325 s | ref_negative=1.90174 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.61666 s | operator=0.61906 s | ref_negative=1.84998 s
+[LAAB] TensorFlow | cm_loops | ref_positive=0.62198 s | operator=0.62029 s | ref_negative=1.86595 s
 LAAB_REPS=10 LAAB_N=3000  python cm_partial_op_sum.py 
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.02932 s | operator=0.06045 s | ref_negative=0.04747 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00057 s | operator=0.03064 s | ref_negative=0.02681 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00058 s | operator=0.03058 s | ref_negative=0.02658 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00053 s | operator=0.03034 s | ref_negative=0.02679 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00053 s | operator=0.03052 s | ref_negative=0.02678 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00052 s | operator=0.03046 s | ref_negative=0.02682 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00054 s | operator=0.03057 s | ref_negative=0.02655 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00051 s | operator=0.03089 s | ref_negative=0.02721 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00050 s | operator=0.03083 s | ref_negative=0.02670 s
-[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00053 s | operator=0.03041 s | ref_negative=0.02707 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.03152 s | operator=0.06899 s | ref_negative=0.05609 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00059 s | operator=0.03836 s | ref_negative=0.03352 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00062 s | operator=0.03739 s | ref_negative=0.03307 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00058 s | operator=0.03785 s | ref_negative=0.03286 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00055 s | operator=0.03770 s | ref_negative=0.03344 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00061 s | operator=0.03773 s | ref_negative=0.03358 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00055 s | operator=0.03779 s | ref_negative=0.03392 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00057 s | operator=0.03772 s | ref_negative=0.03354 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00055 s | operator=0.03807 s | ref_negative=0.03323 s
+[LAAB] TensorFlow | cm_partial_op_sum | ref_positive=0.00060 s | operator=0.07312 s | ref_negative=0.03324 s
 LAAB_REPS=10 LAAB_N=3000  python cm_partial_op_prod.py 
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.06052 s | operator=0.46111 s | ref_negative=0.40695 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00067 s | operator=0.39140 s | ref_negative=0.38538 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00066 s | operator=0.39258 s | ref_negative=0.42089 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00066 s | operator=0.38894 s | ref_negative=0.44029 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00065 s | operator=0.50375 s | ref_negative=0.45511 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00072 s | operator=0.38863 s | ref_negative=0.38349 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00060 s | operator=0.40014 s | ref_negative=0.38404 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00062 s | operator=0.38825 s | ref_negative=0.38322 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00099 s | operator=0.38868 s | ref_negative=0.37763 s
-[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00063 s | operator=0.41745 s | ref_negative=0.37524 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.06508 s | operator=0.58531 s | ref_negative=0.55059 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00073 s | operator=0.53201 s | ref_negative=0.49941 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00074 s | operator=0.50639 s | ref_negative=0.50969 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00078 s | operator=0.50601 s | ref_negative=0.50090 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00067 s | operator=0.50308 s | ref_negative=0.49454 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00068 s | operator=0.50111 s | ref_negative=0.49579 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00073 s | operator=0.49999 s | ref_negative=0.49386 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00067 s | operator=0.49949 s | ref_negative=0.49709 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00064 s | operator=0.50405 s | ref_negative=0.49630 s
+[LAAB] TensorFlow | cm_partial_op_prod | ref_positive=0.00068 s | operator=0.50106 s | ref_negative=0.49736 s
+The activation script must be sourced, otherwise the virtual environment will not work.
+Setting vars
 Results dumped to profile.pkl
 Report written to README.md

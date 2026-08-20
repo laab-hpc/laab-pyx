@@ -13,9 +13,7 @@
 #SBATCH -C skylake
         </parameter>
         <parameter name="postprocess_deps">
-module purge
-module load GCC/14.3.0 SciPy-bundle
-source ${root}/venv/bin/activate
+source ${root}/venvs/pyx-kebnekaise/activate.sh
         </parameter>
     </parameterset>
 

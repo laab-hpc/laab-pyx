@@ -82,6 +82,9 @@
                 <th>
                     <div>{{ row.library }}</div>
                     <div class="fw-normal">{{ row.version }}-{{ row.toolchain }}</div>
+                    {% if show_system_in_header %}
+                    <div class="fw-normal">{{ row.system }}</div>
+                    {% endif %}
                     {% if show_ncpus_in_header %}
                     <div class="fw-normal">NCPUs {{ row.ncpus }}</div>
                     {% endif %}

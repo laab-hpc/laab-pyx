@@ -1,7 +1,6 @@
 #!/bin/bash
 
-module load GCC/12.2.0 SciPy-bundle
-source /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/venv/bin/activate
+source /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/venvs/pyx-kebnekaise/activate.sh
 
 mkdir -p ../../../profiles
 

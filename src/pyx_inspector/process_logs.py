@@ -1,6 +1,7 @@
 import os
 import sys
 import statistics
+from datetime import datetime
 from jinja2 import Template
 from pathlib import Path
 import json
@@ -98,7 +99,8 @@ def main():
         "laab_n":args.prob_size,
         "laab_rep":args.reps,
         "name": args.name,
-        "omp_num_threads": args.omp_num_threads
+        "omp_num_threads": args.omp_num_threads,
+        "datetime": datetime.now().isoformat(timespec="seconds"),
     }
 
     pickle_path = Path(args.outfile).with_suffix(".pkl")

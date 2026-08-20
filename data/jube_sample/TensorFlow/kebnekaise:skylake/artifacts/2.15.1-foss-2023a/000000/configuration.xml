@@ -12,9 +12,7 @@
       <parameter name="laab_n" type="string" separator="," duplicate="none" mode="text">3000</parameter>
       <parameter name="account_config" type="string" separator="," duplicate="none" mode="text">#SBATCH -A hpc2n2026-184
 #SBATCH -C skylake</parameter>
-      <parameter name="postprocess_deps" type="string" separator="," duplicate="none" mode="text">module purge
-module load GCC/14.3.0 SciPy-bundle
-source ${root}/venv/bin/activate</parameter>
+      <parameter name="postprocess_deps" type="string" separator="," duplicate="none" mode="text">source ${root}/venvs/pyx-kebnekaise/activate.sh</parameter>
       <parameter name="src" type="string" separator="," duplicate="none" mode="text">${root}/src/benchmark_codes/TensorFlow/v2-cpu</parameter>
       <parameter name="library" type="string" separator="," duplicate="none" mode="text">TensorFlow</parameter>
       <parameter name="version" type="string" separator="," duplicate="none" mode="text">2.15.1</parameter>

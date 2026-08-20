@@ -21,6 +21,7 @@
                         <tr><td><strong>REP</strong></td><td>{{ profile.exp_config.laab_rep }}</td></tr>
                         <tr><td><strong>NCPUs</strong></td><td>{{ profile.exp_config.omp_num_threads }}</td></tr>
                         <tr><td><strong>CB ID</strong></td><td>{{ cb_id }}</td></tr>
+                        <tr><td><strong>Datetime</strong></td><td>{{ profile.exp_config.get('datetime', '') }}</td></tr>
                     </tbody>
                 </table>
             </div>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jube>
     <parameterset name="param_set">
-        <parameter name="system">kebnekaise:skylake</parameter>
+        <parameter name="system">kebnekaise:zen4</parameter>
         <parameter name="root">/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx</parameter>
         <parameter name="time_limit">00:30:00</parameter>
         <parameter name="ncpus">1,4,14</parameter>
@@ -10,12 +10,10 @@
         <parameter name="laab_n">3000</parameter>
         <parameter name="account_config">
 #SBATCH -A hpc2n2026-184
-#SBATCH -C zen3
+#SBATCH -C zen4
         </parameter>
         <parameter name="postprocess_deps">
-module purge
-module load GCC/14.3.0 SciPy-bundle
-source ${root}/venv/bin/activate
+source ${root}/venvs/pyx-kebnekaise/activate.sh
         </parameter>
     </parameterset>
 

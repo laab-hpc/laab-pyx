@@ -1,429 +1,411 @@
-[2026-08-20 00:29:37,246]:DEBUG: Create initial workpackages
-[2026-08-20 00:29:37,248]:DEBUG: Expand parameter templates:
-[2026-08-20 00:29:37,248]:DEBUG:     "ncpus": 1,4,14
-[2026-08-20 00:29:37,274]:DEBUG: Store initial workpackage information
-[2026-08-20 00:29:37,278]:DEBUG: Start benchmark run
-[2026-08-20 00:29:37,278]:INFO: ######################################################################
-[2026-08-20 00:29:37,278]:INFO: # benchmark: laab-pyx
-[2026-08-20 00:29:37,278]:INFO: # id: 0
-[2026-08-20 00:29:37,278]:INFO: #
-[2026-08-20 00:29:37,278]:INFO: # laab-pyx
-[2026-08-20 00:29:37,278]:INFO: ######################################################################
-[2026-08-20 00:29:37,281]:DEBUG: ----- bm ( iter:0 | id:0 | parents: | cycle:0 | procs:1 ) -----
-[2026-08-20 00:29:37,283]:DEBUG:   available parameter:
-[2026-08-20 00:29:37,283]:DEBUG:          | parameter             | value                                    |
-[2026-08-20 00:29:37,283]:DEBUG:          |-----------------------|------------------------------------------|
-[2026-08-20 00:29:37,283]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,283]:DEBUG:          |                       | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,283]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,283]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
-[2026-08-20 00:29:37,283]:DEBUG:          |                       | pyx/jube/jax/kebnekaise:skylake          |
-[2026-08-20 00:29:37,283]:DEBUG:          | jube_benchmark_id     | 0                                        |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_benchmark_padid  | 000000                                   |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | 2023a/000000                             |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_benchmark_start  | 2026-08-20T00:29:37                      |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_step_cycles      | 1                                        |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_step_iterations  | 1                                        |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_step_name        | bm                                       |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | 2023a/000000/000000_bm/work              |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_cycle         | 0                                        |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_envlist       |                                          |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_envstr        |                                          |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_id            | 0                                        |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_iteration     | 0                                        |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_padid         | 000000                                   |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_relpath       | artifacts/0.4.25-gfbf-                   |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | 2023a/000000/000000_bm/work              |
-[2026-08-20 00:29:37,284]:DEBUG:          | jube_wp_status        | RUNNING                                  |
-[2026-08-20 00:29:37,284]:DEBUG:          | laab_n                | 3000                                     |
-[2026-08-20 00:29:37,284]:DEBUG:          | laab_reps             | 10                                       |
-[2026-08-20 00:29:37,284]:DEBUG:          | ld_blas               | '-lopenblas'                             |
-[2026-08-20 00:29:37,284]:DEBUG:          | library               | jax                                      |
-[2026-08-20 00:29:37,284]:DEBUG:          | modules               | module purge                             |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,284]:DEBUG:          |                       | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,284]:DEBUG:          | name                  | CPU-1x                                   |
-[2026-08-20 00:29:37,284]:DEBUG:          | ncpus                 | 1                                        |
-[2026-08-20 00:29:37,285]:DEBUG:          | postprocess_deps      | module purge                             |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,285]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
-[2026-08-20 00:29:37,285]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,285]:DEBUG:          |                       | pyx/src/benchmark_codes/jax/v0-cpu       |
-[2026-08-20 00:29:37,285]:DEBUG:          | system                | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,285]:DEBUG:          | time_limit            | 00:30:00                                 |
-[2026-08-20 00:29:37,285]:DEBUG:          | toolchain             | gfbf-2023a                               |
-[2026-08-20 00:29:37,285]:DEBUG:          | version               | 0.4.25                                   |
-[2026-08-20 00:29:37,285]:DEBUG:   copy "../../submit.in" -> "submit.in"
-[2026-08-20 00:29:37,291]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
-[2026-08-20 00:29:37,297]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
-[2026-08-20 00:29:37,305]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
-[2026-08-20 00:29:37,331]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
-[2026-08-20 00:29:37,338]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
-[2026-08-20 00:29:37,345]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_blocked.py" -> "../../src/am_blocked.py"
-[2026-08-20 00:29:37,352]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
-[2026-08-20 00:29:37,412]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/config.json" -> "../../src/config.json"
-[2026-08-20 00:29:37,419]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
-[2026-08-20 00:29:37,425]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
-[2026-08-20 00:29:37,432]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_transpose.py" -> "../../src/am_transpose.py"
-[2026-08-20 00:29:37,439]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/Makefile" -> "../../src/Makefile"
-[2026-08-20 00:29:37,445]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
-[2026-08-20 00:29:37,452]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
-[2026-08-20 00:29:37,459]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_addition.py" -> "../../src/cse_addition.py"
-[2026-08-20 00:29:37,466]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
-[2026-08-20 00:29:37,502]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
-[2026-08-20 00:29:37,509]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
-[2026-08-20 00:29:37,540]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_loops.py" -> "../../src/cm_loops.py"
-[2026-08-20 00:29:37,547]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/C" -> "../../src/C"
-[2026-08-20 00:29:37,587]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
-[2026-08-20 00:29:37,615]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
-[2026-08-20 00:29:37,622]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
-[2026-08-20 00:29:37,623]:DEBUG:   substitute submit.in -> submit.sh
-[2026-08-20 00:29:37,623]:DEBUG:   substitute:
-[2026-08-20 00:29:37,623]:DEBUG:          | source             | dest                                     |
-[2026-08-20 00:29:37,623]:DEBUG:          |--------------------|------------------------------------------|
-[2026-08-20 00:29:37,623]:DEBUG:          | #NAME#             | CPU-1x                                   |
-[2026-08-20 00:29:37,623]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
-[2026-08-20 00:29:37,623]:DEBUG:          | #NCPUS#            | 1                                        |
-[2026-08-20 00:29:37,623]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,623]:DEBUG:          |                    | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,623]:DEBUG:          | #MODULES#          | module purge                             |
-[2026-08-20 00:29:37,623]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,623]:DEBUG:          |                    | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,623]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
-[2026-08-20 00:29:37,623]:DEBUG:          | #LAAB_REPS#        | 10                                       |
-[2026-08-20 00:29:37,623]:DEBUG:          | #LAAB_N#           | 3000                                     |
-[2026-08-20 00:29:37,624]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,624]:DEBUG:          | #LIBRARY#          | jax                                      |
-[2026-08-20 00:29:37,624]:DEBUG:          | #VERSION#          | 0.4.25                                   |
-[2026-08-20 00:29:37,624]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
-[2026-08-20 00:29:37,624]:DEBUG:          | #CB_ID#            | 0                                        |
-[2026-08-20 00:29:37,624]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
-[2026-08-20 00:29:37,624]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,624]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,624]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,624]:DEBUG:          |                    | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,628]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
-[2026-08-20 00:29:37,628]:DEBUG:   substitute:
-[2026-08-20 00:29:37,628]:DEBUG:          | source             | dest                                     |
-[2026-08-20 00:29:37,628]:DEBUG:          |--------------------|------------------------------------------|
-[2026-08-20 00:29:37,628]:DEBUG:          | #NAME#             | CPU-1x                                   |
-[2026-08-20 00:29:37,628]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
-[2026-08-20 00:29:37,628]:DEBUG:          | #NCPUS#            | 1                                        |
-[2026-08-20 00:29:37,628]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,628]:DEBUG:          |                    | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,628]:DEBUG:          | #MODULES#          | module purge                             |
-[2026-08-20 00:29:37,628]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,628]:DEBUG:          |                    | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,628]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
-[2026-08-20 00:29:37,628]:DEBUG:          | #LAAB_REPS#        | 10                                       |
-[2026-08-20 00:29:37,628]:DEBUG:          | #LAAB_N#           | 3000                                     |
-[2026-08-20 00:29:37,628]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,628]:DEBUG:          | #LIBRARY#          | jax                                      |
-[2026-08-20 00:29:37,628]:DEBUG:          | #VERSION#          | 0.4.25                                   |
-[2026-08-20 00:29:37,628]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
-[2026-08-20 00:29:37,628]:DEBUG:          | #CB_ID#            | 0                                        |
-[2026-08-20 00:29:37,629]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
-[2026-08-20 00:29:37,629]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,629]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,629]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,629]:DEBUG:          |                    | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,635]:DEBUG: >>> sbatch submit.sh
-[2026-08-20 00:29:37,635]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/stdout
-[2026-08-20 00:29:37,635]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/stderr
-[2026-08-20 00:29:37,664]:DEBUG: Create new workpackages for workpackage bm(0)
-[2026-08-20 00:29:37,664]:DEBUG:   0 new workpackages created
-[2026-08-20 00:29:37,670]:DEBUG: ----- bm ( iter:0 | id:1 | parents: | cycle:0 | procs:1 ) -----
-[2026-08-20 00:29:37,673]:DEBUG:   available parameter:
-[2026-08-20 00:29:37,673]:DEBUG:          | parameter             | value                                    |
-[2026-08-20 00:29:37,673]:DEBUG:          |-----------------------|------------------------------------------|
-[2026-08-20 00:29:37,673]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | pyx/jube/jax/kebnekaise:skylake          |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_benchmark_id     | 0                                        |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_benchmark_padid  | 000000                                   |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | 2023a/000000                             |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_benchmark_start  | 2026-08-20T00:29:37                      |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_step_cycles      | 1                                        |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_step_iterations  | 1                                        |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_step_name        | bm                                       |
-[2026-08-20 00:29:37,673]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
-[2026-08-20 00:29:37,673]:DEBUG:          |                       | 2023a/000000/000001_bm/work              |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_cycle         | 0                                        |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_envlist       |                                          |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_envstr        |                                          |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_id            | 1                                        |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_iteration     | 0                                        |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_padid         | 000001                                   |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_relpath       | artifacts/0.4.25-gfbf-                   |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | 2023a/000000/000001_bm/work              |
-[2026-08-20 00:29:37,674]:DEBUG:          | jube_wp_status        | RUNNING                                  |
-[2026-08-20 00:29:37,674]:DEBUG:          | laab_n                | 3000                                     |
-[2026-08-20 00:29:37,674]:DEBUG:          | laab_reps             | 10                                       |
-[2026-08-20 00:29:37,674]:DEBUG:          | ld_blas               | '-lopenblas'                             |
-[2026-08-20 00:29:37,674]:DEBUG:          | library               | jax                                      |
-[2026-08-20 00:29:37,674]:DEBUG:          | modules               | module purge                             |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,674]:DEBUG:          | name                  | CPU-4x                                   |
-[2026-08-20 00:29:37,674]:DEBUG:          | ncpus                 | 4                                        |
-[2026-08-20 00:29:37,674]:DEBUG:          | postprocess_deps      | module purge                             |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,674]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
-[2026-08-20 00:29:37,674]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,674]:DEBUG:          |                       | pyx/src/benchmark_codes/jax/v0-cpu       |
-[2026-08-20 00:29:37,674]:DEBUG:          | system                | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,674]:DEBUG:          | time_limit            | 00:30:00                                 |
-[2026-08-20 00:29:37,674]:DEBUG:          | toolchain             | gfbf-2023a                               |
-[2026-08-20 00:29:37,674]:DEBUG:          | version               | 0.4.25                                   |
-[2026-08-20 00:29:37,675]:DEBUG:   copy "../../submit.in" -> "submit.in"
-[2026-08-20 00:29:37,681]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
-[2026-08-20 00:29:37,686]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
-[2026-08-20 00:29:37,687]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
-[2026-08-20 00:29:37,687]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
-[2026-08-20 00:29:37,687]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
-[2026-08-20 00:29:37,688]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_blocked.py" -> "../../src/am_blocked.py"
-[2026-08-20 00:29:37,688]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
-[2026-08-20 00:29:37,689]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/config.json" -> "../../src/config.json"
-[2026-08-20 00:29:37,689]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
-[2026-08-20 00:29:37,689]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
-[2026-08-20 00:29:37,690]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_transpose.py" -> "../../src/am_transpose.py"
-[2026-08-20 00:29:37,690]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/Makefile" -> "../../src/Makefile"
-[2026-08-20 00:29:37,690]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
-[2026-08-20 00:29:37,691]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
-[2026-08-20 00:29:37,691]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_addition.py" -> "../../src/cse_addition.py"
-[2026-08-20 00:29:37,691]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
-[2026-08-20 00:29:37,692]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
-[2026-08-20 00:29:37,692]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
-[2026-08-20 00:29:37,692]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_loops.py" -> "../../src/cm_loops.py"
-[2026-08-20 00:29:37,693]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/C" -> "../../src/C"
-[2026-08-20 00:29:37,693]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
-[2026-08-20 00:29:37,693]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
-[2026-08-20 00:29:37,694]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
-[2026-08-20 00:29:37,694]:DEBUG:   substitute submit.in -> submit.sh
-[2026-08-20 00:29:37,694]:DEBUG:   substitute:
-[2026-08-20 00:29:37,694]:DEBUG:          | source             | dest                                     |
-[2026-08-20 00:29:37,694]:DEBUG:          |--------------------|------------------------------------------|
-[2026-08-20 00:29:37,694]:DEBUG:          | #NAME#             | CPU-4x                                   |
-[2026-08-20 00:29:37,694]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
-[2026-08-20 00:29:37,695]:DEBUG:          | #NCPUS#            | 4                                        |
-[2026-08-20 00:29:37,695]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,695]:DEBUG:          | #MODULES#          | module purge                             |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,695]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
-[2026-08-20 00:29:37,695]:DEBUG:          | #LAAB_REPS#        | 10                                       |
-[2026-08-20 00:29:37,695]:DEBUG:          | #LAAB_N#           | 3000                                     |
-[2026-08-20 00:29:37,695]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,695]:DEBUG:          | #LIBRARY#          | jax                                      |
-[2026-08-20 00:29:37,695]:DEBUG:          | #VERSION#          | 0.4.25                                   |
-[2026-08-20 00:29:37,695]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
-[2026-08-20 00:29:37,695]:DEBUG:          | #CB_ID#            | 0                                        |
-[2026-08-20 00:29:37,695]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,695]:DEBUG:          |                    | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,698]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
-[2026-08-20 00:29:37,699]:DEBUG:   substitute:
-[2026-08-20 00:29:37,699]:DEBUG:          | source             | dest                                     |
-[2026-08-20 00:29:37,699]:DEBUG:          |--------------------|------------------------------------------|
-[2026-08-20 00:29:37,699]:DEBUG:          | #NAME#             | CPU-4x                                   |
-[2026-08-20 00:29:37,699]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
-[2026-08-20 00:29:37,699]:DEBUG:          | #NCPUS#            | 4                                        |
-[2026-08-20 00:29:37,699]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,699]:DEBUG:          | #MODULES#          | module purge                             |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,699]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
-[2026-08-20 00:29:37,699]:DEBUG:          | #LAAB_REPS#        | 10                                       |
-[2026-08-20 00:29:37,699]:DEBUG:          | #LAAB_N#           | 3000                                     |
-[2026-08-20 00:29:37,699]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,699]:DEBUG:          | #LIBRARY#          | jax                                      |
-[2026-08-20 00:29:37,699]:DEBUG:          | #VERSION#          | 0.4.25                                   |
-[2026-08-20 00:29:37,699]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
-[2026-08-20 00:29:37,699]:DEBUG:          | #CB_ID#            | 0                                        |
-[2026-08-20 00:29:37,699]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,699]:DEBUG:          |                    | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,705]:DEBUG: >>> sbatch submit.sh
-[2026-08-20 00:29:37,705]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000001_bm/work/stdout
-[2026-08-20 00:29:37,705]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000001_bm/work/stderr
-[2026-08-20 00:29:37,733]:DEBUG: Create new workpackages for workpackage bm(1)
-[2026-08-20 00:29:37,734]:DEBUG:   0 new workpackages created
-[2026-08-20 00:29:37,738]:DEBUG: ----- bm ( iter:0 | id:2 | parents: | cycle:0 | procs:1 ) -----
-[2026-08-20 00:29:37,740]:DEBUG:   available parameter:
-[2026-08-20 00:29:37,740]:DEBUG:          | parameter             | value                                    |
-[2026-08-20 00:29:37,740]:DEBUG:          |-----------------------|------------------------------------------|
-[2026-08-20 00:29:37,740]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,740]:DEBUG:          |                       | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,740]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,740]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | pyx/jube/jax/kebnekaise:skylake          |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_benchmark_id     | 0                                        |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_benchmark_padid  | 000000                                   |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | 2023a/000000                             |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_benchmark_start  | 2026-08-20T00:29:37                      |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_step_cycles      | 1                                        |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_step_iterations  | 1                                        |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_step_name        | bm                                       |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | 2023a/000000/000002_bm/work              |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_cycle         | 0                                        |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_envlist       |                                          |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_envstr        |                                          |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_id            | 2                                        |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_iteration     | 0                                        |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_padid         | 000002                                   |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_relpath       | artifacts/0.4.25-gfbf-                   |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | 2023a/000000/000002_bm/work              |
-[2026-08-20 00:29:37,741]:DEBUG:          | jube_wp_status        | RUNNING                                  |
-[2026-08-20 00:29:37,741]:DEBUG:          | laab_n                | 3000                                     |
-[2026-08-20 00:29:37,741]:DEBUG:          | laab_reps             | 10                                       |
-[2026-08-20 00:29:37,741]:DEBUG:          | ld_blas               | '-lopenblas'                             |
-[2026-08-20 00:29:37,741]:DEBUG:          | library               | jax                                      |
-[2026-08-20 00:29:37,741]:DEBUG:          | modules               | module purge                             |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,741]:DEBUG:          |                       | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,741]:DEBUG:          | name                  | CPU-14x                                  |
-[2026-08-20 00:29:37,742]:DEBUG:          | ncpus                 | 14                                       |
-[2026-08-20 00:29:37,742]:DEBUG:          | postprocess_deps      | module purge                             |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,742]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
-[2026-08-20 00:29:37,742]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,742]:DEBUG:          |                       | pyx/src/benchmark_codes/jax/v0-cpu       |
-[2026-08-20 00:29:37,742]:DEBUG:          | system                | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,742]:DEBUG:          | time_limit            | 00:30:00                                 |
-[2026-08-20 00:29:37,742]:DEBUG:          | toolchain             | gfbf-2023a                               |
-[2026-08-20 00:29:37,742]:DEBUG:          | version               | 0.4.25                                   |
-[2026-08-20 00:29:37,742]:DEBUG:   copy "../../submit.in" -> "submit.in"
-[2026-08-20 00:29:37,749]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_blocked.py" -> "../../src/am_blocked.py"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
-[2026-08-20 00:29:37,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/config.json" -> "../../src/config.json"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_transpose.py" -> "../../src/am_transpose.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/Makefile" -> "../../src/Makefile"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_addition.py" -> "../../src/cse_addition.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_loops.py" -> "../../src/cm_loops.py"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/C" -> "../../src/C"
-[2026-08-20 00:29:37,756]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
-[2026-08-20 00:29:37,757]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
-[2026-08-20 00:29:37,757]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
-[2026-08-20 00:29:37,757]:DEBUG:   substitute submit.in -> submit.sh
-[2026-08-20 00:29:37,758]:DEBUG:   substitute:
-[2026-08-20 00:29:37,758]:DEBUG:          | source             | dest                                     |
-[2026-08-20 00:29:37,758]:DEBUG:          |--------------------|------------------------------------------|
-[2026-08-20 00:29:37,758]:DEBUG:          | #NAME#             | CPU-14x                                  |
-[2026-08-20 00:29:37,758]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
-[2026-08-20 00:29:37,758]:DEBUG:          | #NCPUS#            | 14                                       |
-[2026-08-20 00:29:37,758]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,758]:DEBUG:          | #MODULES#          | module purge                             |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,758]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
-[2026-08-20 00:29:37,758]:DEBUG:          | #LAAB_REPS#        | 10                                       |
-[2026-08-20 00:29:37,758]:DEBUG:          | #LAAB_N#           | 3000                                     |
-[2026-08-20 00:29:37,758]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,758]:DEBUG:          | #LIBRARY#          | jax                                      |
-[2026-08-20 00:29:37,758]:DEBUG:          | #VERSION#          | 0.4.25                                   |
-[2026-08-20 00:29:37,758]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
-[2026-08-20 00:29:37,758]:DEBUG:          | #CB_ID#            | 0                                        |
-[2026-08-20 00:29:37,758]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,758]:DEBUG:          |                    | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,761]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
-[2026-08-20 00:29:37,762]:DEBUG:   substitute:
-[2026-08-20 00:29:37,762]:DEBUG:          | source             | dest                                     |
-[2026-08-20 00:29:37,762]:DEBUG:          |--------------------|------------------------------------------|
-[2026-08-20 00:29:37,762]:DEBUG:          | #NAME#             | CPU-14x                                  |
-[2026-08-20 00:29:37,762]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
-[2026-08-20 00:29:37,762]:DEBUG:          | #NCPUS#            | 14                                       |
-[2026-08-20 00:29:37,762]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
-[2026-08-20 00:29:37,762]:DEBUG:          |                    | #SBATCH -C skylake                       |
-[2026-08-20 00:29:37,762]:DEBUG:          | #MODULES#          | module purge                             |
-[2026-08-20 00:29:37,762]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
-[2026-08-20 00:29:37,762]:DEBUG:          |                    | module load jax/0.4.25                   |
-[2026-08-20 00:29:37,762]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
-[2026-08-20 00:29:37,762]:DEBUG:          | #LAAB_REPS#        | 10                                       |
-[2026-08-20 00:29:37,762]:DEBUG:          | #LAAB_N#           | 3000                                     |
-[2026-08-20 00:29:37,762]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
-[2026-08-20 00:29:37,762]:DEBUG:          | #LIBRARY#          | jax                                      |
-[2026-08-20 00:29:37,762]:DEBUG:          | #VERSION#          | 0.4.25                                   |
-[2026-08-20 00:29:37,762]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
-[2026-08-20 00:29:37,762]:DEBUG:          | #CB_ID#            | 0                                        |
-[2026-08-20 00:29:37,762]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
-[2026-08-20 00:29:37,763]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
-[2026-08-20 00:29:37,763]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
-[2026-08-20 00:29:37,763]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
-[2026-08-20 00:29:37,763]:DEBUG:          |                    | pyx/venv/bin/activate                    |
-[2026-08-20 00:29:37,771]:DEBUG: >>> sbatch submit.sh
-[2026-08-20 00:29:37,771]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000002_bm/work/stdout
-[2026-08-20 00:29:37,771]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000002_bm/work/stderr
-[2026-08-20 00:29:37,798]:DEBUG: Create new workpackages for workpackage bm(2)
-[2026-08-20 00:29:37,798]:DEBUG:   0 new workpackages created
-[2026-08-20 00:29:37,802]:INFO:   | stepname | all | open | wait | error | done |
-[2026-08-20 00:29:37,802]:INFO:   |----------|-----|------|------|-------|------|
-[2026-08-20 00:29:37,802]:INFO:   |       bm |   3 |    0 |    0 |     0 |    3 |
-[2026-08-20 00:29:37,802]:INFO: 
-[2026-08-20 00:29:37,802]:INFO: >>>> Benchmark information and further useful commands:
-[2026-08-20 00:29:37,802]:INFO: >>>>       id: 0
-[2026-08-20 00:29:37,802]:INFO: >>>>   handle: artifacts/0.4.25-gfbf-2023a
-[2026-08-20 00:29:37,802]:INFO: >>>>      dir: artifacts/0.4.25-gfbf-2023a/000000
-[2026-08-20 00:29:37,802]:INFO: >>>>  analyse: jube analyse artifacts/0.4.25-gfbf-2023a --id 0
-[2026-08-20 00:29:37,802]:INFO: >>>>   result: jube result artifacts/0.4.25-gfbf-2023a --id 0
-[2026-08-20 00:29:37,802]:INFO: >>>>     info: jube info artifacts/0.4.25-gfbf-2023a --id 0
-[2026-08-20 00:29:37,802]:INFO: >>>>      log: jube log artifacts/0.4.25-gfbf-2023a --id 0
-[2026-08-20 00:29:37,802]:INFO: ######################################################################
+[2026-08-20 16:00:21,620]:DEBUG: Create initial workpackages
+[2026-08-20 16:00:21,622]:DEBUG: Expand parameter templates:
+[2026-08-20 16:00:21,622]:DEBUG:     "ncpus": 1,4,14
+[2026-08-20 16:00:21,648]:DEBUG: Store initial workpackage information
+[2026-08-20 16:00:21,652]:DEBUG: Start benchmark run
+[2026-08-20 16:00:21,652]:INFO: ######################################################################
+[2026-08-20 16:00:21,652]:INFO: # benchmark: laab-pyx
+[2026-08-20 16:00:21,653]:INFO: # id: 0
+[2026-08-20 16:00:21,653]:INFO: #
+[2026-08-20 16:00:21,653]:INFO: # laab-pyx
+[2026-08-20 16:00:21,653]:INFO: ######################################################################
+[2026-08-20 16:00:21,655]:DEBUG: ----- bm ( iter:0 | id:0 | parents: | cycle:0 | procs:1 ) -----
+[2026-08-20 16:00:21,657]:DEBUG:   available parameter:
+[2026-08-20 16:00:21,657]:DEBUG:          | parameter             | value                                    |
+[2026-08-20 16:00:21,657]:DEBUG:          |-----------------------|------------------------------------------|
+[2026-08-20 16:00:21,657]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,657]:DEBUG:          |                       | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | pyx/jube/jax/kebnekaise:skylake          |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_benchmark_id     | 0                                        |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_benchmark_padid  | 000000                                   |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | 2023a/000000                             |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_benchmark_start  | 2026-08-20T16:00:21                      |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_step_cycles      | 1                                        |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_step_iterations  | 1                                        |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_step_name        | bm                                       |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
+[2026-08-20 16:00:21,658]:DEBUG:          |                       | 2023a/000000/000000_bm/work              |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_cycle         | 0                                        |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_envlist       |                                          |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_envstr        |                                          |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_id            | 0                                        |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_iteration     | 0                                        |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_padid         | 000000                                   |
+[2026-08-20 16:00:21,658]:DEBUG:          | jube_wp_relpath       | artifacts/0.4.25-gfbf-                   |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | 2023a/000000/000000_bm/work              |
+[2026-08-20 16:00:21,659]:DEBUG:          | jube_wp_status        | RUNNING                                  |
+[2026-08-20 16:00:21,659]:DEBUG:          | laab_n                | 3000                                     |
+[2026-08-20 16:00:21,659]:DEBUG:          | laab_reps             | 10                                       |
+[2026-08-20 16:00:21,659]:DEBUG:          | ld_blas               | '-lopenblas'                             |
+[2026-08-20 16:00:21,659]:DEBUG:          | library               | jax                                      |
+[2026-08-20 16:00:21,659]:DEBUG:          | modules               | module purge                             |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,659]:DEBUG:          | name                  | CPU-1x                                   |
+[2026-08-20 16:00:21,659]:DEBUG:          | ncpus                 | 1                                        |
+[2026-08-20 16:00:21,659]:DEBUG:          | postprocess_deps      | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,659]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
+[2026-08-20 16:00:21,659]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-20 16:00:21,659]:DEBUG:          |                       | pyx/src/benchmark_codes/jax/v0-cpu       |
+[2026-08-20 16:00:21,659]:DEBUG:          | system                | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,659]:DEBUG:          | time_limit            | 00:30:00                                 |
+[2026-08-20 16:00:21,659]:DEBUG:          | toolchain             | gfbf-2023a                               |
+[2026-08-20 16:00:21,659]:DEBUG:          | version               | 0.4.25                                   |
+[2026-08-20 16:00:21,660]:DEBUG:   copy "../../submit.in" -> "submit.in"
+[2026-08-20 16:00:21,665]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
+[2026-08-20 16:00:21,671]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
+[2026-08-20 16:00:21,677]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
+[2026-08-20 16:00:21,683]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
+[2026-08-20 16:00:21,690]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
+[2026-08-20 16:00:21,695]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_blocked.py" -> "../../src/am_blocked.py"
+[2026-08-20 16:00:21,701]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
+[2026-08-20 16:00:21,706]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/config.json" -> "../../src/config.json"
+[2026-08-20 16:00:21,713]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
+[2026-08-20 16:00:21,719]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
+[2026-08-20 16:00:21,724]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_transpose.py" -> "../../src/am_transpose.py"
+[2026-08-20 16:00:21,730]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/Makefile" -> "../../src/Makefile"
+[2026-08-20 16:00:21,736]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
+[2026-08-20 16:00:21,742]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
+[2026-08-20 16:00:21,747]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_addition.py" -> "../../src/cse_addition.py"
+[2026-08-20 16:00:21,755]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
+[2026-08-20 16:00:21,761]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
+[2026-08-20 16:00:21,767]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
+[2026-08-20 16:00:21,772]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_loops.py" -> "../../src/cm_loops.py"
+[2026-08-20 16:00:21,778]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/C" -> "../../src/C"
+[2026-08-20 16:00:21,816]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
+[2026-08-20 16:00:21,822]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
+[2026-08-20 16:00:21,828]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
+[2026-08-20 16:00:21,828]:DEBUG:   substitute submit.in -> submit.sh
+[2026-08-20 16:00:21,829]:DEBUG:   substitute:
+[2026-08-20 16:00:21,829]:DEBUG:          | source             | dest                                     |
+[2026-08-20 16:00:21,829]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-20 16:00:21,829]:DEBUG:          | #NAME#             | CPU-1x                                   |
+[2026-08-20 16:00:21,829]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-20 16:00:21,829]:DEBUG:          | #NCPUS#            | 1                                        |
+[2026-08-20 16:00:21,829]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,829]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,829]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-20 16:00:21,829]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,829]:DEBUG:          |                    | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,829]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-20 16:00:21,829]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-20 16:00:21,829]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-20 16:00:21,829]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,829]:DEBUG:          | #LIBRARY#          | jax                                      |
+[2026-08-20 16:00:21,829]:DEBUG:          | #VERSION#          | 0.4.25                                   |
+[2026-08-20 16:00:21,829]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
+[2026-08-20 16:00:21,830]:DEBUG:          | #CB_ID#            | 0                                        |
+[2026-08-20 16:00:21,830]:DEBUG:          | #POSTPROCESS_DEPS# | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,830]:DEBUG:          |                    | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,830]:DEBUG:          |                    | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,833]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
+[2026-08-20 16:00:21,833]:DEBUG:   substitute:
+[2026-08-20 16:00:21,833]:DEBUG:          | source             | dest                                     |
+[2026-08-20 16:00:21,833]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-20 16:00:21,833]:DEBUG:          | #NAME#             | CPU-1x                                   |
+[2026-08-20 16:00:21,833]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-20 16:00:21,833]:DEBUG:          | #NCPUS#            | 1                                        |
+[2026-08-20 16:00:21,833]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,833]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,833]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-20 16:00:21,833]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,833]:DEBUG:          |                    | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,833]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-20 16:00:21,833]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-20 16:00:21,833]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-20 16:00:21,834]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,834]:DEBUG:          | #LIBRARY#          | jax                                      |
+[2026-08-20 16:00:21,834]:DEBUG:          | #VERSION#          | 0.4.25                                   |
+[2026-08-20 16:00:21,834]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
+[2026-08-20 16:00:21,834]:DEBUG:          | #CB_ID#            | 0                                        |
+[2026-08-20 16:00:21,834]:DEBUG:          | #POSTPROCESS_DEPS# | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,834]:DEBUG:          |                    | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,834]:DEBUG:          |                    | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,842]:DEBUG: >>> sbatch submit.sh
+[2026-08-20 16:00:21,842]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/stdout
+[2026-08-20 16:00:21,842]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/stderr
+[2026-08-20 16:00:21,866]:DEBUG: Create new workpackages for workpackage bm(0)
+[2026-08-20 16:00:21,866]:DEBUG:   0 new workpackages created
+[2026-08-20 16:00:21,871]:DEBUG: ----- bm ( iter:0 | id:1 | parents: | cycle:0 | procs:1 ) -----
+[2026-08-20 16:00:21,874]:DEBUG:   available parameter:
+[2026-08-20 16:00:21,874]:DEBUG:          | parameter             | value                                    |
+[2026-08-20 16:00:21,874]:DEBUG:          |-----------------------|------------------------------------------|
+[2026-08-20 16:00:21,874]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | pyx/jube/jax/kebnekaise:skylake          |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_benchmark_id     | 0                                        |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_benchmark_padid  | 000000                                   |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | 2023a/000000                             |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_benchmark_start  | 2026-08-20T16:00:21                      |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_step_cycles      | 1                                        |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_step_iterations  | 1                                        |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_step_name        | bm                                       |
+[2026-08-20 16:00:21,874]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
+[2026-08-20 16:00:21,874]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | 2023a/000000/000001_bm/work              |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_cycle         | 0                                        |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_envlist       |                                          |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_envstr        |                                          |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_id            | 1                                        |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_iteration     | 0                                        |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_padid         | 000001                                   |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_relpath       | artifacts/0.4.25-gfbf-                   |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | 2023a/000000/000001_bm/work              |
+[2026-08-20 16:00:21,875]:DEBUG:          | jube_wp_status        | RUNNING                                  |
+[2026-08-20 16:00:21,875]:DEBUG:          | laab_n                | 3000                                     |
+[2026-08-20 16:00:21,875]:DEBUG:          | laab_reps             | 10                                       |
+[2026-08-20 16:00:21,875]:DEBUG:          | ld_blas               | '-lopenblas'                             |
+[2026-08-20 16:00:21,875]:DEBUG:          | library               | jax                                      |
+[2026-08-20 16:00:21,875]:DEBUG:          | modules               | module purge                             |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,875]:DEBUG:          | name                  | CPU-4x                                   |
+[2026-08-20 16:00:21,875]:DEBUG:          | ncpus                 | 4                                        |
+[2026-08-20 16:00:21,875]:DEBUG:          | postprocess_deps      | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,875]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
+[2026-08-20 16:00:21,875]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
+[2026-08-20 16:00:21,875]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
+[2026-08-20 16:00:21,876]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-20 16:00:21,876]:DEBUG:          |                       | pyx/src/benchmark_codes/jax/v0-cpu       |
+[2026-08-20 16:00:21,876]:DEBUG:          | system                | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,876]:DEBUG:          | time_limit            | 00:30:00                                 |
+[2026-08-20 16:00:21,876]:DEBUG:          | toolchain             | gfbf-2023a                               |
+[2026-08-20 16:00:21,876]:DEBUG:          | version               | 0.4.25                                   |
+[2026-08-20 16:00:21,876]:DEBUG:   copy "../../submit.in" -> "submit.in"
+[2026-08-20 16:00:21,881]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
+[2026-08-20 16:00:21,885]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
+[2026-08-20 16:00:21,885]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
+[2026-08-20 16:00:21,885]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
+[2026-08-20 16:00:21,885]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_blocked.py" -> "../../src/am_blocked.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/config.json" -> "../../src/config.json"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_transpose.py" -> "../../src/am_transpose.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/Makefile" -> "../../src/Makefile"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_addition.py" -> "../../src/cse_addition.py"
+[2026-08-20 16:00:21,886]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_loops.py" -> "../../src/cm_loops.py"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/C" -> "../../src/C"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
+[2026-08-20 16:00:21,887]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
+[2026-08-20 16:00:21,888]:DEBUG:   substitute submit.in -> submit.sh
+[2026-08-20 16:00:21,888]:DEBUG:   substitute:
+[2026-08-20 16:00:21,888]:DEBUG:          | source             | dest                                     |
+[2026-08-20 16:00:21,888]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-20 16:00:21,888]:DEBUG:          | #NAME#             | CPU-4x                                   |
+[2026-08-20 16:00:21,888]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-20 16:00:21,888]:DEBUG:          | #NCPUS#            | 4                                        |
+[2026-08-20 16:00:21,888]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,888]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,888]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-20 16:00:21,888]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,888]:DEBUG:          |                    | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,888]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-20 16:00:21,889]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-20 16:00:21,889]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-20 16:00:21,889]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,889]:DEBUG:          | #LIBRARY#          | jax                                      |
+[2026-08-20 16:00:21,889]:DEBUG:          | #VERSION#          | 0.4.25                                   |
+[2026-08-20 16:00:21,889]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
+[2026-08-20 16:00:21,889]:DEBUG:          | #CB_ID#            | 0                                        |
+[2026-08-20 16:00:21,889]:DEBUG:          | #POSTPROCESS_DEPS# | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,889]:DEBUG:          |                    | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,889]:DEBUG:          |                    | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,892]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
+[2026-08-20 16:00:21,892]:DEBUG:   substitute:
+[2026-08-20 16:00:21,892]:DEBUG:          | source             | dest                                     |
+[2026-08-20 16:00:21,892]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-20 16:00:21,892]:DEBUG:          | #NAME#             | CPU-4x                                   |
+[2026-08-20 16:00:21,892]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-20 16:00:21,892]:DEBUG:          | #NCPUS#            | 4                                        |
+[2026-08-20 16:00:21,892]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,892]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,892]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-20 16:00:21,892]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,892]:DEBUG:          |                    | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,892]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-20 16:00:21,892]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-20 16:00:21,892]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-20 16:00:21,892]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,892]:DEBUG:          | #LIBRARY#          | jax                                      |
+[2026-08-20 16:00:21,893]:DEBUG:          | #VERSION#          | 0.4.25                                   |
+[2026-08-20 16:00:21,893]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
+[2026-08-20 16:00:21,893]:DEBUG:          | #CB_ID#            | 0                                        |
+[2026-08-20 16:00:21,893]:DEBUG:          | #POSTPROCESS_DEPS# | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,893]:DEBUG:          |                    | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,893]:DEBUG:          |                    | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,897]:DEBUG: >>> sbatch submit.sh
+[2026-08-20 16:00:21,897]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000001_bm/work/stdout
+[2026-08-20 16:00:21,898]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000001_bm/work/stderr
+[2026-08-20 16:00:21,917]:DEBUG: Create new workpackages for workpackage bm(1)
+[2026-08-20 16:00:21,917]:DEBUG:   0 new workpackages created
+[2026-08-20 16:00:21,922]:DEBUG: ----- bm ( iter:0 | id:2 | parents: | cycle:0 | procs:1 ) -----
+[2026-08-20 16:00:21,925]:DEBUG:   available parameter:
+[2026-08-20 16:00:21,925]:DEBUG:          | parameter             | value                                    |
+[2026-08-20 16:00:21,925]:DEBUG:          |-----------------------|------------------------------------------|
+[2026-08-20 16:00:21,925]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | pyx/jube/jax/kebnekaise:skylake          |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_benchmark_id     | 0                                        |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_benchmark_padid  | 000000                                   |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | 2023a/000000                             |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_benchmark_start  | 2026-08-20T16:00:21                      |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_step_cycles      | 1                                        |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_step_iterations  | 1                                        |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_step_name        | bm                                       |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/jax/keb |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | nekaise:skylake/artifacts/0.4.25-gfbf-   |
+[2026-08-20 16:00:21,925]:DEBUG:          |                       | 2023a/000000/000002_bm/work              |
+[2026-08-20 16:00:21,925]:DEBUG:          | jube_wp_cycle         | 0                                        |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_envlist       |                                          |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_envstr        |                                          |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_id            | 2                                        |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_iteration     | 0                                        |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_padid         | 000002                                   |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_relpath       | artifacts/0.4.25-gfbf-                   |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | 2023a/000000/000002_bm/work              |
+[2026-08-20 16:00:21,926]:DEBUG:          | jube_wp_status        | RUNNING                                  |
+[2026-08-20 16:00:21,926]:DEBUG:          | laab_n                | 3000                                     |
+[2026-08-20 16:00:21,926]:DEBUG:          | laab_reps             | 10                                       |
+[2026-08-20 16:00:21,926]:DEBUG:          | ld_blas               | '-lopenblas'                             |
+[2026-08-20 16:00:21,926]:DEBUG:          | library               | jax                                      |
+[2026-08-20 16:00:21,926]:DEBUG:          | modules               | module purge                             |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,926]:DEBUG:          | name                  | CPU-14x                                  |
+[2026-08-20 16:00:21,926]:DEBUG:          | ncpus                 | 14                                       |
+[2026-08-20 16:00:21,926]:DEBUG:          | postprocess_deps      | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,926]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
+[2026-08-20 16:00:21,926]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-20 16:00:21,926]:DEBUG:          |                       | pyx/src/benchmark_codes/jax/v0-cpu       |
+[2026-08-20 16:00:21,926]:DEBUG:          | system                | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,926]:DEBUG:          | time_limit            | 00:30:00                                 |
+[2026-08-20 16:00:21,927]:DEBUG:          | toolchain             | gfbf-2023a                               |
+[2026-08-20 16:00:21,927]:DEBUG:          | version               | 0.4.25                                   |
+[2026-08-20 16:00:21,927]:DEBUG:   copy "../../submit.in" -> "submit.in"
+[2026-08-20 16:00:21,931]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_blocked.py" -> "../../src/am_blocked.py"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/config.json" -> "../../src/config.json"
+[2026-08-20 16:00:21,936]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_transpose.py" -> "../../src/am_transpose.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/Makefile" -> "../../src/Makefile"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_addition.py" -> "../../src/cse_addition.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/cm_loops.py" -> "../../src/cm_loops.py"
+[2026-08-20 16:00:21,937]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/C" -> "../../src/C"
+[2026-08-20 16:00:21,938]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
+[2026-08-20 16:00:21,938]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/jax/v0-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
+[2026-08-20 16:00:21,938]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
+[2026-08-20 16:00:21,938]:DEBUG:   substitute submit.in -> submit.sh
+[2026-08-20 16:00:21,939]:DEBUG:   substitute:
+[2026-08-20 16:00:21,939]:DEBUG:          | source             | dest                                     |
+[2026-08-20 16:00:21,939]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-20 16:00:21,939]:DEBUG:          | #NAME#             | CPU-14x                                  |
+[2026-08-20 16:00:21,939]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-20 16:00:21,939]:DEBUG:          | #NCPUS#            | 14                                       |
+[2026-08-20 16:00:21,939]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,939]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,939]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-20 16:00:21,939]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,939]:DEBUG:          |                    | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,939]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-20 16:00:21,939]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-20 16:00:21,939]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-20 16:00:21,939]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,939]:DEBUG:          | #LIBRARY#          | jax                                      |
+[2026-08-20 16:00:21,939]:DEBUG:          | #VERSION#          | 0.4.25                                   |
+[2026-08-20 16:00:21,939]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
+[2026-08-20 16:00:21,939]:DEBUG:          | #CB_ID#            | 0                                        |
+[2026-08-20 16:00:21,939]:DEBUG:          | #POSTPROCESS_DEPS# | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,940]:DEBUG:          |                    | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,940]:DEBUG:          |                    | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,943]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
+[2026-08-20 16:00:21,943]:DEBUG:   substitute:
+[2026-08-20 16:00:21,943]:DEBUG:          | source             | dest                                     |
+[2026-08-20 16:00:21,943]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-20 16:00:21,943]:DEBUG:          | #NAME#             | CPU-14x                                  |
+[2026-08-20 16:00:21,943]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-20 16:00:21,943]:DEBUG:          | #NCPUS#            | 14                                       |
+[2026-08-20 16:00:21,944]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-20 16:00:21,944]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-20 16:00:21,944]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-20 16:00:21,944]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-20 16:00:21,944]:DEBUG:          |                    | module load jax/0.4.25                   |
+[2026-08-20 16:00:21,944]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-20 16:00:21,944]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-20 16:00:21,944]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-20 16:00:21,944]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-20 16:00:21,944]:DEBUG:          | #LIBRARY#          | jax                                      |
+[2026-08-20 16:00:21,944]:DEBUG:          | #VERSION#          | 0.4.25                                   |
+[2026-08-20 16:00:21,944]:DEBUG:          | #TOOLCHAIN#        | gfbf-2023a                               |
+[2026-08-20 16:00:21,944]:DEBUG:          | #CB_ID#            | 0                                        |
+[2026-08-20 16:00:21,944]:DEBUG:          | #POSTPROCESS_DEPS# | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-20 16:00:21,944]:DEBUG:          |                    | HPC/benchmarks/laab-pyx/venvs/pyx-       |
+[2026-08-20 16:00:21,944]:DEBUG:          |                    | kebnekaise/activate.sh                   |
+[2026-08-20 16:00:21,948]:DEBUG: >>> sbatch submit.sh
+[2026-08-20 16:00:21,949]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000002_bm/work/stdout
+[2026-08-20 16:00:21,949]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000002_bm/work/stderr
+[2026-08-20 16:00:21,969]:DEBUG: Create new workpackages for workpackage bm(2)
+[2026-08-20 16:00:21,969]:DEBUG:   0 new workpackages created
+[2026-08-20 16:00:21,973]:INFO:   | stepname | all | open | wait | error | done |
+[2026-08-20 16:00:21,973]:INFO:   |----------|-----|------|------|-------|------|
+[2026-08-20 16:00:21,973]:INFO:   |       bm |   3 |    0 |    0 |     0 |    3 |
+[2026-08-20 16:00:21,973]:INFO: 
+[2026-08-20 16:00:21,973]:INFO: >>>> Benchmark information and further useful commands:
+[2026-08-20 16:00:21,973]:INFO: >>>>       id: 0
+[2026-08-20 16:00:21,973]:INFO: >>>>   handle: artifacts/0.4.25-gfbf-2023a
+[2026-08-20 16:00:21,973]:INFO: >>>>      dir: artifacts/0.4.25-gfbf-2023a/000000
+[2026-08-20 16:00:21,973]:INFO: >>>>  analyse: jube analyse artifacts/0.4.25-gfbf-2023a --id 0
+[2026-08-20 16:00:21,973]:INFO: >>>>   result: jube result artifacts/0.4.25-gfbf-2023a --id 0
+[2026-08-20 16:00:21,973]:INFO: >>>>     info: jube info artifacts/0.4.25-gfbf-2023a --id 0
+[2026-08-20 16:00:21,974]:INFO: >>>>      log: jube log artifacts/0.4.25-gfbf-2023a --id 0
+[2026-08-20 16:00:21,974]:INFO: ######################################################################

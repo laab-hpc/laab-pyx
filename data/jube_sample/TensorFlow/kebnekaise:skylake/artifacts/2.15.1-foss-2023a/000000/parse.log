@@ -1,0 +1,32 @@
+[2026-08-20 00:27:56,042]:DEBUG: Command: jube run 2.15.1-foss-2023a.xml
+[2026-08-20 00:27:56,043]:DEBUG: Version: 2.7.1
+[2026-08-20 00:27:56,043]:DEBUG: Parsing 2.15.1-foss-2023a.xml
+[2026-08-20 00:27:56,044]:DEBUG:   --> Preprocess run 1 <--
+[2026-08-20 00:27:56,044]:DEBUG:   Remove invalid tags
+[2026-08-20 00:27:56,044]:DEBUG:     Available tags: 
+[2026-08-20 00:27:56,044]:DEBUG:   Remove invalid tags
+[2026-08-20 00:27:56,044]:DEBUG:     Available tags: 
+[2026-08-20 00:27:56,044]:DEBUG:   Read $JUBE_INCLUDE_PATH
+[2026-08-20 00:27:56,044]:DEBUG:   Preprocess xml tree
+[2026-08-20 00:27:56,044]:DEBUG:     path: .
+[2026-08-20 00:27:56,045]:DEBUG:   New tags might be included, start additional include-preprocess run.
+[2026-08-20 00:27:56,046]:DEBUG:   --> Preprocess run 2 <--
+[2026-08-20 00:27:56,046]:DEBUG:   Remove invalid tags
+[2026-08-20 00:27:56,046]:DEBUG:     Available tags: 
+[2026-08-20 00:27:56,046]:DEBUG:   Remove invalid tags
+[2026-08-20 00:27:56,046]:DEBUG:     Available tags: 
+[2026-08-20 00:27:56,046]:DEBUG:   Read $JUBE_INCLUDE_PATH
+[2026-08-20 00:27:56,046]:DEBUG:   Preprocess xml tree
+[2026-08-20 00:27:56,046]:DEBUG:     path: .
+[2026-08-20 00:27:56,046]:DEBUG:   No preprocessing changes were detected, stop additional include-preprocess runs.
+[2026-08-20 00:27:56,046]:DEBUG:   Remove invalid tags
+[2026-08-20 00:27:56,046]:DEBUG:     Available tags: 
+[2026-08-20 00:27:56,046]:DEBUG:   Preprocess done
+[2026-08-20 00:27:56,046]:DEBUG:   Preprocess benchmark xml tree
+[2026-08-20 00:27:56,047]:DEBUG:   Parsing <parameterset name="param_set">
+[2026-08-20 00:27:56,047]:DEBUG:     Searching for <parameterset name="param_set"> in _commons.xml
+[2026-08-20 00:27:56,047]:DEBUG:   Parsing <substituteset name="substitutes">
+[2026-08-20 00:27:56,047]:DEBUG:   Parsing <fileset name="files">
+[2026-08-20 00:27:56,048]:DEBUG:   Parsing <step name="bm">
+[2026-08-20 00:27:56,048]:DEBUG: Start consistency check
+[2026-08-20 00:27:56,048]:DEBUG: Create benchmark directory

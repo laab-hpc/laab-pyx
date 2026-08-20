@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workpackages>
+  <workpackage id="0">
+    <step iteration="0" cycle="0">bm</step>
+    <parameterset>
+      <parameter name="system" type="string" separator="," duplicate="none" mode="text">
+        <value>kebnekaise:skylake</value>
+      </parameter>
+      <parameter name="root" type="string" separator="," duplicate="none" mode="text">
+        <value>/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx</value>
+      </parameter>
+      <parameter name="time_limit" type="string" separator="," duplicate="none" mode="text">
+        <value>00:30:00</value>
+      </parameter>
+      <parameter name="ncpus" type="string" separator="," duplicate="none" mode="text">
+        <value>1,4,14</value>
+        <selection idx="0">1</selection>
+      </parameter>
+      <parameter name="ld_blas" type="string" separator="," duplicate="none" mode="text">
+        <value>'-lopenblas'</value>
+      </parameter>
+      <parameter name="laab_reps" type="string" separator="," duplicate="none" mode="text">
+        <value>10</value>
+      </parameter>
+      <parameter name="laab_n" type="string" separator="," duplicate="none" mode="text">
+        <value>3000</value>
+      </parameter>
+      <parameter name="account_config" type="string" separator="," duplicate="none" mode="text">
+        <value>#SBATCH -A hpc2n2026-184
+#SBATCH -C skylake</value>
+      </parameter>
+      <parameter name="postprocess_deps" type="string" separator="," duplicate="none" mode="text">
+        <value>module purge
+module load GCC/14.3.0 SciPy-bundle
+source ${root}/venv/bin/activate</value>
+        <selection>module purge
+module load GCC/14.3.0 SciPy-bundle
+source /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/venv/bin/activate</selection>
+      </parameter>
+      <parameter name="src" type="string" separator="," duplicate="none" mode="text">
+        <value>${root}/src/benchmark_codes/TensorFlow/v2-cpu</value>
+        <selection>/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/TensorFlow/v2-cpu</selection>
+      </parameter>
+      <parameter name="library" type="string" separator="," duplicate="none" mode="text">
+        <value>TensorFlow</value>
+      </parameter>
+      <parameter name="version" type="string" separator="," duplicate="none" mode="text">
+        <value>2.15.1</value>
+      </parameter>
+      <parameter name="toolchain" type="string" separator="," duplicate="none" mode="text">
+        <value>foss-2023a</value>
+      </parameter>
+      <parameter name="modules" type="string" separator="," duplicate="none" mode="text">
+        <value>module purge
+module load GCC/12.3.0 OpenMPI/4.1.5
+module load TensorFlow/2.15.1</value>
+      </parameter>
+      <parameter name="name" type="string" separator="," duplicate="none" mode="text">
+        <value>CPU-${ncpus}x</value>
+        <selection>CPU-1x</selection>
+      </parameter>
+    </parameterset>
+    <iteration_siblings>0</iteration_siblings>
+    <environment>
+      <nonenv name="BASH_FUNC_ml%%"/>
+      <nonenv name="BASH_FUNC_module%%"/>
+    </environment>
+  </workpackage>
+  <workpackage id="1">
+    <step iteration="0" cycle="0">bm</step>
+    <parameterset>
+      <parameter name="system" type="string" separator="," duplicate="none" mode="text">
+        <value>kebnekaise:skylake</value>
+      </parameter>
+      <parameter name="root" type="string" separator="," duplicate="none" mode="text">
+        <value>/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx</value>
+      </parameter>
+      <parameter name="time_limit" type="string" separator="," duplicate="none" mode="text">
+        <value>00:30:00</value>
+      </parameter>
+      <parameter name="ncpus" type="string" separator="," duplicate="none" mode="text">
+        <value>1,4,14</value>
+        <selection idx="1">4</selection>
+      </parameter>
+      <parameter name="ld_blas" type="string" separator="," duplicate="none" mode="text">
+        <value>'-lopenblas'</value>
+      </parameter>
+      <parameter name="laab_reps" type="string" separator="," duplicate="none" mode="text">
+        <value>10</value>
+      </parameter>
+      <parameter name="laab_n" type="string" separator="," duplicate="none" mode="text">
+        <value>3000</value>
+      </parameter>
+      <parameter name="account_config" type="string" separator="," duplicate="none" mode="text">
+        <value>#SBATCH -A hpc2n2026-184
+#SBATCH -C skylake</value>
+      </parameter>
+      <parameter name="postprocess_deps" type="string" separator="," duplicate="none" mode="text">
+        <value>module purge
+module load GCC/14.3.0 SciPy-bundle
+source ${root}/venv/bin/activate</value>
+        <selection>module purge
+module load GCC/14.3.0 SciPy-bundle
+source /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/venv/bin/activate</selection>
+      </parameter>
+      <parameter name="src" type="string" separator="," duplicate="none" mode="text">
+        <value>${root}/src/benchmark_codes/TensorFlow/v2-cpu</value>
+        <selection>/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/TensorFlow/v2-cpu</selection>
+      </parameter>
+      <parameter name="library" type="string" separator="," duplicate="none" mode="text">
+        <value>TensorFlow</value>
+      </parameter>
+      <parameter name="version" type="string" separator="," duplicate="none" mode="text">
+        <value>2.15.1</value>
+      </parameter>
+      <parameter name="toolchain" type="string" separator="," duplicate="none" mode="text">
+        <value>foss-2023a</value>
+      </parameter>
+      <parameter name="modules" type="string" separator="," duplicate="none" mode="text">
+        <value>module purge
+module load GCC/12.3.0 OpenMPI/4.1.5
+module load TensorFlow/2.15.1</value>
+      </parameter>
+      <parameter name="name" type="string" separator="," duplicate="none" mode="text">
+        <value>CPU-${ncpus}x</value>
+        <selection>CPU-4x</selection>
+      </parameter>
+    </parameterset>
+    <iteration_siblings>1</iteration_siblings>
+    <environment>
+      <nonenv name="BASH_FUNC_ml%%"/>
+      <nonenv name="BASH_FUNC_module%%"/>
+    </environment>
+  </workpackage>
+  <workpackage id="2">
+    <step iteration="0" cycle="0">bm</step>
+    <parameterset>
+      <parameter name="system" type="string" separator="," duplicate="none" mode="text">
+        <value>kebnekaise:skylake</value>
+      </parameter>
+      <parameter name="root" type="string" separator="," duplicate="none" mode="text">
+        <value>/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx</value>
+      </parameter>
+      <parameter name="time_limit" type="string" separator="," duplicate="none" mode="text">
+        <value>00:30:00</value>
+      </parameter>
+      <parameter name="ncpus" type="string" separator="," duplicate="none" mode="text">
+        <value>1,4,14</value>
+        <selection idx="2">14</selection>
+      </parameter>
+      <parameter name="ld_blas" type="string" separator="," duplicate="none" mode="text">
+        <value>'-lopenblas'</value>
+      </parameter>
+      <parameter name="laab_reps" type="string" separator="," duplicate="none" mode="text">
+        <value>10</value>
+      </parameter>
+      <parameter name="laab_n" type="string" separator="," duplicate="none" mode="text">
+        <value>3000</value>
+      </parameter>
+      <parameter name="account_config" type="string" separator="," duplicate="none" mode="text">
+        <value>#SBATCH -A hpc2n2026-184
+#SBATCH -C skylake</value>
+      </parameter>
+      <parameter name="postprocess_deps" type="string" separator="," duplicate="none" mode="text">
+        <value>module purge
+module load GCC/14.3.0 SciPy-bundle
+source ${root}/venv/bin/activate</value>
+        <selection>module purge
+module load GCC/14.3.0 SciPy-bundle
+source /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/venv/bin/activate</selection>
+      </parameter>
+      <parameter name="src" type="string" separator="," duplicate="none" mode="text">
+        <value>${root}/src/benchmark_codes/TensorFlow/v2-cpu</value>
+        <selection>/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/TensorFlow/v2-cpu</selection>
+      </parameter>
+      <parameter name="library" type="string" separator="," duplicate="none" mode="text">
+        <value>TensorFlow</value>
+      </parameter>
+      <parameter name="version" type="string" separator="," duplicate="none" mode="text">
+        <value>2.15.1</value>
+      </parameter>
+      <parameter name="toolchain" type="string" separator="," duplicate="none" mode="text">
+        <value>foss-2023a</value>
+      </parameter>
+      <parameter name="modules" type="string" separator="," duplicate="none" mode="text">
+        <value>module purge
+module load GCC/12.3.0 OpenMPI/4.1.5
+module load TensorFlow/2.15.1</value>
+      </parameter>
+      <parameter name="name" type="string" separator="," duplicate="none" mode="text">
+        <value>CPU-${ncpus}x</value>
+        <selection>CPU-14x</selection>
+      </parameter>
+    </parameterset>
+    <iteration_siblings>2</iteration_siblings>
+    <environment>
+      <nonenv name="BASH_FUNC_ml%%"/>
+      <nonenv name="BASH_FUNC_module%%"/>
+    </environment>
+  </workpackage>
+</workpackages>

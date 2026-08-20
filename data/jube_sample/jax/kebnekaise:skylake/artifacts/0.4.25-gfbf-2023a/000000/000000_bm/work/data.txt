@@ -1,0 +1,298 @@
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  28
+On-line CPU(s) list:                     0-27
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz
+CPU family:                              6
+Model:                                   85
+Thread(s) per core:                      1
+Core(s) per socket:                      14
+Socket(s):                               2
+Stepping:                                4
+CPU(s) scaling MHz:                      91%
+CPU max MHz:                             3700.0000
+CPU min MHz:                             1000.0000
+BogoMIPS:                                5200.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi pku ospke md_clear flush_l1d arch_capabilities ibpb_exit_to_user
+Virtualization:                          VT-x
+L1d cache:                               896 KiB (28 instances)
+L1i cache:                               896 KiB (28 instances)
+L2 cache:                                28 MiB (28 instances)
+L3 cache:                                38.5 MiB (2 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0-13
+NUMA node1 CPU(s):                       14-27
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                      Mitigation; PTE Inversion; VMX conditional cache flushes, SMT disabled
+Vulnerability Mds:                       Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Meltdown:                  Mitigation; PTI
+Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+LAAB_REPS=10 LAAB_N=3000 LAAB_PREFIX='' LD_BLAS=-lopenblas /usr/bin/make -C C/ run
+gcc -O3 sgemm.c -c -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemm.o
+gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemm.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemm.exe -lopenblas
+gcc -O3 sgemv.c -c -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemv.o
+gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemv.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemv.exe -lopenblas
+gcc -O3 ssyrk.c -c -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/ssyrk.o
+gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/ssyrk.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/ssyrk.exe -lopenblas
+gcc -O3 strmm.c -c -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/strmm.o
+gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/strmm.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/strmm.exe -lopenblas
+gcc -O3 stridiagmm.c -c -fopenmp -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/stridiagmm.o
+gcc /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/stridiagmm.o -o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/stridiagmm.exe -fopenmp
+REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemm.exe 3000 3000 3000
+[LAAB] C | mm_sgemm | ref_positive=0.334 s
+[LAAB] C | mm_sgemm | ref_positive=0.329 s
+[LAAB] C | mm_sgemm | ref_positive=0.333 s
+[LAAB] C | mm_sgemm | ref_positive=0.329 s
+[LAAB] C | mm_sgemm | ref_positive=0.331 s
+[LAAB] C | mm_sgemm | ref_positive=0.330 s
+[LAAB] C | mm_sgemm | ref_positive=0.329 s
+[LAAB] C | mm_sgemm | ref_positive=0.329 s
+[LAAB] C | mm_sgemm | ref_positive=0.330 s
+[LAAB] C | mm_sgemm | ref_positive=0.329 s
+REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/sgemv.exe 3000 3000 3000
+[LAAB] C | mm_sgemm | ref_negative=6.796002 s
+[LAAB] C | mm_sgemm | ref_negative=6.810512 s
+[LAAB] C | mm_sgemm | ref_negative=6.904421 s
+[LAAB] C | mm_sgemm | ref_negative=6.924707 s
+[LAAB] C | mm_sgemm | ref_negative=6.916158 s
+[LAAB] C | mm_sgemm | ref_negative=7.025942 s
+[LAAB] C | mm_sgemm | ref_negative=6.954875 s
+[LAAB] C | mm_sgemm | ref_negative=7.021328 s
+[LAAB] C | mm_sgemm | ref_negative=6.996097 s
+[LAAB] C | mm_sgemm | ref_negative=6.981811 s
+REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/ssyrk.exe 3000 3000
+[LAAB] C | mm_syrk | ref_positive=0.188 s
+[LAAB] C | mm_syrk | ref_positive=0.180 s
+[LAAB] C | mm_syrk | ref_positive=0.180 s
+[LAAB] C | mm_syrk | ref_positive=0.180 s
+[LAAB] C | mm_syrk | ref_positive=0.181 s
+[LAAB] C | mm_syrk | ref_positive=0.182 s
+[LAAB] C | mm_syrk | ref_positive=0.180 s
+[LAAB] C | mm_syrk | ref_positive=0.194 s
+[LAAB] C | mm_syrk | ref_positive=0.199 s
+[LAAB] C | mm_syrk | ref_positive=0.199 s
+REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/strmm.exe 3000 3000
+[LAAB] C | mm_trmm | ref_positive=0.188 s
+[LAAB] C | mm_trmm | ref_positive=0.187 s
+[LAAB] C | mm_trmm | ref_positive=0.191 s
+[LAAB] C | mm_trmm | ref_positive=0.180 s
+[LAAB] C | mm_trmm | ref_positive=0.185 s
+[LAAB] C | mm_trmm | ref_positive=0.180 s
+[LAAB] C | mm_trmm | ref_positive=0.171 s
+[LAAB] C | mm_trmm | ref_positive=0.180 s
+[LAAB] C | mm_trmm | ref_positive=0.182 s
+[LAAB] C | mm_trmm | ref_positive=0.188 s
+REP=10  /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/stridiagmm.exe 3000 3000
+[LAAB] C | mm_tridiag | ref_positive=0.010028 s
+[LAAB] C | mm_tridiag | ref_positive=0.009992 s
+[LAAB] C | mm_tridiag | ref_positive=0.010044 s
+[LAAB] C | mm_tridiag | ref_positive=0.010022 s
+[LAAB] C | mm_tridiag | ref_positive=0.010030 s
+[LAAB] C | mm_tridiag | ref_positive=0.010134 s
+[LAAB] C | mm_tridiag | ref_positive=0.010182 s
+[LAAB] C | mm_tridiag | ref_positive=0.010142 s
+[LAAB] C | mm_tridiag | ref_positive=0.010146 s
+[LAAB] C | mm_tridiag | ref_positive=0.010167 s
+rm -f /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/*.o /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/jax/kebnekaise:skylake/artifacts/0.4.25-gfbf-2023a/000000/000000_bm/work/build/*.exe
+LAAB_REPS=10 LAAB_N=3000  python mm_sgemm.py 
+[LAAB] Jax | mm_sgemm | operator=0.73297 s | linalg_matmul=0.65214 s
+[LAAB] Jax | mm_sgemm | operator=0.59714 s | linalg_matmul=0.57168 s
+[LAAB] Jax | mm_sgemm | operator=0.60227 s | linalg_matmul=0.57142 s
+[LAAB] Jax | mm_sgemm | operator=0.60724 s | linalg_matmul=0.68062 s
+[LAAB] Jax | mm_sgemm | operator=0.62438 s | linalg_matmul=0.58392 s
+[LAAB] Jax | mm_sgemm | operator=0.57065 s | linalg_matmul=0.57612 s
+[LAAB] Jax | mm_sgemm | operator=0.57668 s | linalg_matmul=0.57876 s
+[LAAB] Jax | mm_sgemm | operator=0.58880 s | linalg_matmul=0.57392 s
+[LAAB] Jax | mm_sgemm | operator=0.57561 s | linalg_matmul=0.60186 s
+[LAAB] Jax | mm_sgemm | operator=0.58539 s | linalg_matmul=0.64074 s
+LAAB_REPS=10 LAAB_N=3000  python cse_addition.py 
+[LAAB] Jax | cse_addition | ref_positive=0.80681 s | operator=1.62844 s | ref_negative=1.61362 s
+[LAAB] Jax | cse_addition | ref_positive=0.70634 s | operator=1.42118 s | ref_negative=1.41269 s
+[LAAB] Jax | cse_addition | ref_positive=0.69925 s | operator=1.41436 s | ref_negative=1.39850 s
+[LAAB] Jax | cse_addition | ref_positive=0.70296 s | operator=1.42112 s | ref_negative=1.40593 s
+[LAAB] Jax | cse_addition | ref_positive=0.69792 s | operator=1.40510 s | ref_negative=1.39584 s
+[LAAB] Jax | cse_addition | ref_positive=0.69964 s | operator=1.41937 s | ref_negative=1.39928 s
+[LAAB] Jax | cse_addition | ref_positive=0.71658 s | operator=1.56688 s | ref_negative=1.43317 s
+[LAAB] Jax | cse_addition | ref_positive=0.70035 s | operator=1.42959 s | ref_negative=1.40070 s
+[LAAB] Jax | cse_addition | ref_positive=0.69855 s | operator=1.41721 s | ref_negative=1.39710 s
+[LAAB] Jax | cse_addition | ref_positive=0.69708 s | operator=1.41828 s | ref_negative=1.39416 s
+LAAB_REPS=10 LAAB_N=3000  python cse_matmul_paranthesis.py 
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.68264 s | operator=2.57902 s | ref_negative=2.52396 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.58617 s | operator=2.27438 s | ref_negative=2.37925 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.57672 s | operator=2.26412 s | ref_negative=2.36508 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.48206 s | operator=2.23909 s | ref_negative=2.22308 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.40055 s | operator=1.99763 s | ref_negative=2.10083 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.47781 s | operator=2.01899 s | ref_negative=2.21672 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.39204 s | operator=1.98515 s | ref_negative=2.08806 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.45156 s | operator=1.98077 s | ref_negative=2.17734 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.39799 s | operator=2.18247 s | ref_negative=2.09698 s
+[LAAB] Jax | cse_matmul_paranthesis | ref_positive=1.39623 s | operator=1.98059 s | ref_negative=2.09435 s
+LAAB_REPS=10 LAAB_N=3000  python cse_matmul_no_paranthesis.py 
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.50961 s | operator=1.91488 s | ref_negative=2.26442 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.39255 s | operator=1.66015 s | ref_negative=2.08883 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.38695 s | operator=1.65503 s | ref_negative=2.08042 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.42833 s | operator=1.71873 s | ref_negative=2.14250 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.55985 s | operator=1.66432 s | ref_negative=2.33978 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.39277 s | operator=1.67187 s | ref_negative=2.08915 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.44527 s | operator=1.68902 s | ref_negative=2.16790 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.39579 s | operator=1.64031 s | ref_negative=2.09369 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.40125 s | operator=1.66503 s | ref_negative=2.10188 s
+[LAAB] Jax | cse_matmul_no_paranthesis | ref_positive=1.39915 s | operator=1.64725 s | ref_negative=2.09873 s
+LAAB_REPS=10 LAAB_N=3000  python cse_suboptimal.py 
+[LAAB] Jax | cse_suboptimal | ref_positive=0.12407 s | operator=1.92017 s | ref_negative=1.40375 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08909 s | operator=1.66300 s | ref_negative=1.49179 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08923 s | operator=1.73113 s | ref_negative=1.28904 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08891 s | operator=1.66033 s | ref_negative=1.27584 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08908 s | operator=1.64244 s | ref_negative=1.32687 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08930 s | operator=1.70272 s | ref_negative=1.28150 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08961 s | operator=1.66225 s | ref_negative=1.28819 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08926 s | operator=1.65879 s | ref_negative=1.29229 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.08936 s | operator=1.66230 s | ref_negative=1.28992 s
+[LAAB] Jax | cse_suboptimal | ref_positive=0.09161 s | operator=1.77707 s | ref_negative=1.33241 s
+LAAB_REPS=10 LAAB_N=3000  python matchain_ltor.py 
+[LAAB] Jax | matchain_ltor | ref_positive=0.03735 s | operator=0.03864 s | linalg_multidot=0.03835 s | ref_negative=0.82305 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01336 s | operator=0.01383 s | linalg_multidot=0.01346 s | ref_negative=0.71745 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01348 s | operator=0.01373 s | linalg_multidot=0.01355 s | ref_negative=0.69515 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01383 s | operator=0.01370 s | linalg_multidot=0.02747 s | ref_negative=0.69476 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01358 s | operator=0.01376 s | linalg_multidot=0.01350 s | ref_negative=0.69196 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01353 s | operator=0.02656 s | linalg_multidot=0.01375 s | ref_negative=0.70345 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01340 s | operator=0.01372 s | linalg_multidot=0.01349 s | ref_negative=0.70243 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01349 s | operator=0.01371 s | linalg_multidot=0.01355 s | ref_negative=0.70554 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01354 s | operator=0.01374 s | linalg_multidot=0.01356 s | ref_negative=0.69310 s
+[LAAB] Jax | matchain_ltor | ref_positive=0.01337 s | operator=0.01375 s | linalg_multidot=0.01352 s | ref_negative=0.69661 s
+LAAB_REPS=10 LAAB_N=3000  python matchain_rtol.py 
+[LAAB] Jax | matchain_rtol | ref_positive=0.06668 s | operator=0.86378 s | linalg_multidot=0.07230 s | ref_negative=0.78938 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04422 s | operator=0.70054 s | linalg_multidot=0.04448 s | ref_negative=0.71682 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04410 s | operator=0.70578 s | linalg_multidot=0.04423 s | ref_negative=0.71571 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04531 s | operator=0.81396 s | linalg_multidot=0.04537 s | ref_negative=0.73848 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04415 s | operator=0.69952 s | linalg_multidot=0.04424 s | ref_negative=0.69807 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04323 s | operator=0.69047 s | linalg_multidot=0.04379 s | ref_negative=0.70744 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04318 s | operator=0.74048 s | linalg_multidot=0.04387 s | ref_negative=0.69553 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04401 s | operator=0.73061 s | linalg_multidot=0.04412 s | ref_negative=0.70405 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04361 s | operator=0.73281 s | linalg_multidot=0.04387 s | ref_negative=0.75202 s
+[LAAB] Jax | matchain_rtol | ref_positive=0.04349 s | operator=0.69866 s | linalg_multidot=0.04398 s | ref_negative=0.69190 s
+LAAB_REPS=10 LAAB_N=3000  python matchain_mixed.py 
+[LAAB] Jax | matchain_mixed | ref_positive=0.09826 s | operator=0.73178 s | linalg_multidot=0.11308 s | ref_negative=0.71329 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06896 s | operator=0.64772 s | linalg_multidot=0.06927 s | ref_negative=0.66336 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06911 s | operator=0.64293 s | linalg_multidot=0.06874 s | ref_negative=0.66337 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06906 s | operator=0.64457 s | linalg_multidot=0.06915 s | ref_negative=0.64306 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06925 s | operator=0.64934 s | linalg_multidot=0.06894 s | ref_negative=0.64174 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06902 s | operator=0.64271 s | linalg_multidot=0.06904 s | ref_negative=0.64515 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06941 s | operator=0.64841 s | linalg_multidot=0.06954 s | ref_negative=0.64637 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.07246 s | operator=0.74080 s | linalg_multidot=0.07236 s | ref_negative=0.70331 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06982 s | operator=0.64751 s | linalg_multidot=0.06961 s | ref_negative=0.64843 s
+[LAAB] Jax | matchain_mixed | ref_positive=0.06917 s | operator=0.64891 s | linalg_multidot=0.06941 s | ref_negative=0.64609 s
+LAAB_REPS=10 LAAB_N=3000  python mm_trmm.py 
+[LAAB] Jax | mm_trmm | operator=0.67607 s | linalg_matmul=0.65781 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.58060 s | linalg_matmul=0.57800 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.59772 s | linalg_matmul=0.58674 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.59354 s | linalg_matmul=0.58262 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.58091 s | linalg_matmul=0.58136 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.57854 s | linalg_matmul=0.58133 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.58044 s | linalg_matmul=0.58000 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.57918 s | linalg_matmul=0.57995 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.58354 s | linalg_matmul=0.57993 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_trmm | operator=0.60301 s | linalg_matmul=0.57452 s | ref_negative=R+mm_sgemm
+LAAB_REPS=10 LAAB_N=3000  python mm_syrk.py 
+[LAAB] Jax | mm_syrk | operator=0.48383 s | linalg_matmul=0.54683 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.46166 s | linalg_matmul=0.41601 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.38885 s | linalg_matmul=0.39082 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.40975 s | linalg_matmul=0.38990 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.38858 s | linalg_matmul=0.40571 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.40615 s | linalg_matmul=0.46300 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.42691 s | linalg_matmul=0.44037 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.46055 s | linalg_matmul=0.39522 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.46316 s | linalg_matmul=0.44963 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_syrk | operator=0.46264 s | linalg_matmul=0.46244 s | ref_negative=R+mm_sgemm
+LAAB_REPS=10 LAAB_N=3000  python mm_tridiag.py 
+[LAAB] Jax | mm_tridiag | operator=0.79106 s | linalg_matmul=0.70753 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.66249 s | linalg_matmul=0.66960 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.63773 s | linalg_matmul=0.68561 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.63991 s | linalg_matmul=0.67269 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.64941 s | linalg_matmul=0.66623 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.61635 s | linalg_matmul=0.57541 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.57046 s | linalg_matmul=0.59582 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.67241 s | linalg_matmul=0.64077 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.59121 s | linalg_matmul=0.58825 s | ref_negative=R+mm_sgemm
+[LAAB] Jax | mm_tridiag | operator=0.58286 s | linalg_matmul=0.57731 s | ref_negative=R+mm_sgemm
+LAAB_REPS=10 LAAB_N=3000  python am_distributivity1.py 
+[LAAB] Jax | am_distributivity1 | ref_positive=0.67958 s | operator=1.35924 s | ref_negative=1.27537 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60449 s | operator=1.18613 s | ref_negative=1.17614 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60075 s | operator=1.15761 s | ref_negative=1.15811 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.62057 s | operator=1.16121 s | ref_negative=1.15907 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60224 s | operator=1.16081 s | ref_negative=1.15627 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60297 s | operator=1.15883 s | ref_negative=1.29970 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60224 s | operator=1.16751 s | ref_negative=1.16140 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60134 s | operator=1.16066 s | ref_negative=1.16429 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.60097 s | operator=1.15587 s | ref_negative=1.17728 s
+[LAAB] Jax | am_distributivity1 | ref_positive=0.64598 s | operator=1.15209 s | ref_negative=1.19954 s
+LAAB_REPS=10 LAAB_N=3000  python am_distributivity2.py 
+[LAAB] Jax | am_distributivity2 | ref_positive=0.08226 s | operator=0.88060 s | ref_negative=0.77691 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04700 s | operator=0.70365 s | ref_negative=0.75392 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04708 s | operator=0.72688 s | ref_negative=0.73901 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04676 s | operator=0.69864 s | ref_negative=0.69578 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04665 s | operator=0.70044 s | ref_negative=0.77867 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04668 s | operator=0.75855 s | ref_negative=0.69506 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04737 s | operator=0.70207 s | ref_negative=0.70503 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04676 s | operator=0.70058 s | ref_negative=0.69897 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04713 s | operator=0.69926 s | ref_negative=0.71051 s
+[LAAB] Jax | am_distributivity2 | ref_positive=0.04717 s | operator=0.70604 s | ref_negative=0.70521 s
+LAAB_REPS=10 LAAB_N=3000  python am_transpose.py 
+[LAAB] Jax | am_transpose | ref_positive=1.51857 s | operator=1.92174 s | ref_negative=1.82657 s
+[LAAB] Jax | am_transpose | ref_positive=1.40411 s | operator=1.66120 s | ref_negative=1.75496 s
+[LAAB] Jax | am_transpose | ref_positive=1.39383 s | operator=1.67147 s | ref_negative=1.82916 s
+[LAAB] Jax | am_transpose | ref_positive=1.43770 s | operator=1.63937 s | ref_negative=1.64338 s
+[LAAB] Jax | am_transpose | ref_positive=1.39292 s | operator=1.71129 s | ref_negative=1.66266 s
+[LAAB] Jax | am_transpose | ref_positive=1.39226 s | operator=1.65223 s | ref_negative=1.64482 s
+[LAAB] Jax | am_transpose | ref_positive=1.42553 s | operator=1.71691 s | ref_negative=1.64610 s
+[LAAB] Jax | am_transpose | ref_positive=1.38928 s | operator=1.65993 s | ref_negative=1.77388 s
+[LAAB] Jax | am_transpose | ref_positive=1.42742 s | operator=1.71742 s | ref_negative=1.64857 s
+[LAAB] Jax | am_transpose | ref_positive=1.38810 s | operator=1.64436 s | ref_negative=1.64324 s
+LAAB_REPS=10 LAAB_N=3000  python cm_loops.py 
+[LAAB] Jax | cm_loops | ref_positive=0.68757 s | operator=0.73481 s | ref_negative=2.06271 s
+[LAAB] Jax | cm_loops | ref_positive=0.61667 s | operator=0.60598 s | ref_negative=1.85002 s
+[LAAB] Jax | cm_loops | ref_positive=0.61381 s | operator=0.62545 s | ref_negative=1.84144 s
+[LAAB] Jax | cm_loops | ref_positive=0.61424 s | operator=0.62711 s | ref_negative=1.84272 s
+[LAAB] Jax | cm_loops | ref_positive=0.60833 s | operator=0.60873 s | ref_negative=1.82500 s
+[LAAB] Jax | cm_loops | ref_positive=0.60792 s | operator=0.60612 s | ref_negative=1.82376 s
+[LAAB] Jax | cm_loops | ref_positive=0.65044 s | operator=0.63953 s | ref_negative=1.95133 s
+[LAAB] Jax | cm_loops | ref_positive=0.60724 s | operator=0.61086 s | ref_negative=1.82172 s
+[LAAB] Jax | cm_loops | ref_positive=0.65936 s | operator=0.60989 s | ref_negative=1.97809 s
+[LAAB] Jax | cm_loops | ref_positive=0.60908 s | operator=0.70577 s | ref_negative=1.82724 s
+LAAB_REPS=10 LAAB_N=3000  python cm_partial_op_sum.py 
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.01180557 s | operator=0.01284555 s | ref_negative=0.04145 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00002745 s | operator=0.00190066 s | ref_negative=0.02639 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00002952 s | operator=0.00190402 s | ref_negative=0.02735 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00007392 s | operator=0.00204901 s | ref_negative=0.02647 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00002800 s | operator=0.00190951 s | ref_negative=0.02645 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00003031 s | operator=0.00190122 s | ref_negative=0.02638 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00002880 s | operator=0.00191247 s | ref_negative=0.02642 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00003176 s | operator=0.00192254 s | ref_negative=0.05215 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00002723 s | operator=0.00190627 s | ref_negative=0.02658 s
+[LAAB] Jax | cm_partial_op_sum | ref_positive=0.00003054 s | operator=0.00191260 s | ref_negative=0.02665 s
+LAAB_REPS=10 LAAB_N=3000  python cm_partial_op_prod.py 
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.01839 s | operator=0.67255 s | ref_negative=0.65553 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00009 s | operator=0.57992 s | ref_negative=0.57586 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00018 s | operator=0.59285 s | ref_negative=0.57645 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00016 s | operator=0.58454 s | ref_negative=0.58188 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00007 s | operator=0.57633 s | ref_negative=0.62999 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00009 s | operator=0.57251 s | ref_negative=0.57869 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00008 s | operator=0.62142 s | ref_negative=0.58561 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00011 s | operator=0.58376 s | ref_negative=0.57254 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00007 s | operator=0.58093 s | ref_negative=0.57369 s
+[LAAB] Jax | cm_partial_op_prod | ref_positive=0.00007 s | operator=0.57982 s | ref_negative=0.58237 s

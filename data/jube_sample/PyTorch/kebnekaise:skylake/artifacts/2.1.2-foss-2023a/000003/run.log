@@ -1,0 +1,432 @@
+[2026-08-19 23:14:59,070]:DEBUG: Create initial workpackages
+[2026-08-19 23:14:59,071]:DEBUG: Expand parameter templates:
+[2026-08-19 23:14:59,072]:DEBUG:     "ncpus": 1,4,14
+[2026-08-19 23:14:59,100]:DEBUG: Store initial workpackage information
+[2026-08-19 23:14:59,105]:DEBUG: Start benchmark run
+[2026-08-19 23:14:59,105]:INFO: ######################################################################
+[2026-08-19 23:14:59,105]:INFO: # benchmark: laab-pyx
+[2026-08-19 23:14:59,105]:INFO: # id: 3
+[2026-08-19 23:14:59,105]:INFO: #
+[2026-08-19 23:14:59,105]:INFO: # laab-pyx
+[2026-08-19 23:14:59,105]:INFO: ######################################################################
+[2026-08-19 23:14:59,107]:DEBUG: ----- bm ( iter:0 | id:0 | parents: | cycle:0 | procs:1 ) -----
+[2026-08-19 23:14:59,110]:DEBUG:   available parameter:
+[2026-08-19 23:14:59,110]:DEBUG:          | parameter             | value                                    |
+[2026-08-19 23:14:59,110]:DEBUG:          |-----------------------|------------------------------------------|
+[2026-08-19 23:14:59,110]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | pyx/jube/PyTorch/kebnekaise:skylake      |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_benchmark_id     | 3                                        |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_benchmark_padid  | 000003                                   |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/PyTorch |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | /kebnekaise:skylake/artifacts/2.1.2-     |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | foss-2023a/000003                        |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_benchmark_start  | 2026-08-19T23:14:59                      |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_step_cycles      | 1                                        |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_step_iterations  | 1                                        |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_step_name        | bm                                       |
+[2026-08-19 23:14:59,110]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/PyTorch |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | /kebnekaise:skylake/artifacts/2.1.2-     |
+[2026-08-19 23:14:59,110]:DEBUG:          |                       | foss-2023a/000003/000000_bm/work         |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_cycle         | 0                                        |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_envlist       |                                          |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_envstr        |                                          |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_id            | 0                                        |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_iteration     | 0                                        |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_padid         | 000000                                   |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_relpath       | artifacts/2.1.2-foss-                    |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | 2023a/000003/000000_bm/work              |
+[2026-08-19 23:14:59,111]:DEBUG:          | jube_wp_status        | RUNNING                                  |
+[2026-08-19 23:14:59,111]:DEBUG:          | laab_n                | 3000                                     |
+[2026-08-19 23:14:59,111]:DEBUG:          | laab_reps             | 10                                       |
+[2026-08-19 23:14:59,111]:DEBUG:          | ld_blas               | '-lopenblas'                             |
+[2026-08-19 23:14:59,111]:DEBUG:          | library               | PyTorch                                  |
+[2026-08-19 23:14:59,111]:DEBUG:          | modules               | module purge                             |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,111]:DEBUG:          | name                  | CPU-1x                                   |
+[2026-08-19 23:14:59,111]:DEBUG:          | ncpus                 | 1                                        |
+[2026-08-19 23:14:59,111]:DEBUG:          | postprocess_deps      | module purge                             |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,111]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
+[2026-08-19 23:14:59,111]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
+[2026-08-19 23:14:59,111]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
+[2026-08-19 23:14:59,112]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,112]:DEBUG:          |                       | pyx/src/benchmark_codes/PyTorch/v2-cpu   |
+[2026-08-19 23:14:59,112]:DEBUG:          | system                | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,112]:DEBUG:          | time_limit            | 00:30:00                                 |
+[2026-08-19 23:14:59,112]:DEBUG:          | toolchain             | foss-2023a                               |
+[2026-08-19 23:14:59,112]:DEBUG:          | version               | 2.1.2                                    |
+[2026-08-19 23:14:59,112]:DEBUG:   copy "../../submit.in" -> "submit.in"
+[2026-08-19 23:14:59,119]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
+[2026-08-19 23:14:59,128]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
+[2026-08-19 23:14:59,135]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
+[2026-08-19 23:14:59,141]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
+[2026-08-19 23:14:59,148]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
+[2026-08-19 23:14:59,156]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/eager_vs_graph.py" -> "../../src/eager_vs_graph.py"
+[2026-08-19 23:14:59,163]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_blocked.py" -> "../../src/am_blocked.py"
+[2026-08-19 23:14:59,170]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
+[2026-08-19 23:14:59,177]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/config.json" -> "../../src/config.json"
+[2026-08-19 23:14:59,193]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
+[2026-08-19 23:14:59,200]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
+[2026-08-19 23:14:59,206]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_transpose.py" -> "../../src/am_transpose.py"
+[2026-08-19 23:14:59,212]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/Makefile" -> "../../src/Makefile"
+[2026-08-19 23:14:59,217]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
+[2026-08-19 23:14:59,223]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
+[2026-08-19 23:14:59,229]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_addition.py" -> "../../src/cse_addition.py"
+[2026-08-19 23:14:59,235]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
+[2026-08-19 23:14:59,241]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
+[2026-08-19 23:14:59,247]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
+[2026-08-19 23:14:59,252]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_loops.py" -> "../../src/cm_loops.py"
+[2026-08-19 23:14:59,258]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/C" -> "../../src/C"
+[2026-08-19 23:14:59,319]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
+[2026-08-19 23:14:59,325]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
+[2026-08-19 23:14:59,331]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
+[2026-08-19 23:14:59,332]:DEBUG:   substitute submit.in -> submit.sh
+[2026-08-19 23:14:59,333]:DEBUG:   substitute:
+[2026-08-19 23:14:59,333]:DEBUG:          | source             | dest                                     |
+[2026-08-19 23:14:59,333]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-19 23:14:59,333]:DEBUG:          | #NAME#             | CPU-1x                                   |
+[2026-08-19 23:14:59,333]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-19 23:14:59,333]:DEBUG:          | #NCPUS#            | 1                                        |
+[2026-08-19 23:14:59,333]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,333]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,333]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-19 23:14:59,333]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,333]:DEBUG:          |                    | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,333]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-19 23:14:59,333]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-19 23:14:59,334]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-19 23:14:59,334]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,334]:DEBUG:          | #LIBRARY#          | PyTorch                                  |
+[2026-08-19 23:14:59,334]:DEBUG:          | #VERSION#          | 2.1.2                                    |
+[2026-08-19 23:14:59,334]:DEBUG:          | #TOOLCHAIN#        | foss-2023a                               |
+[2026-08-19 23:14:59,334]:DEBUG:          | #CB_ID#            | 3                                        |
+[2026-08-19 23:14:59,334]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
+[2026-08-19 23:14:59,334]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,334]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,334]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,334]:DEBUG:          |                    | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,338]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
+[2026-08-19 23:14:59,338]:DEBUG:   substitute:
+[2026-08-19 23:14:59,338]:DEBUG:          | source             | dest                                     |
+[2026-08-19 23:14:59,338]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-19 23:14:59,338]:DEBUG:          | #NAME#             | CPU-1x                                   |
+[2026-08-19 23:14:59,338]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-19 23:14:59,338]:DEBUG:          | #NCPUS#            | 1                                        |
+[2026-08-19 23:14:59,338]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,338]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,338]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-19 23:14:59,338]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,339]:DEBUG:          |                    | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,339]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-19 23:14:59,339]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-19 23:14:59,339]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-19 23:14:59,339]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,339]:DEBUG:          | #LIBRARY#          | PyTorch                                  |
+[2026-08-19 23:14:59,339]:DEBUG:          | #VERSION#          | 2.1.2                                    |
+[2026-08-19 23:14:59,339]:DEBUG:          | #TOOLCHAIN#        | foss-2023a                               |
+[2026-08-19 23:14:59,339]:DEBUG:          | #CB_ID#            | 3                                        |
+[2026-08-19 23:14:59,339]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
+[2026-08-19 23:14:59,339]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,339]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,339]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,339]:DEBUG:          |                    | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,345]:DEBUG: >>> sbatch submit.sh
+[2026-08-19 23:14:59,345]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000003/000000_bm/work/stdout
+[2026-08-19 23:14:59,345]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000003/000000_bm/work/stderr
+[2026-08-19 23:14:59,371]:DEBUG: Create new workpackages for workpackage bm(0)
+[2026-08-19 23:14:59,371]:DEBUG:   0 new workpackages created
+[2026-08-19 23:14:59,378]:DEBUG: ----- bm ( iter:0 | id:1 | parents: | cycle:0 | procs:1 ) -----
+[2026-08-19 23:14:59,381]:DEBUG:   available parameter:
+[2026-08-19 23:14:59,381]:DEBUG:          | parameter             | value                                    |
+[2026-08-19 23:14:59,381]:DEBUG:          |-----------------------|------------------------------------------|
+[2026-08-19 23:14:59,381]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,381]:DEBUG:          |                       | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,381]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,381]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
+[2026-08-19 23:14:59,381]:DEBUG:          |                       | pyx/jube/PyTorch/kebnekaise:skylake      |
+[2026-08-19 23:14:59,381]:DEBUG:          | jube_benchmark_id     | 3                                        |
+[2026-08-19 23:14:59,381]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
+[2026-08-19 23:14:59,381]:DEBUG:          | jube_benchmark_padid  | 000003                                   |
+[2026-08-19 23:14:59,381]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,381]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/PyTorch |
+[2026-08-19 23:14:59,382]:DEBUG:          |                       | /kebnekaise:skylake/artifacts/2.1.2-     |
+[2026-08-19 23:14:59,382]:DEBUG:          |                       | foss-2023a/000003                        |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_benchmark_start  | 2026-08-19T23:14:59                      |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_step_cycles      | 1                                        |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_step_iterations  | 1                                        |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_step_name        | bm                                       |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,382]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/PyTorch |
+[2026-08-19 23:14:59,382]:DEBUG:          |                       | /kebnekaise:skylake/artifacts/2.1.2-     |
+[2026-08-19 23:14:59,382]:DEBUG:          |                       | foss-2023a/000003/000001_bm/work         |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_cycle         | 0                                        |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_envlist       |                                          |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_envstr        |                                          |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_id            | 1                                        |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_iteration     | 0                                        |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_padid         | 000001                                   |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_relpath       | artifacts/2.1.2-foss-                    |
+[2026-08-19 23:14:59,382]:DEBUG:          |                       | 2023a/000003/000001_bm/work              |
+[2026-08-19 23:14:59,382]:DEBUG:          | jube_wp_status        | RUNNING                                  |
+[2026-08-19 23:14:59,382]:DEBUG:          | laab_n                | 3000                                     |
+[2026-08-19 23:14:59,383]:DEBUG:          | laab_reps             | 10                                       |
+[2026-08-19 23:14:59,383]:DEBUG:          | ld_blas               | '-lopenblas'                             |
+[2026-08-19 23:14:59,383]:DEBUG:          | library               | PyTorch                                  |
+[2026-08-19 23:14:59,383]:DEBUG:          | modules               | module purge                             |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,383]:DEBUG:          | name                  | CPU-4x                                   |
+[2026-08-19 23:14:59,383]:DEBUG:          | ncpus                 | 4                                        |
+[2026-08-19 23:14:59,383]:DEBUG:          | postprocess_deps      | module purge                             |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,383]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
+[2026-08-19 23:14:59,383]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,383]:DEBUG:          |                       | pyx/src/benchmark_codes/PyTorch/v2-cpu   |
+[2026-08-19 23:14:59,383]:DEBUG:          | system                | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,383]:DEBUG:          | time_limit            | 00:30:00                                 |
+[2026-08-19 23:14:59,384]:DEBUG:          | toolchain             | foss-2023a                               |
+[2026-08-19 23:14:59,384]:DEBUG:          | version               | 2.1.2                                    |
+[2026-08-19 23:14:59,384]:DEBUG:   copy "../../submit.in" -> "submit.in"
+[2026-08-19 23:14:59,389]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
+[2026-08-19 23:14:59,395]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
+[2026-08-19 23:14:59,395]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
+[2026-08-19 23:14:59,395]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
+[2026-08-19 23:14:59,395]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
+[2026-08-19 23:14:59,395]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/eager_vs_graph.py" -> "../../src/eager_vs_graph.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_blocked.py" -> "../../src/am_blocked.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/config.json" -> "../../src/config.json"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_transpose.py" -> "../../src/am_transpose.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/Makefile" -> "../../src/Makefile"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
+[2026-08-19 23:14:59,396]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_addition.py" -> "../../src/cse_addition.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_loops.py" -> "../../src/cm_loops.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/C" -> "../../src/C"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
+[2026-08-19 23:14:59,397]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
+[2026-08-19 23:14:59,398]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
+[2026-08-19 23:14:59,398]:DEBUG:   substitute submit.in -> submit.sh
+[2026-08-19 23:14:59,399]:DEBUG:   substitute:
+[2026-08-19 23:14:59,399]:DEBUG:          | source             | dest                                     |
+[2026-08-19 23:14:59,399]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-19 23:14:59,399]:DEBUG:          | #NAME#             | CPU-4x                                   |
+[2026-08-19 23:14:59,399]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-19 23:14:59,399]:DEBUG:          | #NCPUS#            | 4                                        |
+[2026-08-19 23:14:59,399]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,399]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,399]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-19 23:14:59,399]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,399]:DEBUG:          |                    | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,399]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-19 23:14:59,399]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-19 23:14:59,399]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-19 23:14:59,399]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,400]:DEBUG:          | #LIBRARY#          | PyTorch                                  |
+[2026-08-19 23:14:59,400]:DEBUG:          | #VERSION#          | 2.1.2                                    |
+[2026-08-19 23:14:59,400]:DEBUG:          | #TOOLCHAIN#        | foss-2023a                               |
+[2026-08-19 23:14:59,400]:DEBUG:          | #CB_ID#            | 3                                        |
+[2026-08-19 23:14:59,400]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
+[2026-08-19 23:14:59,400]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,400]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,400]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,400]:DEBUG:          |                    | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,403]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
+[2026-08-19 23:14:59,403]:DEBUG:   substitute:
+[2026-08-19 23:14:59,403]:DEBUG:          | source             | dest                                     |
+[2026-08-19 23:14:59,403]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-19 23:14:59,403]:DEBUG:          | #NAME#             | CPU-4x                                   |
+[2026-08-19 23:14:59,404]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-19 23:14:59,404]:DEBUG:          | #NCPUS#            | 4                                        |
+[2026-08-19 23:14:59,404]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,404]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,404]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-19 23:14:59,404]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-19 23:14:59,404]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-19 23:14:59,404]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,404]:DEBUG:          | #LIBRARY#          | PyTorch                                  |
+[2026-08-19 23:14:59,404]:DEBUG:          | #VERSION#          | 2.1.2                                    |
+[2026-08-19 23:14:59,404]:DEBUG:          | #TOOLCHAIN#        | foss-2023a                               |
+[2026-08-19 23:14:59,404]:DEBUG:          | #CB_ID#            | 3                                        |
+[2026-08-19 23:14:59,404]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,404]:DEBUG:          |                    | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,409]:DEBUG: >>> sbatch submit.sh
+[2026-08-19 23:14:59,409]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000003/000001_bm/work/stdout
+[2026-08-19 23:14:59,409]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000003/000001_bm/work/stderr
+[2026-08-19 23:14:59,433]:DEBUG: Create new workpackages for workpackage bm(1)
+[2026-08-19 23:14:59,433]:DEBUG:   0 new workpackages created
+[2026-08-19 23:14:59,439]:DEBUG: ----- bm ( iter:0 | id:2 | parents: | cycle:0 | procs:1 ) -----
+[2026-08-19 23:14:59,441]:DEBUG:   available parameter:
+[2026-08-19 23:14:59,442]:DEBUG:          | parameter             | value                                    |
+[2026-08-19 23:14:59,442]:DEBUG:          |-----------------------|------------------------------------------|
+[2026-08-19 23:14:59,442]:DEBUG:          | account_config        | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,442]:DEBUG:          |                       | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_benchmark_home   | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,442]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-                 |
+[2026-08-19 23:14:59,442]:DEBUG:          |                       | pyx/jube/PyTorch/kebnekaise:skylake      |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_benchmark_id     | 3                                        |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_benchmark_name   | laab-pyx                                 |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_benchmark_padid  | 000003                                   |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_benchmark_rundir | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,442]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/PyTorch |
+[2026-08-19 23:14:59,442]:DEBUG:          |                       | /kebnekaise:skylake/artifacts/2.1.2-     |
+[2026-08-19 23:14:59,442]:DEBUG:          |                       | foss-2023a/000003                        |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_benchmark_start  | 2026-08-19T23:14:59                      |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_step_cycles      | 1                                        |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_step_iterations  | 1                                        |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_step_name        | bm                                       |
+[2026-08-19 23:14:59,442]:DEBUG:          | jube_wp_abspath       | /pfs/proj/nobackup/fs/projnb10/aravind/L |
+[2026-08-19 23:14:59,443]:DEBUG:          |                       | AAB-HPC/benchmarks/laab-pyx/jube/PyTorch |
+[2026-08-19 23:14:59,443]:DEBUG:          |                       | /kebnekaise:skylake/artifacts/2.1.2-     |
+[2026-08-19 23:14:59,443]:DEBUG:          |                       | foss-2023a/000003/000002_bm/work         |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_cycle         | 0                                        |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_envlist       |                                          |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_envstr        |                                          |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_id            | 2                                        |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_iteration     | 0                                        |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_padid         | 000002                                   |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_relpath       | artifacts/2.1.2-foss-                    |
+[2026-08-19 23:14:59,443]:DEBUG:          |                       | 2023a/000003/000002_bm/work              |
+[2026-08-19 23:14:59,443]:DEBUG:          | jube_wp_status        | RUNNING                                  |
+[2026-08-19 23:14:59,443]:DEBUG:          | laab_n                | 3000                                     |
+[2026-08-19 23:14:59,443]:DEBUG:          | laab_reps             | 10                                       |
+[2026-08-19 23:14:59,443]:DEBUG:          | ld_blas               | '-lopenblas'                             |
+[2026-08-19 23:14:59,444]:DEBUG:          | library               | PyTorch                                  |
+[2026-08-19 23:14:59,444]:DEBUG:          | modules               | module purge                             |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,444]:DEBUG:          | name                  | CPU-14x                                  |
+[2026-08-19 23:14:59,444]:DEBUG:          | ncpus                 | 14                                       |
+[2026-08-19 23:14:59,444]:DEBUG:          | postprocess_deps      | module purge                             |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,444]:DEBUG:          | root                  | /proj/nobackup/aravind/LAAB-             |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | HPC/benchmarks/laab-pyx                  |
+[2026-08-19 23:14:59,444]:DEBUG:          | src                   | /proj/nobackup/aravind/LAAB-             |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,444]:DEBUG:          |                       | pyx/src/benchmark_codes/PyTorch/v2-cpu   |
+[2026-08-19 23:14:59,444]:DEBUG:          | system                | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,445]:DEBUG:          | time_limit            | 00:30:00                                 |
+[2026-08-19 23:14:59,445]:DEBUG:          | toolchain             | foss-2023a                               |
+[2026-08-19 23:14:59,445]:DEBUG:          | version               | 2.1.2                                    |
+[2026-08-19 23:14:59,445]:DEBUG:   copy "../../submit.in" -> "submit.in"
+[2026-08-19 23:14:59,450]:DEBUG:   copy "../../pyx_process_logs.in" -> "pyx_process_logs.in"
+[2026-08-19 23:14:59,455]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_matmul_no_paranthesis.py" -> "../../src/cse_matmul_no_paranthesis.py"
+[2026-08-19 23:14:59,455]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_trmm.py" -> "../../src/mm_trmm.py"
+[2026-08-19 23:14:59,455]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_sgemm.py" -> "../../src/mm_sgemm.py"
+[2026-08-19 23:14:59,455]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_ltor.py" -> "../../src/matchain_ltor.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/eager_vs_graph.py" -> "../../src/eager_vs_graph.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_blocked.py" -> "../../src/am_blocked.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_partial_op_sum.py" -> "../../src/cm_partial_op_sum.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/config.json" -> "../../src/config.json"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_distributivity1.py" -> "../../src/am_distributivity1.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_tridiag.py" -> "../../src/mm_tridiag.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_transpose.py" -> "../../src/am_transpose.py"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/Makefile" -> "../../src/Makefile"
+[2026-08-19 23:14:59,456]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/mm_syrk.py" -> "../../src/mm_syrk.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_partial_op_prod.py" -> "../../src/cm_partial_op_prod.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_addition.py" -> "../../src/cse_addition.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_matmul_paranthesis.py" -> "../../src/cse_matmul_paranthesis.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cse_suboptimal.py" -> "../../src/cse_suboptimal.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_rtol.py" -> "../../src/matchain_rtol.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/cm_loops.py" -> "../../src/cm_loops.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/C" -> "../../src/C"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/am_distributivity2.py" -> "../../src/am_distributivity2.py"
+[2026-08-19 23:14:59,457]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/PyTorch/v2-cpu/matchain_mixed.py" -> "../../src/matchain_mixed.py"
+[2026-08-19 23:14:59,458]:DEBUG:   copy "/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx/src/benchmark_codes/C" -> "../../src/C"
+[2026-08-19 23:14:59,458]:DEBUG:   substitute submit.in -> submit.sh
+[2026-08-19 23:14:59,459]:DEBUG:   substitute:
+[2026-08-19 23:14:59,459]:DEBUG:          | source             | dest                                     |
+[2026-08-19 23:14:59,459]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-19 23:14:59,459]:DEBUG:          | #NAME#             | CPU-14x                                  |
+[2026-08-19 23:14:59,459]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-19 23:14:59,459]:DEBUG:          | #NCPUS#            | 14                                       |
+[2026-08-19 23:14:59,459]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,459]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,459]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-19 23:14:59,459]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,459]:DEBUG:          |                    | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,459]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-19 23:14:59,459]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-19 23:14:59,459]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-19 23:14:59,459]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,460]:DEBUG:          | #LIBRARY#          | PyTorch                                  |
+[2026-08-19 23:14:59,460]:DEBUG:          | #VERSION#          | 2.1.2                                    |
+[2026-08-19 23:14:59,460]:DEBUG:          | #TOOLCHAIN#        | foss-2023a                               |
+[2026-08-19 23:14:59,460]:DEBUG:          | #CB_ID#            | 3                                        |
+[2026-08-19 23:14:59,460]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
+[2026-08-19 23:14:59,460]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,460]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,460]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,460]:DEBUG:          |                    | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,463]:DEBUG:   substitute pyx_process_logs.in -> pyx_process_logs.sh
+[2026-08-19 23:14:59,463]:DEBUG:   substitute:
+[2026-08-19 23:14:59,463]:DEBUG:          | source             | dest                                     |
+[2026-08-19 23:14:59,463]:DEBUG:          |--------------------|------------------------------------------|
+[2026-08-19 23:14:59,463]:DEBUG:          | #NAME#             | CPU-14x                                  |
+[2026-08-19 23:14:59,463]:DEBUG:          | #TIME_LIMIT#       | 00:30:00                                 |
+[2026-08-19 23:14:59,464]:DEBUG:          | #NCPUS#            | 14                                       |
+[2026-08-19 23:14:59,464]:DEBUG:          | #ACCOUNT_CONFIG#   | #SBATCH -A hpc2n2026-184                 |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | #SBATCH -C skylake                       |
+[2026-08-19 23:14:59,464]:DEBUG:          | #MODULES#          | module purge                             |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | module load GCC/12.3.0 OpenMPI/4.1.5     |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | module load PyTorch/2.1.2-CUDA-12.1.1    |
+[2026-08-19 23:14:59,464]:DEBUG:          | #LD_BLAS#          | '-lopenblas'                             |
+[2026-08-19 23:14:59,464]:DEBUG:          | #LAAB_REPS#        | 10                                       |
+[2026-08-19 23:14:59,464]:DEBUG:          | #LAAB_N#           | 3000                                     |
+[2026-08-19 23:14:59,464]:DEBUG:          | #SYSTEM#           | kebnekaise:skylake                       |
+[2026-08-19 23:14:59,464]:DEBUG:          | #LIBRARY#          | PyTorch                                  |
+[2026-08-19 23:14:59,464]:DEBUG:          | #VERSION#          | 2.1.2                                    |
+[2026-08-19 23:14:59,464]:DEBUG:          | #TOOLCHAIN#        | foss-2023a                               |
+[2026-08-19 23:14:59,464]:DEBUG:          | #CB_ID#            | 3                                        |
+[2026-08-19 23:14:59,464]:DEBUG:          | #POSTPROCESS_DEPS# | module purge                             |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | module load GCC/14.3.0 SciPy-bundle      |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | source /proj/nobackup/aravind/LAAB-      |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | HPC/benchmarks/laab-                     |
+[2026-08-19 23:14:59,464]:DEBUG:          |                    | pyx/venv/bin/activate                    |
+[2026-08-19 23:14:59,469]:DEBUG: >>> sbatch submit.sh
+[2026-08-19 23:14:59,469]:DEBUG:     stdout: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000003/000002_bm/work/stdout
+[2026-08-19 23:14:59,469]:DEBUG:     stderr: /pfs/proj/nobackup/fs/projnb10/aravind/LAAB-HPC/benchmarks/laab-pyx/jube/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/000003/000002_bm/work/stderr
+[2026-08-19 23:14:59,491]:DEBUG: Create new workpackages for workpackage bm(2)
+[2026-08-19 23:14:59,491]:DEBUG:   0 new workpackages created
+[2026-08-19 23:14:59,496]:INFO:   | stepname | all | open | wait | error | done |
+[2026-08-19 23:14:59,496]:INFO:   |----------|-----|------|------|-------|------|
+[2026-08-19 23:14:59,496]:INFO:   |       bm |   3 |    0 |    0 |     0 |    3 |
+[2026-08-19 23:14:59,496]:INFO: 
+[2026-08-19 23:14:59,496]:INFO: >>>> Benchmark information and further useful commands:
+[2026-08-19 23:14:59,496]:INFO: >>>>       id: 3
+[2026-08-19 23:14:59,496]:INFO: >>>>   handle: artifacts/2.1.2-foss-2023a
+[2026-08-19 23:14:59,496]:INFO: >>>>      dir: artifacts/2.1.2-foss-2023a/000003
+[2026-08-19 23:14:59,497]:INFO: >>>>  analyse: jube analyse artifacts/2.1.2-foss-2023a --id 3
+[2026-08-19 23:14:59,497]:INFO: >>>>   result: jube result artifacts/2.1.2-foss-2023a --id 3
+[2026-08-19 23:14:59,497]:INFO: >>>>     info: jube info artifacts/2.1.2-foss-2023a --id 3
+[2026-08-19 23:14:59,497]:INFO: >>>>      log: jube log artifacts/2.1.2-foss-2023a --id 3
+[2026-08-19 23:14:59,497]:INFO: ######################################################################

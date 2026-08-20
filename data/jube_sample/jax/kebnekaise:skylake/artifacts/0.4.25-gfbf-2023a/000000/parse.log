@@ -1,0 +1,32 @@
+[2026-08-20 00:29:37,224]:DEBUG: Command: jube run 0.4.25-gfbf-2023a.xml
+[2026-08-20 00:29:37,225]:DEBUG: Version: 2.7.1
+[2026-08-20 00:29:37,225]:DEBUG: Parsing 0.4.25-gfbf-2023a.xml
+[2026-08-20 00:29:37,226]:DEBUG:   --> Preprocess run 1 <--
+[2026-08-20 00:29:37,226]:DEBUG:   Remove invalid tags
+[2026-08-20 00:29:37,226]:DEBUG:     Available tags: 
+[2026-08-20 00:29:37,226]:DEBUG:   Remove invalid tags
+[2026-08-20 00:29:37,226]:DEBUG:     Available tags: 
+[2026-08-20 00:29:37,227]:DEBUG:   Read $JUBE_INCLUDE_PATH
+[2026-08-20 00:29:37,227]:DEBUG:   Preprocess xml tree
+[2026-08-20 00:29:37,227]:DEBUG:     path: .
+[2026-08-20 00:29:37,228]:DEBUG:   New tags might be included, start additional include-preprocess run.
+[2026-08-20 00:29:37,228]:DEBUG:   --> Preprocess run 2 <--
+[2026-08-20 00:29:37,228]:DEBUG:   Remove invalid tags
+[2026-08-20 00:29:37,229]:DEBUG:     Available tags: 
+[2026-08-20 00:29:37,229]:DEBUG:   Remove invalid tags
+[2026-08-20 00:29:37,229]:DEBUG:     Available tags: 
+[2026-08-20 00:29:37,229]:DEBUG:   Read $JUBE_INCLUDE_PATH
+[2026-08-20 00:29:37,229]:DEBUG:   Preprocess xml tree
+[2026-08-20 00:29:37,229]:DEBUG:     path: .
+[2026-08-20 00:29:37,229]:DEBUG:   No preprocessing changes were detected, stop additional include-preprocess runs.
+[2026-08-20 00:29:37,229]:DEBUG:   Remove invalid tags
+[2026-08-20 00:29:37,229]:DEBUG:     Available tags: 
+[2026-08-20 00:29:37,229]:DEBUG:   Preprocess done
+[2026-08-20 00:29:37,229]:DEBUG:   Preprocess benchmark xml tree
+[2026-08-20 00:29:37,229]:DEBUG:   Parsing <parameterset name="param_set">
+[2026-08-20 00:29:37,229]:DEBUG:     Searching for <parameterset name="param_set"> in _commons.xml
+[2026-08-20 00:29:37,230]:DEBUG:   Parsing <substituteset name="substitutes">
+[2026-08-20 00:29:37,230]:DEBUG:   Parsing <fileset name="files">
+[2026-08-20 00:29:37,230]:DEBUG:   Parsing <step name="bm">
+[2026-08-20 00:29:37,230]:DEBUG: Start consistency check
+[2026-08-20 00:29:37,230]:DEBUG: Create benchmark directory

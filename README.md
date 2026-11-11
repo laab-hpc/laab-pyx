@@ -122,7 +122,7 @@ More details about this benchmark can be found in the following publications,
 ```
 @inproceedings{sankaran2022benchmarking,
   title={Benchmarking the Linear Algebra Awareness of TensorFlow and PyTorch},
-  author={Sankaran, Aravind and Alam, Shourov and Karlsson, Lars and Bientinesi, Paolo},
+  author={Sankaran, Aravind and Alashti, Navid Akbari and Psarras, Christos and Bientinesi, Paolo},
   booktitle={Proceedings of the 2022 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)},
   pages={924--933},
   year={2022},

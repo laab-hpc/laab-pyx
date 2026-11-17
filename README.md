@@ -1,12 +1,16 @@
 # LAAB-PyX
 
-*Version*: v2026.1
+*Version*: v2026.1 (with dissertation data)
 
 LAAB-PyX benchmarks the linear-algebra awareness of PyTorch, TensorFlow, and
 JAX. See the [Benchmark Suite](https://github.com/laab-hpc/laab-pyx/blob/main/docs/BENCHMARK_SUITE.md)
 for the tests and evaluation method.
 
 Run the following commands from the repository root.
+
+## Dissertation Data
+
+The data and the reproducibiility guide can be found in `data/dissertation-cpu-mt-v2026.0.tar.gz`
 
 ## 1. Prepare the virtual environment
 

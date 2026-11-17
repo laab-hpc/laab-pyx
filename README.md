@@ -1,4 +1,6 @@
-# LAAB-PyX Reproducibility Guide
+# LAAB-PyX
+
+*Version*: v2026.1
 
 LAAB-PyX benchmarks the linear-algebra awareness of PyTorch, TensorFlow, and
 JAX. See [Benchmark Suite](BENCHMARK_SUITE.md) for the tests and evaluation

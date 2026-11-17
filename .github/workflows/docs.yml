@@ -1,16 +1,46 @@
-name: Build documentation
+
+name: Build and deploy documentation
 
 on:
   push:
+    branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   mkdocs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - run: python -m pip install -r mkdocs-requirements.txt
+
       - run: mkdocs build --strict -f mkdocs.yaml
+
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          path: ./site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: mkdocs
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: $&#123;&#123; steps.deployment.outputs.page_url &#125;&#125;
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

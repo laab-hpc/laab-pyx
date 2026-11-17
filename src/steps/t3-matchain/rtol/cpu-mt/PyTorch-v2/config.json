@@ -1,0 +1,10 @@
+{
+    "matchain_rtol": {
+        "tests": {
+            "operator": "t(H)@H@x",
+            "linalg_multidot": "linalg.multi_dot([t(H), H, x])"
+        },
+        "ref_negative": "eval. left to right",
+        "ref_positive": "t(H)@(H@x)"
+    }
+}

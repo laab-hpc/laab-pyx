@@ -1,0 +1,10 @@
+{
+    "mm_tridiag":{
+        "tests": {
+            "operator": "T@B",
+            "linalg_matmul": "jax.numpy.matmul(T,B)"
+        },
+        "ref_negative": "sgemm",
+        "ref_positive": "csr(T)@B"
+    }
+}

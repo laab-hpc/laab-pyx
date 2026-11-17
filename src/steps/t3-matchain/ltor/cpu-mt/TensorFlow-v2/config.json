@@ -1,0 +1,9 @@
+{
+    "matchain_ltor": {
+        "tests": {
+            "operator": "transpose(y)@transpose(H)@H"
+        },
+        "ref_negative": "eval. right to left",
+        "ref_positive": "(transpose(y)@transpose(H))@H"
+    }
+}

@@ -4,12 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyx_inspector"
-version = "v2026a"
+version = "v2026.1"
 description = "Linear Algebra Awareness Benchmark for Python frameworks"
 requires-python = ">=3.9"
 license = {file = "LICENSE"}
 dependencies = [
   "flask",
+  "jinja2",
+  "numpy",
 ]
 
 [project.scripts]
@@ -20,3 +22,6 @@ pyx-dashboard = "pyx_inspector.dashboard.dashboard:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"pyx_inspector.markdown" = ["templates/*.md"]

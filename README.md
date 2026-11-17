@@ -1,140 +1,103 @@
-# LAAB-PyX:  Linear Algebra Awareness Benchmarks for Math Operation Executions via Python Interfaces
+# LAAB-PyX Reproducibility Guide
 
+LAAB-PyX benchmarks the linear-algebra awareness of PyTorch, TensorFlow, and
+JAX. See [Benchmark Suite](BENCHMARK_SUITE.md) for the tests and evaluation
+method.
 
-Linear algebra operations, which are the building blocks of countless computational problems, often constitute major performance bottlenecks. The HPC community invests significant effort in developing architecture-specific optimised kernels, such as those provided by the BLAS and LAPACK libraries, to accelerate these operations. Thanks to high-level frameworks, users no longer need to engage in the error-prone and time-consuming process of directly invoking such kernels; instead, they can express computations using a high-level, mathematics-like syntax that closely mirrors textbook notation, without having to manage the low-level implementation details themselves. However, it is not guaranteed that these frameworks will automatically exploit knowledge of linear algebra to accelerate computations in the way expert-tuned implementations would.
+Run the following commands from the repository root.
 
-We currently investigate the executions on math operations invoked from the installations of ML frameworks - PyTorch, TensorFlow and JAX
+## 1. Prepare the virtual environment
 
-## The benchmark suite
+[JUBE 2](https://apps.fz-juelich.de/jsc/jube/jube2/docu/) must be installed.
 
-This benchmark consists of several test expressions categorised into the following five test sets that evaluate the linear algebra awareness of high-level Python interfaces in a given installation of PyTorch, TensorFlow, and JAX.
+The environment recipe is
+`venvs/jube/prepare_venv_kebnekaise.xml`. Before running it, update only these
+values if required:
 
-**Test-set 1: Matrix multiplications.** Matrix-matrix multiplications are one of the most expensive operations. The execution times of matrix multiplications invoked through the high-level APIs of the frameworks are compared against those of an optimised reference implementation. For general dense matrices, execution time is compared with the BLAS kernel `gemm`. For triangular matrices and symmetric rank-k updates, which require only about half the floating-point operations of `gemm`, the execution speed is compared against the specialised BLAS kernels `trmm` and `syrk` respectively. For multiplication with a tri-diagnoal matrix (where only a  fraction of the matrix elements are non-zero), the execution can be orders of magnitude faster than the multiplication that assumes regular matrices. Here, the execution times are compared against those of a reference that uses compressed row formats. 
+- `venv_tag`: output environment name.
+- `modules`: modules that provide Python and the required system packages.
+- `requirements`: any additional Python packages.
 
-
-**Test-set 2: Common sub-expression elimination.** In general, sub-expressions within an expression that evaluate to the same value can be computed once and reused via a temporary reference in subsequent instances. For example, in the expression $A^TB +A^TB$, the matrix multiplication $A^TB$ aprrears twice and can be computed only once. Such common sub-expression eliminations can improve performance in some cases, while in others it may not; for example, in the expression $A^TBA^TBy$, where $y$ is a vector, the fastest evaluation strategy might be to avoid the matrix product $A^TB$ altogether. Instead, one can evaluate the expression right-to-left, using only matrix–vector products, thereby sidestepping the expensive matrix–matrix multiplication. This test evaluates the application of common sub-expression elimination on several input expressions.
-
-**Test-set 3: Matrix chains.** Given $m$ matrices of suitable sizes, the product $M = A_1A_2...A_n$ is known as a matrix chain. Because of associativity of matrix product, matrix chain can be computed in many different ways, each identified by a specific paranthesisation. The different parenthesisations may vary in the number of FLOP counts and performance. This test evaluates the performance of a set of input matrix chain expressions against reference implementations that use the optimal parenthesisation.
-
-**Test-set 4: Expression rewrites.** Algebraic properties can be used to rewrite an expression in several alternative ways that can result in accelerated evaluations. For example, the expression $AB +AB$ can be rewritten as $A(B+C)$, reducing the number of matrix–matrix multiplications from two to one. This test evaluates rewrites based on the distributive and transpose law.
-
-**Test-set 5: Code motion.** Some operations, when moved around, can result in improved performance. This test evaluates if the frameworks can identify loop-invariant code and partial operand accesses to improve performance.
-
-
-## The evaluation procedure
-
-Each test expression in a test-set is invoked using one more high-level interfaces provided by the framework. For each such invocation (which we refer to as input), the execution times are measured 10 times and  compared against those of an optimised reference implementation. The fraction by which the input is slower than the reference implmentation is computed as follows,
-
-<!-- <p align="center">
-  <img src=".img/slowdown.png" alt="slowdown">
-</p> -->
-
-![slowdown](.img/slowdown.png)
-<!-- $$
-\texttt{slowdown}(\mathbf{t}, \mathbf{t}^{+}) =
-    \begin{cases}
-        \frac{\texttt{median}(\mathbf{t}) - \texttt{median}(\mathbf{t}^{+})}{\texttt{median}(\mathbf{t}^+)} & \text{if } \ \texttt{quantile}(\mathbf{t}^{+}, 75) \le \texttt{quantile}(\mathbf{t}, 25)  \\
-        0.0 & \text{otherwise} 
-    \end{cases} 
-$$ -->
-Here, $\mathbf{t}$ and $\mathbf{t}^{+}$ are the list of execution time measurements of the input and the reference implementation respectively, and $\texttt{quantile}(\mathbf{t}, x)$ denote the $x^{th}$ quantile value of $\mathbf{t}$. Note that the execution times can vary due to system effects, and therefore, the slowdown is greater than 0 only when the execution speed of the input is significantly slower than the reference. We consider this difference to be significant if and only if the 75th quantile value of the execution time of the reference is less than or equal to the 25th quantile value of the input. A slowdown value of 0.0 indicates that the input is not significantly slower than the reference. A slowdown value of $0.5$ indicates that the input is slower than the reference by a fraction $0.5$; in other words, the input requires $50$ percent more time than the reference.
-
-The slowdown values across different text expressions need not be on a comparable scale.
-For instance, a slowdown value of 0.5 may indicate a substantial loss for expression A, yet represent only a minor loss for expression B.
-Therefore, for each input, we also consider a negative reference, which is a sub-optimal implmentation, and measure the execution times $\mathbf{t}^{-}$. Then, for a given input, the loss is defined as the ratio of the slowdown of $\mathbf{t}$ to the slowdown of $\mathbf{t}^-$ with respect to the optimised reference $\mathbf{t}^+$. That is,
-
-![loss](.img/loss.png)
-
-<!-- $$
-\texttt{loss}(\mathbf{t}, \mathbf{t}^+, \mathbf{t}^-) = \frac{\texttt{slowdown}(\mathbf{t}, \mathbf{t}^+)}{\texttt{slowdown}(\mathbf{t}^-, \mathbf{t}^+)}
-$$ -->
-For each input, the $\texttt{slowdown}$ and $\texttt{loss}$ scores are reported,  and the corresponding test is considered passed if $\texttt{loss} \le 0.05$. For a given framework installation, the overall benchmark result include the mean $\texttt{loss}$ and the number of test expressions passed.
-
-
-<!-- If you are using this benchmark, please also cite the software, -->
-
-## The usage and example
-
-### Installing the inspector
-
-Prepare the Python environment and install the package:
+Create and activate the environment:
 
 ```bash
-cd /proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e .
-```
-
-### Installation on Kebnekaise
-
-LAAB-PyX uses [JUBE](https://apps.fz-juelich.de/jsc/jube/jube2/docu/) to prepare and run experiments. On Kebnekaise, the virtual environment can also be prepared directly with JUBE:
-
-```bash
-cd venvs/jube
-jube run prepare_venv_kebnekaise.xml
-```
-
-This creates a virtual environment named `pyx-kebnekaise` under `venvs/pyx-kebnekaise/`. You can then activate it with:
-
-```bash
+(cd venvs/jube && jube run prepare_venv_kebnekaise.xml)
 source venvs/pyx-kebnekaise/activate.sh
+python -m pip install -r mkdocs-requirements.txt
 ```
 
-### Running the benchmark
+## 2. Run the benchmarks
 
-To run a benchmark experiment, go to the intended JUBE directory and start it with `jube run`. For example:
+Submit all five tests for PyTorch, TensorFlow, and JAX:
 
 ```bash
-cd jube/PyTorch/kebnekaise:skylake
-jube run 2.1.2-foss-2023a.xml
+(cd jube/cpu-mt-v2026/kebnekaise:zen4/PyTorch-2.1.2-foss-2023a && bash run.sh)
+(cd jube/cpu-mt-v2026/kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a && bash run.sh)
+(cd jube/cpu-mt-v2026/kebnekaise:zen4/jax-0.4.25-gfbf-2023a && bash run.sh)
 ```
 
-This launches the experiment. The run results are stored in the JUBE-generated artifact directory for that benchmark configuration.
+Each `run.sh` submits tests `t1` through `t5` for 1 and 4 CPUs. Wait for the
+Slurm jobs to finish before processing the results.
 
-### Results and reports
-
-Collected profiles and generated markdown reports are stored under the corresponding `profiles/` directory. Sample outputs are available under [`data/jube_sample/`](data/jube_sample/).
-
-An example markdown report is available at [`data/jube_sample/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/profiles/README_1_0.md`](data/jube_sample/PyTorch/kebnekaise:skylake/artifacts/2.1.2-foss-2023a/profiles/README_1_0.md).
-
-**Visualisation of reports via dashboard**
-
-Step 1. Collect profiles:
+## 3. Collect profiles and open the dashboard
 
 ```bash
-pyx-collect-profiles jube/
+pyx-collect-profiles jube/cpu-mt-v2026/kebnekaise:zen4
+pyx-dashboard jube/cpu-mt-v2026/kebnekaise:zen4 --port 8010
 ```
 
-This creates a `profiles.<timestamp>.json` file with metadata of the available profiles found under `jube/`.
+Open <http://127.0.0.1:8010/>.
 
-Step 2. Start the dashboard:
+## 4. Generate and view Markdown reports
 
 ```bash
-pyx-dashboard jube/ --port 8000
+./prepare_docs.sh
+mkdocs serve -f mkdocs.yaml
 ```
 
+Open <http://127.0.0.1:8000/>.
 
-## Cite
+`prepare_docs.sh` collects the profiles, regenerates the Markdown reports,
+and performs a strict MkDocs build.
 
-More details about this benchmark can be found in the following publications,
+Reports are organized as:
 
+```text
+docs/
+└── framework/
+    └── version-toolchain/
+        └── system/
+            └── test-id/
+                └── cb-id--ncpus.md
 ```
+
+## Citation
+
+```bibtex
 @inproceedings{sankaran2022benchmarking,
-  title={Benchmarking the Linear Algebra Awareness of TensorFlow and PyTorch},
-  author={Sankaran, Aravind and Alashti, Navid Akbari and Psarras, Christos and Bientinesi, Paolo},
-  booktitle={Proceedings of the 2022 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)},
-  pages={924--933},
-  year={2022},
-  address={Lyon, France},
-  publisher={IEEE},
-  doi={10.1109/IPDPSW55747.2022.00150}
+  title     = {Benchmarking the Linear Algebra Awareness of TensorFlow and PyTorch},
+  author    = {Sankaran, Aravind and Alashti, Navid Akbari and
+               Psarras, Christos and Bientinesi, Paolo},
+  booktitle = {Proceedings of the 2022 IEEE International Parallel and
+               Distributed Processing Symposium Workshops (IPDPSW)},
+  pages     = {924--933},
+  year      = {2022},
+  address   = {Lyon, France},
+  publisher = {IEEE},
+  doi       = {10.1109/IPDPSW55747.2022.00150}
 }
 ```
 
+## Acknowledgements
 
-## Acknowledgement
+Financial support was provided by the Deutsche Forschungsgemeinschaft (DFG,
+German Research Foundation) through Grant IRTG 2379 and by the BMBF project
+“01-1H1-6013 AP6-NRW Anwenderunterstützung SiVeGCS”.
 
-Financial support from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through Grant IRTG 2379 and from the BMBF project “01-1H1-6013 AP6-NRW Anwenderunterstützung SiVeGCS” is gratefully acknowledged.
+Computing resources were provided by the High Performance Computing Center
+North (HPC2N), Sweden, and the Jülich Supercomputing Centre (JSC), Germany.
 
-The authors also gratefully acknowledge the computing resources provided by the High Performance Computing Center North (HPC2N), Sweden, and the Jülich Supercomputing Centre (JSC), Germany.
+## License
+
+LAAB-PyX is licensed under the GNU Affero General Public License v3.0. See
+[LICENSE](LICENSE) for the complete terms.

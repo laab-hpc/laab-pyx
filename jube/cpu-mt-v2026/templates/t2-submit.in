@@ -1,0 +1,50 @@
+#!/bin/bash
+#SBATCH --job-name=#NAME#
+#SBATCH --time=#TIME_LIMIT#
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=#NCPUS#
+#SBATCH --output=slurm.out
+#SBATCH --error=slurm.err
+#ACCOUNT_CONFIG#
+
+set -euo pipefail
+
+#MODULES#
+
+export LD_BLAS=#LD_BLAS#
+export OMP_NUM_THREADS=#NCPUS#
+export LAAB_REPS=#LAAB_REPS#
+export LAAB_N=#LAAB_N#
+
+SRC_DIR="#SRC_DIR#/t2-cse"
+LIB_DIR="#LIB_DIR#"
+
+mkdir -p logs/
+
+lscpu > logs/cpu_info.txt
+
+echo "Test-2-CSE" > logs/metadata.txt
+echo #NAME# >> logs/metadata.txt
+echo #SYSTEM# >> logs/metadata.txt
+echo #LIBRARY# >> logs/metadata.txt
+echo #VERSION# >> logs/metadata.txt
+echo #TOOLCHAIN# >> logs/metadata.txt
+
+echo "REP=${LAAB_REPS} benchmark.exe ${LAAB_N}" > logs/data.txt
+
+srun python "${SRC_DIR}/addition/cpu-mt/${LIB_DIR}/cse_addition.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/addition/cpu-mt/${LIB_DIR}/config.json" logs/cse_addition.json
+
+srun python "${SRC_DIR}/matmul-paranthesis/cpu-mt/${LIB_DIR}/cse_matmul_paranthesis.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/matmul-paranthesis/cpu-mt/${LIB_DIR}/config.json" logs/cse_matmul_paranthesis.json
+
+srun python "${SRC_DIR}/matmul-no-paranthesis/cpu-mt/${LIB_DIR}/cse_matmul_no_paranthesis.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/matmul-no-paranthesis/cpu-mt/${LIB_DIR}/config.json" logs/cse_matmul_no_paranthesis.json
+
+srun python "${SRC_DIR}/suboptimal/cpu-mt/${LIB_DIR}/cse_suboptimal.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/suboptimal/cpu-mt/${LIB_DIR}/config.json" logs/cse_suboptimal.json
+
+#POSTPROCESS_DEPS#
+
+pyx-process-logs logs/ --out_dir ../../../profiles

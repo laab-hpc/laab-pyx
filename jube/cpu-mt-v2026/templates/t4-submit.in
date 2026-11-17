@@ -1,0 +1,47 @@
+#!/bin/bash
+#SBATCH --job-name=#NAME#
+#SBATCH --time=#TIME_LIMIT#
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=#NCPUS#
+#SBATCH --output=slurm.out
+#SBATCH --error=slurm.err
+#ACCOUNT_CONFIG#
+
+set -euo pipefail
+
+#MODULES#
+
+export LD_BLAS=#LD_BLAS#
+export OMP_NUM_THREADS=#NCPUS#
+export LAAB_REPS=#LAAB_REPS#
+export LAAB_N=#LAAB_N#
+
+SRC_DIR="#SRC_DIR#/t4-expr_rewrite"
+LIB_DIR="#LIB_DIR#"
+
+mkdir -p logs/
+
+lscpu > logs/cpu_info.txt
+
+echo "Test-4-Expression-Rewrites" > logs/metadata.txt
+echo #NAME# >> logs/metadata.txt
+echo #SYSTEM# >> logs/metadata.txt
+echo #LIBRARY# >> logs/metadata.txt
+echo #VERSION# >> logs/metadata.txt
+echo #TOOLCHAIN# >> logs/metadata.txt
+
+echo "REP=${LAAB_REPS} benchmark.exe ${LAAB_N}" > logs/data.txt
+
+srun python "${SRC_DIR}/distributivity1/cpu-mt/${LIB_DIR}/am_distributivity1.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/distributivity1/cpu-mt/${LIB_DIR}/config.json" logs/am_distributivity1.json
+
+srun python "${SRC_DIR}/distributivity2/cpu-mt/${LIB_DIR}/am_distributivity2.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/distributivity2/cpu-mt/${LIB_DIR}/config.json" logs/am_distributivity2.json
+
+srun python "${SRC_DIR}/transpose/cpu-mt/${LIB_DIR}/am_transpose.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/transpose/cpu-mt/${LIB_DIR}/config.json" logs/am_transpose.json
+
+#POSTPROCESS_DEPS#
+
+pyx-process-logs logs/ --out_dir ../../../profiles

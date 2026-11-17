@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jube>
+    <parameterset name="param_set">
+        <parameter name="time_limit">00:30:00</parameter>
+        <parameter name="ncpus">1,4</parameter>
+        <parameter name="laab_reps">10</parameter>
+        <parameter name="laab_n">3000</parameter>
+    </parameterset>
+
+    <files>
+        <fileset name="files">
+            <copy name="submit.in" tag="t1">../../templates/t1-submit.in</copy>
+            <copy name="submit.in" tag="t2">../../templates/t2-submit.in</copy>
+            <copy name="submit.in" tag="t3">../../templates/t3-submit.in</copy>
+            <copy name="submit.in" tag="t4">../../templates/t4-submit.in</copy>
+            <copy name="submit.in" tag="t5">../../templates/t5-submit.in</copy>
+        </fileset>
+    </files>
+
+    <subs>
+        <substituteset name="substitutes">
+            <iofile in="submit.in" out="submit.sh" />
+            <sub source="#NAME#" dest="$name" />
+            <sub source="#TIME_LIMIT#" dest="$time_limit" />
+            <sub source="#NCPUS#" dest="$ncpus" />
+            <sub source="#ACCOUNT_CONFIG#" dest="$account_config" />
+            <sub source="#MODULES#" dest="$modules" />
+            <sub source="#LD_BLAS#" dest="$ld_blas" />
+            <sub source="#LAAB_REPS#" dest="$laab_reps" />
+            <sub source="#LAAB_N#" dest="$laab_n" />
+            <sub source="#SRC_DIR#" dest="$src" />
+            <sub source="#LIB_DIR#" dest="$library_dir" />
+            <sub source="#SYSTEM#" dest="$system" />
+            <sub source="#LIBRARY#" dest="$library" />
+            <sub source="#VERSION#" dest="$version" />
+            <sub source="#TOOLCHAIN#" dest="$toolchain" />
+            <sub source="#POSTPROCESS_DEPS#" dest="$postprocess_deps" />
+        </substituteset>
+    </subs>
+
+    <steps>
+        <use>param_set</use>
+        <use>files</use>
+        <use>substitutes</use>
+        <do>sbatch submit.sh</do>
+    </steps>
+</jube>

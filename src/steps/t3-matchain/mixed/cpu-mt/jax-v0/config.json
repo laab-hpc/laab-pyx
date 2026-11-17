@@ -1,0 +1,10 @@
+{
+    "matchain_mixed": {
+        "tests": {
+            "operator": "transpose(H)@y@transpose(x)@H",
+            "linalg_multidot": "linalg.multi_dot([transpose(H), y, transpose(x), H])"
+        },
+        "ref_negative": "eval. left to right",
+        "ref_positive": "(transpose(H)@y)@(transpose(x)@H)"
+    }
+}

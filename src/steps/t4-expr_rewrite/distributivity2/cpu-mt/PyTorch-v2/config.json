@@ -1,0 +1,9 @@
+{
+    "am_distributivity2": {
+        "tests": {
+            "operator": "(A - t(H)@H)@x"
+        },
+        "ref_negative": "no rewrite",
+        "ref_positive": "A@x - t(H)@(H@x)"
+    }
+}

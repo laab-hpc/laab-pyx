@@ -1,0 +1,47 @@
+#!/bin/bash
+#SBATCH --job-name=#NAME#
+#SBATCH --time=#TIME_LIMIT#
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=#NCPUS#
+#SBATCH --output=slurm.out
+#SBATCH --error=slurm.err
+#ACCOUNT_CONFIG#
+
+set -euo pipefail
+
+#MODULES#
+
+export LD_BLAS=#LD_BLAS#
+export OMP_NUM_THREADS=#NCPUS#
+export LAAB_REPS=#LAAB_REPS#
+export LAAB_N=#LAAB_N#
+
+SRC_DIR="#SRC_DIR#/t5-code_motion"
+LIB_DIR="#LIB_DIR#"
+
+mkdir -p logs/
+
+lscpu > logs/cpu_info.txt
+
+echo "Test-5-Code-Motion" > logs/metadata.txt
+echo #NAME# >> logs/metadata.txt
+echo #SYSTEM# >> logs/metadata.txt
+echo #LIBRARY# >> logs/metadata.txt
+echo #VERSION# >> logs/metadata.txt
+echo #TOOLCHAIN# >> logs/metadata.txt
+
+echo "REP=${LAAB_REPS} benchmark.exe ${LAAB_N}" > logs/data.txt
+
+srun python "${SRC_DIR}/loops/cpu-mt/${LIB_DIR}/cm_loops.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/loops/cpu-mt/${LIB_DIR}/config.json" logs/cm_loops.json
+
+srun python "${SRC_DIR}/partial-op-sum/cpu-mt/${LIB_DIR}/cm_partial_op_sum.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/partial-op-sum/cpu-mt/${LIB_DIR}/config.json" logs/cm_partial_op_sum.json
+
+srun python "${SRC_DIR}/partial-op-prod/cpu-mt/${LIB_DIR}/cm_partial_op_prod.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/partial-op-prod/cpu-mt/${LIB_DIR}/config.json" logs/cm_partial_op_prod.json
+
+#POSTPROCESS_DEPS#
+
+pyx-process-logs logs/ --out_dir ../../../profiles

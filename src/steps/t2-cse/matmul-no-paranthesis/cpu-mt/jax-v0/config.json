@@ -1,0 +1,9 @@
+{
+    "cse_matmul_no_paranthesis": {
+        "tests": {
+            "operator": "transpose(transpose(A)@B)@transpose(A)@B"
+        },
+        "ref_negative": "no cse",
+        "ref_positive": "S=transpose(A)@B; transpose(S)@S"
+    }
+}

@@ -1,0 +1,36 @@
+:root {
+  --md-primary-fg-color: #442029;
+  --md-primary-fg-color--light: #6f3c49;
+  --md-primary-fg-color--dark: #2d151b;
+  --md-accent-fg-color: #8f5363;
+  --md-accent-fg-color--transparent: rgba(143, 83, 99, 0.12);
+}
+
+.md-grid {
+  max-width: 92rem;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  min-width: 100%;
+}
+
+.md-typeset .md-typeset__table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+
+.md-typeset h1 {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.35rem;
+}

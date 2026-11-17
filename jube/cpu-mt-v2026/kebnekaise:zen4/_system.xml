@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jube>
+    <parameterset name="param_set" init_with="../../_commons.xml">
+        <parameter name="root">/proj/nobackup/aravind/LAAB-HPC/benchmarks/laab-pyx</parameter>
+        <parameter name="system">kebnekaise:zen4</parameter>
+        <parameter name="ld_blas">'-lopenblas'</parameter>
+        <parameter name="postprocess_deps">
+source ${root}/venvs/pyx-kebnekaise/activate.sh
+        </parameter>
+        <parameter name="account_config">
+#SBATCH -A hpc2n2026-184
+#SBATCH -C zen4
+        </parameter>
+    </parameterset>
+</jube>

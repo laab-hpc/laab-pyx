@@ -1,0 +1,9 @@
+{
+    "am_distributivity1": {
+        "tests": {
+            "operator": "A@B+ A@C"
+        },
+        "ref_negative": "no rewrite",
+        "ref_positive": "A@(B+C)"
+    }
+}

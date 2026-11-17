@@ -1,0 +1,9 @@
+{
+    "cse_addition": {
+        "tests": {
+            "operator": "t(A)@B + t(A)@B"
+        },
+        "ref_negative": "no cse",
+        "ref_positive": "2*(t(A)@B)"
+    }
+}

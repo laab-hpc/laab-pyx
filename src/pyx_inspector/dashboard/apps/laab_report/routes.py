@@ -1,5 +1,7 @@
+from copy import deepcopy
 import pickle
 from pathlib import Path
+import re
 
 from flask import Blueprint, render_template, request
 
@@ -213,10 +215,8 @@ def _humanize_result(result):
 
 
 def _extract_cb_id(profile_path: str) -> str:
-    parts = Path(profile_path).stem.split("_")
-    if len(parts) < 3:
-        return ""
-    return parts[-1]
+    match = re.search(r"[-_](\d+)$", Path(profile_path).stem)
+    return match.group(1) if match else ""
 
 
 def _result_symbol(result: str) -> str:
@@ -233,8 +233,88 @@ def _load_profile(profile_path: str):
         return pickle.load(handle)
 
 
+def _profile_paths(row):
+    paths = row.get("profile_paths")
+    if paths:
+        return paths
+    profile_path = row.get("profile_path")
+    if not profile_path:
+        raise ValueError("Report index row does not contain profile paths")
+    return {row.get("test_id", "profile"): profile_path}
+
+
+def _merge_profile_paths(profile_paths):
+    profiles = [_load_profile(path) for path in profile_paths.values()]
+    if not profiles:
+        raise ValueError("No profiles available for report")
+
+    merged = deepcopy(profiles[0])
+    merged["score"] = 0
+    merged["num_tests"] = 0
+    merged["test_ids"] = []
+    merged_exp_config = merged.get("exp_config", {})
+    datetimes = []
+
+    merged_sections = ("config", "losses", "slow_down", "times", "cutoff_results")
+    for section in merged_sections:
+        merged[section] = {}
+
+    for profile in profiles:
+        for field in ("eb_name", "system", "cpu_model", "cutoff"):
+            if profile.get(field) != profiles[0].get(field):
+                raise ValueError(f"Cannot merge profiles with different {field}")
+
+        exp_config = profile.get("exp_config", {})
+        for field in ("name", "laab_n", "laab_rep", "omp_num_threads"):
+            if exp_config.get(field) != merged_exp_config.get(field):
+                raise ValueError(
+                    f"Cannot merge profiles with different exp_config.{field}"
+                )
+        if exp_config.get("datetime"):
+            datetimes.append(exp_config["datetime"])
+
+        test_id = profile.get("test_id", "")
+        if test_id:
+            merged["test_ids"].append(test_id)
+
+        for section in merged_sections:
+            values = profile.get(section, {})
+            duplicate = set(merged[section]) & set(values)
+            if duplicate:
+                raise ValueError(
+                    f"Duplicate experiments while merging {section}: "
+                    f"{sorted(duplicate)}"
+                )
+            merged[section].update(deepcopy(values))
+
+        merged["score"] += int(profile.get("score", 0))
+        merged["num_tests"] += int(profile.get("num_tests", 0))
+
+    merged["test_ids"] = sorted(set(merged["test_ids"]))
+    merged["test_id"] = ", ".join(merged["test_ids"])
+    if datetimes:
+        merged_exp_config["datetime"] = max(datetimes)
+
+    result_losses = [
+        float(experiment["result"])
+        for experiment in merged["losses"].values()
+        if "result" in experiment
+    ]
+    merged["mean_loss"] = (
+        f"{sum(result_losses) / len(result_losses):.3f}"
+        if result_losses
+        else "0.000"
+    )
+    return merged
+
+
+def _load_report(row):
+    return _merge_profile_paths(_profile_paths(row))
+
+
 def _build_common_metadata(profiles):
     candidates = [
+        ("Tests", [", ".join(p.get("test_ids", [])) for p in profiles]),
         ("Library", [p.get("eb_name", "").split("/", 1)[0] if p.get("eb_name", "") else "" for p in profiles]),
         ("Version", [
             p.get("eb_name", "").split("/", 1)[1].rsplit("-", 1)[0]
@@ -293,6 +373,8 @@ def _build_compare_groups(profiles):
     for title, experiments in COMPARE_GROUPS:
         rows = []
         for exp_key, row_label in experiments:
+            if not all(exp_key in profile.get("losses", {}) for profile in profiles):
+                continue
             values = []
             for profile in profiles:
                 loss = profile["losses"][exp_key]["result"]
@@ -305,7 +387,8 @@ def _build_compare_groups(profiles):
                     }
                 )
             rows.append({"label": row_label, "values": values})
-        groups.append({"title": title, "rows": rows})
+        if rows:
+            groups.append({"title": title, "rows": rows})
     return groups
 
 
@@ -377,19 +460,24 @@ def index():
 
 @bp.route("/compare", methods=["POST"])
 def compare():
-    profile_paths = [p for p in request.form.get("profiles", "").split(",") if p]
-    by_path = {row["profile_path"]: row for row in PROFILES.get_profiles()}
+    report_ids = [p for p in request.form.get("profiles", "").split(",") if p]
+    by_id = {
+        row.get("report_id", row.get("profile_path")): row
+        for row in PROFILES.get_profiles()
+    }
     pairs = []
 
-    for profile_path in profile_paths:
-        row = by_path.get(profile_path, {"profile_path": profile_path})
-        profile = _load_profile(profile_path)
-        profile["_cb_id"] = row.get("cb_id", _extract_cb_id(profile_path))
+    for report_id in report_ids:
+        row = by_id.get(report_id)
+        if row is None:
+            continue
+        profile = _load_report(row)
+        profile["_cb_id"] = row.get("cb_id", "")
         pairs.append(
             {
                 "profile": profile,
                 "selected": {
-                    "profile_path": profile_path,
+                    "report_id": report_id,
                     "library": row.get("library", ""),
                     "version": row.get("version", ""),
                     "toolchain": row.get("toolchain", ""),
@@ -441,17 +529,25 @@ def acknowledgements():
 
 @bp.route("/laab_report")
 def laab_report():
-    profile_path = request.args.get("profile_path")
-    if not profile_path:
-        return render_template(f"{name}/error.html", message="Profile path missing.", code=400), 400
-
-    profile_file = PROFILES.profiles_root / profile_path
-    if not profile_file.exists():
-        return render_template(f"{name}/error.html", message="Profile not found.", code=404), 404
+    report_id = request.args.get("report_id")
+    legacy_profile_path = request.args.get("profile_path")
+    rows = PROFILES.get_profiles()
+    row = next(
+        (
+            item
+            for item in rows
+            if item.get("report_id", item.get("profile_path"))
+            == (report_id or legacy_profile_path)
+        ),
+        None,
+    )
+    if row is None:
+        return render_template(
+            f"{name}/error.html", message="Report not found.", code=404
+        ), 404
 
     try:
-        with profile_file.open("rb") as handle:
-            profile = pickle.load(handle)
+        profile = _load_report(row)
     except Exception as exc:
         return render_template(
             f"{name}/error.html",
@@ -462,7 +558,7 @@ def laab_report():
     return render_template(
         f"{name}/laab_report.html",
         profile=profile,
-        profile_path=profile_path,
-        cb_id=_extract_cb_id(profile_path),
+        profile_paths=_profile_paths(row),
+        cb_id=row.get("cb_id", ""),
         sections=_build_sections(profile),
     )

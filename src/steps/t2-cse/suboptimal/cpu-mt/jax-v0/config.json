@@ -1,0 +1,9 @@
+{
+    "cse_suboptimal": {
+        "tests": {
+            "operator": "transpose(A)@B@transpose(A)@B@y"
+        },
+        "ref_negative": "with cse",
+        "ref_positive": "transpose(A)@(B@(transpose(A)@(B@y))"
+    }
+}

@@ -21,6 +21,7 @@
                 <th>NCPUs</th>
                 <th>CB ID</th>
                 <th>Score</th>
+                <th>Num tests</th>
                 <th>Mean loss</th>
                 <th></th>
             </tr>
@@ -35,13 +36,14 @@
                 <th><input type="text" data-col="7" placeholder="filter"></th>
                 <th><input type="text" data-col="8" placeholder="filter"></th>
                 <th><input type="text" data-col="9" placeholder="filter"></th>
+                <th><input type="text" data-col="10" placeholder="filter"></th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             {% for row in profiles %}
             <tr>
-                <td><input type="checkbox" class="tvst-select" value="{{ row['profile_path'] }}"></td>
+                <td><input type="checkbox" class="tvst-select" value="{{ row.get('report_id') or row.get('profile_path') }}"></td>
                 <td class="datetime">{{ row.get('datetime', '') }}</td>
                 <td class="library">{{ row['library'] }}</td>
                 <td class="version">{{ row['version'] }}</td>
@@ -50,9 +52,10 @@
                 <td class="ncpus">{{ row['omp_num_threads'] }}</td>
                 <td class="cb_id">{{ row['cb_id'] }}</td>
                 <td class="score">{{ row['score'] }}</td>
+                <td class="num_tests">{{ row['num_tests'] }}</td>
                 <td class="mean_loss">{{ row['mean_loss'] }}</td>
                 <td>
-                    <a href="{{ url_for('laab_report.laab_report', profile_path=row['profile_path']) }}"
+                    <a href="{{ url_for('laab_report.laab_report', report_id=row.get('report_id') or row.get('profile_path')) }}"
                     class="btn btn-secondary btn-sm">
                         View report
                     </a>

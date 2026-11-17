@@ -1,0 +1,9 @@
+{
+    "cm_loops": {
+        "tests": {
+            "operator": "for i in range(3): A@B ..."
+        },
+        "ref_negative": "no code motion",
+        "ref_positive": "A@B; for i in range(3): ..."
+    }
+}

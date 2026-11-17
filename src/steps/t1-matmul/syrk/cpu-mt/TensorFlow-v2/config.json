@@ -1,0 +1,10 @@
+{
+    "mm_syrk":{
+        "tests": {
+            "operator": "A@transpose(A)",
+            "linalg_matmul": "linalg.matmul(A,transpose(A))"
+        },
+        "ref_negative": "sgemm",
+        "ref_positive": "syrk"
+    }
+}

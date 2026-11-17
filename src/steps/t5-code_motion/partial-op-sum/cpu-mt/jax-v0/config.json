@@ -1,0 +1,9 @@
+{
+    "cm_partial_op_sum": {
+        "tests": {
+            "operator": "(A+B)[2,2]"
+        },
+        "ref_negative": "no code motion",
+        "ref_positive": "A[2,2] + B[2,2]"
+    }
+}

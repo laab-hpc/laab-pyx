@@ -1,0 +1,242 @@
+[
+    {
+        "eb_name": "PyTorch/2.1.2-foss-2023a",
+        "library": "PyTorch",
+        "version": "2.1.2",
+        "toolchain": "foss-2023a",
+        "system": "kebnekaise:zen4",
+        "cpu_model": "AMD EPYC 9754 128-Core Processor",
+        "cutoff": "0.05",
+        "name": "CPU-1x",
+        "laab_n": "3000",
+        "laab_rep": 10,
+        "omp_num_threads": 1,
+        "cb_id": "0",
+        "report_id": "43e453b79a9a7571",
+        "profile_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t1/profiles/test-1-matmul-1-0.pkl",
+            "Test-2-CSE": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t2/profiles/test-2-cse-1-0.pkl",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t3/profiles/test-3-matrix-chains-1-0.pkl",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t4/profiles/test-4-expression-rewrites-1-0.pkl",
+            "Test-5-Code-Motion": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t5/profiles/test-5-code-motion-1-0.pkl"
+        },
+        "artifact_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t1",
+            "Test-2-CSE": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t2",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t3",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t4",
+            "Test-5-Code-Motion": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t5"
+        },
+        "score": 7,
+        "num_tests": 17,
+        "datetime": "2026-11-17T00:58:07",
+        "test_ids": [
+            "Test-1-Matmul",
+            "Test-2-CSE",
+            "Test-3-Matrix-Chains",
+            "Test-4-Expression-Rewrites",
+            "Test-5-Code-Motion"
+        ],
+        "mean_loss": "0.639"
+    },
+    {
+        "eb_name": "TensorFlow/2.15.1-foss-2023a",
+        "library": "TensorFlow",
+        "version": "2.15.1",
+        "toolchain": "foss-2023a",
+        "system": "kebnekaise:zen4",
+        "cpu_model": "AMD EPYC 9754 128-Core Processor",
+        "cutoff": "0.05",
+        "name": "CPU-1x",
+        "laab_n": "3000",
+        "laab_rep": 10,
+        "omp_num_threads": 1,
+        "cb_id": "0",
+        "report_id": "c381fc83ed382ddc",
+        "profile_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t1/profiles/test-1-matmul-1-0.pkl",
+            "Test-2-CSE": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t2/profiles/test-2-cse-1-0.pkl",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t3/profiles/test-3-matrix-chains-1-0.pkl",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t4/profiles/test-4-expression-rewrites-1-0.pkl",
+            "Test-5-Code-Motion": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t5/profiles/test-5-code-motion-1-0.pkl"
+        },
+        "artifact_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t1",
+            "Test-2-CSE": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t2",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t3",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t4",
+            "Test-5-Code-Motion": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t5"
+        },
+        "score": 6,
+        "num_tests": 17,
+        "datetime": "2026-11-17T01:04:59",
+        "test_ids": [
+            "Test-1-Matmul",
+            "Test-2-CSE",
+            "Test-3-Matrix-Chains",
+            "Test-4-Expression-Rewrites",
+            "Test-5-Code-Motion"
+        ],
+        "mean_loss": "0.680"
+    },
+    {
+        "eb_name": "jax/0.4.25-gfbf-2023a",
+        "library": "jax",
+        "version": "0.4.25",
+        "toolchain": "gfbf-2023a",
+        "system": "kebnekaise:zen4",
+        "cpu_model": "AMD EPYC 9754 128-Core Processor",
+        "cutoff": "0.05",
+        "name": "CPU-1x",
+        "laab_n": "3000",
+        "laab_rep": 10,
+        "omp_num_threads": 1,
+        "cb_id": "0",
+        "report_id": "e1977d2515bd80c3",
+        "profile_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t1/profiles/test-1-matmul-1-0.pkl",
+            "Test-2-CSE": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t2/profiles/test-2-cse-1-0.pkl",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t3/profiles/test-3-matrix-chains-1-0.pkl",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t4/profiles/test-4-expression-rewrites-1-0.pkl",
+            "Test-5-Code-Motion": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t5/profiles/test-5-code-motion-1-0.pkl"
+        },
+        "artifact_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t1",
+            "Test-2-CSE": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t2",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t3",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t4",
+            "Test-5-Code-Motion": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t5"
+        },
+        "score": 5,
+        "num_tests": 17,
+        "datetime": "2026-11-17T01:06:18",
+        "test_ids": [
+            "Test-1-Matmul",
+            "Test-2-CSE",
+            "Test-3-Matrix-Chains",
+            "Test-4-Expression-Rewrites",
+            "Test-5-Code-Motion"
+        ],
+        "mean_loss": "0.682"
+    },
+    {
+        "eb_name": "PyTorch/2.1.2-foss-2023a",
+        "library": "PyTorch",
+        "version": "2.1.2",
+        "toolchain": "foss-2023a",
+        "system": "kebnekaise:zen4",
+        "cpu_model": "AMD EPYC 9754 128-Core Processor",
+        "cutoff": "0.05",
+        "name": "CPU-4x",
+        "laab_n": "3000",
+        "laab_rep": 10,
+        "omp_num_threads": 4,
+        "cb_id": "0",
+        "report_id": "ab03eb74c150cb33",
+        "profile_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t1/profiles/test-1-matmul-4-0.pkl",
+            "Test-2-CSE": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t2/profiles/test-2-cse-4-0.pkl",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t3/profiles/test-3-matrix-chains-4-0.pkl",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t4/profiles/test-4-expression-rewrites-4-0.pkl",
+            "Test-5-Code-Motion": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t5/profiles/test-5-code-motion-4-0.pkl"
+        },
+        "artifact_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t1",
+            "Test-2-CSE": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t2",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t3",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t4",
+            "Test-5-Code-Motion": "kebnekaise:zen4/PyTorch-2.1.2-foss-2023a/artifacts/t5"
+        },
+        "score": 8,
+        "num_tests": 17,
+        "datetime": "2026-11-17T00:56:53",
+        "test_ids": [
+            "Test-1-Matmul",
+            "Test-2-CSE",
+            "Test-3-Matrix-Chains",
+            "Test-4-Expression-Rewrites",
+            "Test-5-Code-Motion"
+        ],
+        "mean_loss": "0.629"
+    },
+    {
+        "eb_name": "TensorFlow/2.15.1-foss-2023a",
+        "library": "TensorFlow",
+        "version": "2.15.1",
+        "toolchain": "foss-2023a",
+        "system": "kebnekaise:zen4",
+        "cpu_model": "AMD EPYC 9754 128-Core Processor",
+        "cutoff": "0.05",
+        "name": "CPU-4x",
+        "laab_n": "3000",
+        "laab_rep": 10,
+        "omp_num_threads": 4,
+        "cb_id": "0",
+        "report_id": "87d9364951995983",
+        "profile_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t1/profiles/test-1-matmul-4-0.pkl",
+            "Test-2-CSE": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t2/profiles/test-2-cse-4-0.pkl",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t3/profiles/test-3-matrix-chains-4-0.pkl",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t4/profiles/test-4-expression-rewrites-4-0.pkl",
+            "Test-5-Code-Motion": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t5/profiles/test-5-code-motion-4-0.pkl"
+        },
+        "artifact_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t1",
+            "Test-2-CSE": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t2",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t3",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t4",
+            "Test-5-Code-Motion": "kebnekaise:zen4/TensorFlow-2.15.1-foss-2023a/artifacts/t5"
+        },
+        "score": 7,
+        "num_tests": 17,
+        "datetime": "2026-11-17T01:03:42",
+        "test_ids": [
+            "Test-1-Matmul",
+            "Test-2-CSE",
+            "Test-3-Matrix-Chains",
+            "Test-4-Expression-Rewrites",
+            "Test-5-Code-Motion"
+        ],
+        "mean_loss": "0.700"
+    },
+    {
+        "eb_name": "jax/0.4.25-gfbf-2023a",
+        "library": "jax",
+        "version": "0.4.25",
+        "toolchain": "gfbf-2023a",
+        "system": "kebnekaise:zen4",
+        "cpu_model": "AMD EPYC 9754 128-Core Processor",
+        "cutoff": "0.05",
+        "name": "CPU-4x",
+        "laab_n": "3000",
+        "laab_rep": 10,
+        "omp_num_threads": 4,
+        "cb_id": "0",
+        "report_id": "8f631392c08d3781",
+        "profile_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t1/profiles/test-1-matmul-4-0.pkl",
+            "Test-2-CSE": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t2/profiles/test-2-cse-4-0.pkl",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t3/profiles/test-3-matrix-chains-4-0.pkl",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t4/profiles/test-4-expression-rewrites-4-0.pkl",
+            "Test-5-Code-Motion": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t5/profiles/test-5-code-motion-4-0.pkl"
+        },
+        "artifact_paths": {
+            "Test-1-Matmul": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t1",
+            "Test-2-CSE": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t2",
+            "Test-3-Matrix-Chains": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t3",
+            "Test-4-Expression-Rewrites": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t4",
+            "Test-5-Code-Motion": "kebnekaise:zen4/jax-0.4.25-gfbf-2023a/artifacts/t5"
+        },
+        "score": 7,
+        "num_tests": 17,
+        "datetime": "2026-11-17T01:04:51",
+        "test_ids": [
+            "Test-1-Matmul",
+            "Test-2-CSE",
+            "Test-3-Matrix-Chains",
+            "Test-4-Expression-Rewrites",
+            "Test-5-Code-Motion"
+        ],
+        "mean_loss": "0.590"
+    }
+]

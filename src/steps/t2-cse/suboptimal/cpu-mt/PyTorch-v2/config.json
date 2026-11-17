@@ -1,0 +1,9 @@
+{
+    "cse_suboptimal": {
+        "tests": {
+            "operator": "t(A)@B@t(A)@B@y"
+        },
+        "ref_negative": "with cse",
+        "ref_positive": "t(A)@(B@(t(A)@(B@y))"
+    }
+}

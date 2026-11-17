@@ -1,0 +1,9 @@
+{
+    "cse_addition": {
+        "tests": {
+            "operator": "transpose(A)@B + transpose(A)@B"
+        },
+        "ref_negative": "no cse",
+        "ref_positive": "2*(transpose(A)@B)"
+    }
+}

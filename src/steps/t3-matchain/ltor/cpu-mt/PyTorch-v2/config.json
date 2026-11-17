@@ -1,0 +1,10 @@
+{
+    "matchain_ltor": {
+        "tests": {
+            "operator": "t(y)@t(H)@H",
+            "linalg_multidot": "linalg.multi_dot([t(y), t(H), H])"
+        },
+        "ref_negative": "eval. right to left",
+        "ref_positive": "(t(y)@t(H))@H"
+    }
+}

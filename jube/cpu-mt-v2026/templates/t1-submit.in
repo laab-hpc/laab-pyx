@@ -1,0 +1,62 @@
+#!/bin/bash
+#SBATCH --job-name=#NAME#
+#SBATCH --time=#TIME_LIMIT#
+#SBATCH --nodes=1
+#SBATCH --ntasks=1           
+#SBATCH --cpus-per-task=#NCPUS#
+#SBATCH --output=slurm.out
+#SBATCH --error=slurm.err
+#ACCOUNT_CONFIG#
+
+set -euo pipefail
+
+#MODULES#
+
+export LD_BLAS=#LD_BLAS#
+export OMP_NUM_THREADS=#NCPUS#
+export LAAB_REPS=#LAAB_REPS#
+export LAAB_N=#LAAB_N#
+
+SRC_DIR="#SRC_DIR#/t1-matmul"
+LIB_DIR="#LIB_DIR#"
+
+export LAAB_BUILD_DIR=$(pwd)/build
+
+mkdir -p logs/
+
+lscpu > logs/cpu_info.txt
+
+echo "Test-1-Matmul" > logs/metadata.txt
+echo #NAME# >> logs/metadata.txt
+echo #SYSTEM# >> logs/metadata.txt
+echo #LIBRARY# >> logs/metadata.txt
+echo #VERSION# >> logs/metadata.txt
+echo #TOOLCHAIN# >> logs/metadata.txt
+
+srun make --no-print-directory -C "${SRC_DIR}/gemm/cpu-mt/C"
+srun make --no-print-directory -C "${SRC_DIR}/gemm/cpu-mt/C" run | tee -a logs/data.txt
+srun make --no-print-directory -C "${SRC_DIR}/gemv/cpu-mt/C"
+srun make --no-print-directory -C "${SRC_DIR}/gemv/cpu-mt/C" run | tee -a logs/data.txt
+srun make --no-print-directory -C "${SRC_DIR}/syrk/cpu-mt/C"
+srun make --no-print-directory -C "${SRC_DIR}/syrk/cpu-mt/C" run | tee -a logs/data.txt
+srun make --no-print-directory -C "${SRC_DIR}/trmm/cpu-mt/C"
+srun make --no-print-directory -C "${SRC_DIR}/trmm/cpu-mt/C" run | tee -a logs/data.txt
+srun make --no-print-directory -C "${SRC_DIR}/tridiag/cpu-mt/C"
+srun make --no-print-directory -C "${SRC_DIR}/tridiag/cpu-mt/C" run | tee -a logs/data.txt
+
+srun python "${SRC_DIR}/gemm/cpu-mt/${LIB_DIR}/mm_sgemm.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/gemm/cpu-mt/${LIB_DIR}/config.json" logs/mm_sgemm.json
+
+srun python "${SRC_DIR}/syrk/cpu-mt/${LIB_DIR}/mm_syrk.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/syrk/cpu-mt/${LIB_DIR}/config.json" logs/mm_syrk.json
+
+srun python "${SRC_DIR}/trmm/cpu-mt/${LIB_DIR}/mm_trmm.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/trmm/cpu-mt/${LIB_DIR}/config.json" logs/mm_trmm.json
+
+srun python "${SRC_DIR}/tridiag/cpu-mt/${LIB_DIR}/mm_tridiag.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/tridiag/cpu-mt/${LIB_DIR}/config.json" logs/mm_tridiag.json
+
+#POSTPROCESS_DEPS#
+
+pyx-process-logs logs/ --out_dir ../../../profiles
+

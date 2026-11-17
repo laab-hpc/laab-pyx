@@ -1,0 +1,9 @@
+{
+    "matchain_mixed": {
+        "tests": {
+            "operator": "transpose(H)@y@transpose(x)@H"
+        },
+        "ref_negative": "eval. left to right",
+        "ref_positive": "(transpose(H)@y)@(transpose(x)@H)"
+    }
+}

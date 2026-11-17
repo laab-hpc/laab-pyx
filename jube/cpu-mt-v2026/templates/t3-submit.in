@@ -1,0 +1,47 @@
+#!/bin/bash
+#SBATCH --job-name=#NAME#
+#SBATCH --time=#TIME_LIMIT#
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=#NCPUS#
+#SBATCH --output=slurm.out
+#SBATCH --error=slurm.err
+#ACCOUNT_CONFIG#
+
+set -euo pipefail
+
+#MODULES#
+
+export LD_BLAS=#LD_BLAS#
+export OMP_NUM_THREADS=#NCPUS#
+export LAAB_REPS=#LAAB_REPS#
+export LAAB_N=#LAAB_N#
+
+SRC_DIR="#SRC_DIR#/t3-matchain"
+LIB_DIR="#LIB_DIR#"
+
+mkdir -p logs/
+
+lscpu > logs/cpu_info.txt
+
+echo "Test-3-Matrix-Chains" > logs/metadata.txt
+echo #NAME# >> logs/metadata.txt
+echo #SYSTEM# >> logs/metadata.txt
+echo #LIBRARY# >> logs/metadata.txt
+echo #VERSION# >> logs/metadata.txt
+echo #TOOLCHAIN# >> logs/metadata.txt
+
+echo "REP=${LAAB_REPS} benchmark.exe ${LAAB_N}" > logs/data.txt
+
+srun python "${SRC_DIR}/rtol/cpu-mt/${LIB_DIR}/matchain_rtol.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/rtol/cpu-mt/${LIB_DIR}/config.json" logs/matchain_rtol.json
+
+srun python "${SRC_DIR}/ltor/cpu-mt/${LIB_DIR}/matchain_ltor.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/ltor/cpu-mt/${LIB_DIR}/config.json" logs/matchain_ltor.json
+
+srun python "${SRC_DIR}/mixed/cpu-mt/${LIB_DIR}/matchain_mixed.py" | tee -a logs/data.txt
+cp "${SRC_DIR}/mixed/cpu-mt/${LIB_DIR}/config.json" logs/matchain_mixed.json
+
+#POSTPROCESS_DEPS#
+
+pyx-process-logs logs/ --out_dir ../../../profiles

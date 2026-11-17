@@ -1,0 +1,9 @@
+{
+    "am_transpose": {
+        "tests": {
+            "operator": "t(B)@A@t(A)@B"
+        },
+        "ref_negative": "no rewrite",
+        "ref_positive": "S = t(A)@B; t(S)@S"
+    }
+}

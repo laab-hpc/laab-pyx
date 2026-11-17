@@ -1,0 +1,10 @@
+{
+    "matchain_mixed": {
+        "tests": {
+            "operator": "t(H)@y@t(x)@H",
+            "linalg_multidot": "linalg.multi_dot([t(H), y, t(x), H])"
+        },
+        "ref_negative": "eval. left to right",
+        "ref_positive": "(t(H)@y)@(t(x)@H)"
+    }
+}

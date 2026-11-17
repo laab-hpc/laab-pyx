@@ -1,0 +1,9 @@
+{
+    "cse_matmul_no_paranthesis": {
+        "tests": {
+            "operator": "t(t(A)@B)@t(A)@B"
+        },
+        "ref_negative": "no cse",
+        "ref_positive": "S=t(A)@B; t(S)@S"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "mm_trmm":{
+        "tests": {
+            "operator": "L@B",
+            "linalg_matmul": "jax.numpy.matmul(L,B)"
+        },
+        "ref_negative": "sgemm",
+        "ref_positive": "trmm"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "mm_sgemm":{
+        "tests":{
+            "operator": "t(A)@B",
+            "linalg_matmul": "linalg.matmul(t(A),B)"
+        },
+        "ref_negative": "sgemv for each row",
+        "ref_positive": "sgemm"
+    }
+}

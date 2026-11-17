@@ -1,0 +1,10 @@
+{
+    "matchain_rtol": {
+        "tests": {
+            "operator": "transpose(H)@H@x",
+            "linalg_multidot": "linalg.multi_dot([transpose(H), H, x])"
+        },
+        "ref_negative": "eval. left to right",
+        "ref_positive": "transpose(H)@(H@x)"
+    }
+}

@@ -93,8 +93,7 @@ docs/
 ## Acknowledgements
 
 Financial support was provided by the Deutsche Forschungsgemeinschaft (DFG,
-German Research Foundation) through Grant IRTG 2379 and by the BMBF project
-“01-1H1-6013 AP6-NRW Anwenderunterstützung SiVeGCS”.
+German Research Foundation) through Grant IRTG 2379.
 
 Computing resources were provided by the High Performance Computing Center
 North (HPC2N), Sweden, and the Jülich Supercomputing Centre (JSC), Germany.

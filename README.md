@@ -3,8 +3,8 @@
 *Version*: v2026.1
 
 LAAB-PyX benchmarks the linear-algebra awareness of PyTorch, TensorFlow, and
-JAX. See [Benchmark Suite](BENCHMARK_SUITE.md) for the tests and evaluation
-method.
+JAX. See the [Benchmark Suite](https://github.com/laab-hpc/laab-pyx/blob/main/docs/BENCHMARK_SUITE.md)
+for the tests and evaluation method.
 
 Run the following commands from the repository root.
 
